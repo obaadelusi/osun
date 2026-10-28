@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="calc.meta.title">Calculate Your Personal Income Tax | Government of Osun State</title>
+  <meta name="description" data-i18n-attr="content:calc.meta.description"
+    content="Estimate your personal income tax, PAYE and Direct Assessment under the Nigeria Tax Act 2025 rates for Osun State.">
+  <meta name="theme-color" content="#00703c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://osunstate.gov.ng/taxes/calculate-personal-income-tax.html">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ============ OFFICIAL TOP BAR ============ -->
+  <div class="official-topbar" aria-label="Official government website" data-i18n-attr="aria-label:topbar.label">
+    <div class="container official-topbar__inner">
+      <svg class="official-topbar__flag" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"
+        focusable="false">
+        <rect width="8" height="16" fill="#008751" />
+        <rect x="8" width="8" height="16" fill="#ffffff" />
+        <rect x="16" width="8" height="16" fill="#008751" />
+        <rect width="24" height="16" fill="none" stroke="rgba(0, 0, 0, 0.15)" stroke-width="1" />
+      </svg>
+      <span class="official-topbar__text" data-i18n="topbar.official">This is NOT the official website of the Osun State
+        Government.</span>
+    </div>
+  </div>
+
+  <!-- ============ ALERT BANNER ============ -->
+  <div class="alert" id="site-alert" role="region" aria-labelledby="alert-title">
+    <div class="container alert__inner">
+      <svg class="alert__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 1 21h22L12 2zm1 15h-2v-2h2v2zm0-4h-2V9h2v4z" />
+      </svg>
+      <p class="alert__text">
+        <strong id="alert-title" data-i18n="alert.title">Rainy season advisory:</strong>
+        <span data-i18n="alert.body">Residents and visitors are advised to check weather updates before embarking on
+          outdoor hiking trails.</span>
+        <a href="#" data-i18n="alert.link">Flood safety information</a>
+      </p>
+      <button class="alert__close" type="button" data-i18n-attr="aria-label:alert.dismiss" aria-label="Dismiss alert">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" data-i18n-attr="aria-label:brand.home"
+        aria-label="Government of Osun State home">
+        <img class="brand__emblem" src="../assets/images/osun-logo.jpg" alt="Osun State Logo" width="64" height="64">
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Ọ̀ṣun</span>
+          <span class="brand__tagline" data-i18n="brand.tagline">State of the Living Spring</span>
+        </span>
+      </a>
+
+      <div class="site-header__tools">
+        <ul class="utility-nav" aria-label="Utility" data-i18n-attr="aria-label:utility.label">
+          <li><button type="button" class="link-button" id="print-btn" data-i18n="utility.print">Printer
+              Friendly</button></li>
+          <li><button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button></li>
+          <li><a href="#contact" data-i18n="utility.contact">Contact Government</a></li>
+        </ul>
+
+        <form class="search" role="search" id="search-form" action="#" autocomplete="off">
+          <label class="visually-hidden" for="search-input" data-i18n="search.label">Search osunstate.gov.ng</label>
+          <input class="search__input" id="search-input" type="search" name="q"
+            placeholder="Search for programs and online services" data-i18n-attr="placeholder:search.placeholder"
+            aria-controls="search-suggestions" aria-autocomplete="list" aria-expanded="false">
+          <button class="search__button" type="submit" data-i18n="search.button">Search</button>
+          <ul class="search__suggestions" id="search-suggestions" role="listbox" hidden></ul>
+        </form>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span data-i18n="nav.menu">Menu</span>
+      </button>
+    </div>
+
+    <!-- ============ PRIMARY NAV ============ -->
+    <nav class="primary-nav" id="primary-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <ul class="container primary-nav__list">
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-residents"
+            data-i18n="nav.residents">Resident Online Services</button>
+          <div class="mega" id="mega-residents" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.health">Health</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.health.1">Osun Health Insurance Scheme (OHIS)</a></li>
+                  <li><a href="#" data-i18n="mega.health.2">Hospitals and primary health centres</a></li>
+                  <li><a href="#" data-i18n="mega.health.3">Immunisation</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.education">Education</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.education.1">Public schools</a></li>
+                  <li><a href="#" data-i18n="mega.education.2">Scholarships and bursaries</a></li>
+                  <li><a href="#" data-i18n="mega.education.3">Tertiary institutions</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.land">Land and housing</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.land.1">Certificate of Occupancy</a></li>
+                  <li><a href="#" data-i18n="mega.land.2">Land search and GIS</a></li>
+                  <li><a href="#" data-i18n="mega.land.3">Building permits</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.records">Records and identity</h2>
+                <ul>
+                  <li><a href="../records/register-a-birth.html" data-i18n="mega.records.1">Birth and death registration</a></li>
+                  <li><a href="#" data-i18n="mega.records.2">Certificate of state of origin</a></li>
+                  <li><a href="#" data-i18n="mega.records.3">Driver and vehicle licensing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-business"
+            data-i18n="nav.business">Business</button>
+          <div class="mega" id="mega-business" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.start">Start and grow</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.start.1">Starting a business</a></li>
+                  <li><a href="#" data-i18n="mega.start.2">Registration and permits</a></li>
+                  <li><a href="#" data-i18n="mega.start.3">Support for small businesses</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.invest">Invest in Osun</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.invest.1">Investment opportunities</a></li>
+                  <li><a href="#" data-i18n="mega.invest.2">Agriculture and agribusiness</a></li>
+                  <li><a href="#" data-i18n="mega.invest.3">Solid minerals</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.tax">Taxes and procurement</h2>
+                <ul>
+                  <li><a href="pay-your-taxes.html" data-i18n="mega.tax.1">Pay taxes online
+                      (OSIRS)</a></li>
+                  <li><a href="calculate-personal-income-tax.html" aria-current="page"
+                      data-i18n="mega.tax.calc">Calculate personal
+                      income tax</a></li>
+                  <li><a href="#" data-i18n="mega.tax.2">Tax clearance certificate</a></li>
+                  <li><a href="#" data-i18n="mega.tax.3">Tenders and contracts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-government"
+            data-i18n="nav.government">Government</button>
+          <div class="mega" id="mega-government" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.exec">Executive</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.exec.1">Office of the Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.2">Office of the Deputy Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.3">State Executive Council</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.arms">Legislature and judiciary</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.arms.1">Osun State House of Assembly</a></li>
+                  <li><a href="#" data-i18n="mega.arms.2">State Judiciary</a></li>
+                  <li><a href="../laws/laws-and-gazettes.html" data-i18n="mega.arms.3">Laws and gazettes</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.orgs">Organisations</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.orgs.1">Ministries, departments and agencies</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.2">Local Government Areas</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.3">Budget and open data</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-visitors"
+            data-i18n="nav.visitors">Visitors</button>
+          <div class="mega" id="mega-visitors" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.see">Places to see</h2>
+                <ul>
+                  <li><a href="../tourism/tourist.html" data-i18n="mega.see.tourist">Tourist Centres</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=osun-sacred-grove">Osun-Osogbo Sacred Grove</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=olumirin-waterfall">Olumirin Waterfall,
+                      Erin-Ijesha</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=oduduwa-shrine">Ile-Ife, cradle of the Yoruba</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.events">Culture and events</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.events.1">Osun-Osogbo Festival</a></li>
+                  <li><a href="#" data-i18n="mega.events.2">Festivals calendar</a></li>
+                  <li><a href="#" data-i18n="mega.events.3">Museums and arts</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.plan">Plan your trip</h2>
+                <ul>
+                  <li><a href="../tourism/plan-your-visit.html" data-i18n="plan.cta">Plan your visit</a></li>
+                  <li><a href="#" data-i18n="mega.plan.1">Getting to Osun</a></li>
+                  <li><a href="#" data-i18n="mega.plan.2">Hotels and accommodation</a></li>
+                  <li><a href="#" data-i18n="mega.plan.3">Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main" tabindex="-1">
+    <div id="calculate-tax-page" data-calc-page>
+      <!-- Page Header with Breadcrumbs -->
+      <div class="container page-header page-header--with-breadcrumb tax-hero">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="pay-your-taxes.html" data-i18n="tax.title">Pay Your Taxes</a></li>
+            <li aria-current="page"><span data-i18n="calc.title">Calculate Your Personal Income Tax</span></li>
+          </ol>
+        </nav>
+
+        <div class="tax-hero__grid">
+          <div>
+            <p class="tax-hero__eyebrow" data-i18n="tax.eyebrow">Osun Internal Revenue Service (OsunIRS)</p>
+            <h1 class="page-title" data-i18n="calc.title">Calculate Your Personal Income Tax</h1>
+            <p class="page-lead" data-i18n="calc.lead">Use this official estimator to see how much personal income tax
+              or PAYE you will pay in Osun State under the Nigeria Tax Act 2025, in effect from 1 January 2026.</p>
+          </div>
+          <img class="tax-hero__img" src="../assets/images/tax-calculator-hero.svg" alt="" width="480" height="360">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="tax-notice-box" role="note">
+          <p data-i18n="calc.notice">Nigeria Tax Act 2025: from 1 January 2026, the first ₦800,000 of annual
+            chargeable income is taxed at 0%, and tenants can claim rent relief of 20% of rent paid, up to ₦500,000 a
+            year.</p>
+        </div>
+
+        <!-- ============ INCOME TAX CALCULATOR ============ -->
+        <section class="tax-section tax-calc" id="tax-calculator" aria-labelledby="tax-calc-title">
+          <div class="tax-calc__head">
+            <svg class="tax-calc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5.97 4.06L14.09 6l1.41 1.41L16.91 6l1.06 1.06-1.41 1.41 1.41 1.41-1.06 1.06-1.41-1.4-1.41 1.41-1.06-1.06 1.41-1.41-1.41-1.42zm-6.78.66h5v1.5h-5v-1.5zM11.5 16h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2V16zm6.5 1.25h-5v-1.5h5v1.5zm0-2.5h-5v-1.5h5v1.5z" />
+            </svg>
+            <div>
+              <h2 class="tax-calc__title" id="tax-calc-title" data-i18n="tax.calc.title">Calculate your personal income
+                tax</h2>
+              <p class="tax-calc__lead" data-i18n="tax.calc.lead">Uses the personal income tax rates in the Nigeria Tax
+                Act 2025, in force from 1 January 2026.</p>
+            </div>
+          </div>
+
+          <div class="tax-calc__grid">
+            <form class="tax-form" id="tax-calc-form" novalidate>
+              <fieldset class="tax-period">
+                <legend data-i18n="tax.calc.period">My figures are</legend>
+                <div class="tax-period__options">
+                  <label class="tax-period__option">
+                    <input type="radio" name="period" value="yearly" checked>
+                    <span data-i18n="tax.calc.yearly">Per year</span>
+                  </label>
+                  <label class="tax-period__option">
+                    <input type="radio" name="period" value="monthly">
+                    <span data-i18n="tax.calc.monthly">Per month</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="tax-field">
+                <label for="tax-gross" data-i18n="tax.calc.gross">Gross income</label>
+                <p class="tax-field__hint" id="tax-gross-hint" data-i18n="tax.calc.gross.hint">Salary, allowances,
+                  bonuses and business profit before any deductions.</p>
+                <p class="tax-field__error" id="tax-gross-error" hidden></p>
+                <div class="tax-field__input">
+                  <span class="tax-field__prefix" aria-hidden="true">₦</span>
+                  <input type="text" id="tax-gross" name="gross" inputmode="decimal" autocomplete="off" required
+                    aria-describedby="tax-gross-hint tax-gross-error" placeholder="4,500,000">
+                </div>
+              </div>
+
+              <div class="tax-field">
+                <label for="tax-pension"><span data-i18n="tax.calc.pension">Pension contribution</span> <span
+                    class="tax-field__optional" data-i18n="tax.calc.optional">(optional)</span></label>
+                <p class="tax-field__hint" id="tax-pension-hint" data-i18n="tax.calc.pension.hint">Your own
+                  contribution to an approved pension scheme — usually 8% of basic, housing and transport pay.</p>
+                <div class="tax-field__input">
+                  <span class="tax-field__prefix" aria-hidden="true">₦</span>
+                  <input type="text" id="tax-pension" name="pension" inputmode="decimal" autocomplete="off"
+                    aria-describedby="tax-pension-hint">
+                </div>
+              </div>
+
+              <div class="tax-field">
+                <label for="tax-other"><span data-i18n="tax.calc.other">Other approved deductions</span> <span
+                    class="tax-field__optional" data-i18n="tax.calc.optional">(optional)</span></label>
+                <p class="tax-field__hint" id="tax-other-hint" data-i18n="tax.calc.other.hint">National Housing Fund,
+                  National Health Insurance and life assurance premiums.</p>
+                <div class="tax-field__input">
+                  <span class="tax-field__prefix" aria-hidden="true">₦</span>
+                  <input type="text" id="tax-other" name="other" inputmode="decimal" autocomplete="off"
+                    aria-describedby="tax-other-hint">
+                </div>
+              </div>
+
+              <div class="tax-field">
+                <label for="tax-rent"><span data-i18n="tax.calc.rent">Rent paid on your home</span> <span
+                    class="tax-field__optional" data-i18n="tax.calc.optional">(optional)</span></label>
+                <p class="tax-field__hint" id="tax-rent-hint" data-i18n="tax.calc.rent.hint">Tenants can claim rent
+                  relief of 20% of rent paid, up to ₦500,000 a year.</p>
+                <div class="tax-field__input">
+                  <span class="tax-field__prefix" aria-hidden="true">₦</span>
+                  <input type="text" id="tax-rent" name="rent" inputmode="decimal" autocomplete="off"
+                    aria-describedby="tax-rent-hint">
+                </div>
+              </div>
+
+              <div class="tax-form__actions">
+                <button type="submit" class="btn btn--primary" data-i18n="tax.calc.submit">Calculate my tax</button>
+                <button type="reset" class="btn btn--outline" data-i18n="tax.calc.reset">Clear</button>
+              </div>
+            </form>
+
+            <div class="tax-results">
+              <!-- Shown until a calculation is made (and without JavaScript) -->
+              <div id="tax-rates">
+                <h3 class="tax-results__title" id="tax-rates-title" data-i18n="tax.calc.rates.title">2026 personal
+                  income tax bands</h3>
+                <div class="tax-table-wrap">
+                  <table class="tax-table" aria-labelledby="tax-rates-title">
+                    <thead>
+                      <tr>
+                        <th scope="col" data-i18n="tax.calc.band">Annual chargeable income</th>
+                        <th scope="col" class="num" data-i18n="tax.calc.rate">Rate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" data-i18n="tax.band.1">First ₦800,000</th>
+                        <td class="num">0%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="tax.band.2">Next ₦2,200,000</th>
+                        <td class="num">15%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="tax.band.3">Next ₦9,000,000</th>
+                        <td class="num">18%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="tax.band.4">Next ₦13,000,000</th>
+                        <td class="num">21%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="tax.band.5">Next ₦25,000,000</th>
+                        <td class="num">23%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="tax.band.6">Above ₦50,000,000</th>
+                        <td class="num">25%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="tax-results__empty" data-i18n="tax.calc.empty">Enter your income and select “Calculate my
+                  tax” to see a band-by-band estimate.</p>
+              </div>
+
+              <!-- Filled in by scripts/index.js after a calculation -->
+              <div id="tax-results" hidden></div>
+            </div>
+          </div>
+
+          <div id="tax-calc-status" class="visually-hidden" role="status" aria-live="polite"></div>
+        </section>
+
+        <!-- ============ HOW THE 2026 RULES WORK ============ -->
+        <section class="tax-section" id="tax-bands-guide" aria-labelledby="tax-bands-title">
+          <h2 class="section-title" id="tax-bands-title" data-i18n="calc.about.title">How personal income tax works
+            from 2026</h2>
+          <p class="tax-section__lead" data-i18n="calc.about.lead">The Nigeria Tax Act 2025 introduced major reforms
+            for personal income tax across Nigeria and Osun State, effective 1 January 2026.</p>
+
+          <ul class="tax-types">
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="calc.zero.title">0% tax-free threshold</h3>
+              </div>
+              <p data-i18n="calc.zero.desc">The first ₦800,000 of your annual chargeable income is taxed at 0%. If your
+                chargeable income is ₦800,000 or less (about ₦66,667 a month), you pay no personal income tax.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="calc.zero.k1">Exempt amount</dt>
+                <dd data-i18n="calc.zero.v1">First ₦800,000 a year</dd>
+                <dt data-i18n="calc.zero.k2">Rate</dt>
+                <dd>0%</dd>
+              </dl>
+            </li>
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="calc.rent.title">20% rent relief</h3>
+              </div>
+              <p data-i18n="calc.rent.desc">Tenants can deduct 20% of the rent they pay on their home each year, up to a
+                maximum deduction of ₦500,000.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="calc.rent.k1">Relief</dt>
+                <dd data-i18n="calc.rent.v1">20% of annual rent</dd>
+                <dt data-i18n="calc.rent.k2">Maximum</dt>
+                <dd data-i18n="calc.rent.v2">₦500,000 a year</dd>
+              </dl>
+            </li>
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M3 17h2v-7H3v7zm4 0h2V7H7v10zm4 0h2v-4h-2v4zm4 0h2V4h-2v13zm4 0h2v-9h-2v9z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="calc.prog.title">Progressive bands</h3>
+              </div>
+              <p data-i18n="calc.prog.desc">A higher rate applies only to the part of your income inside that band, not
+                to
+                all of it. For example, with ₦2,000,000 of chargeable income you pay 15% on ₦1,200,000, after the free
+                ₦800,000.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="calc.prog.k1">Bands</dt>
+                <dd data-i18n="calc.prog.v1">6 bands</dd>
+                <dt data-i18n="calc.prog.k2">Rates</dt>
+                <dd>0%, 15%, 18%, 21%, 23%, 25%</dd>
+              </dl>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ============ WORKED EXAMPLES ============ -->
+        <section class="tax-section" id="tax-worked-examples" aria-labelledby="tax-examples-title">
+          <h2 class="section-title" id="tax-examples-title" data-i18n="calc.ex.title">Worked examples</h2>
+          <p class="tax-section__lead" data-i18n="calc.ex.lead">See how the 2026 rules work out at different income
+            levels.</p>
+
+          <div class="tax-example-card">
+            <h3 class="tax-example-card__title" data-i18n="calc.ex1.title">Example 1: earning ₦750,000 a year</h3>
+            <p data-i18n="calc.ex1.body">With no deductions, chargeable income is ₦750,000. All of it falls in the
+              first band (0%), so the tax is ₦0 and the effective rate is 0.0%.</p>
+          </div>
+
+          <div class="tax-example-card">
+            <h3 class="tax-example-card__title" data-i18n="calc.ex2.title">Example 2: earning ₦4,000,000 a year, with
+              pension and rent</h3>
+            <p data-i18n="calc.ex2.body">Pension of ₦320,000 (8%) and rent of ₦1,000,000 (relief ₦200,000) bring
+              deductions to ₦520,000 and chargeable income to ₦3,480,000.</p>
+            <ul>
+              <li data-i18n="calc.ex2.b1">First ₦800,000 at 0%: ₦0</li>
+              <li data-i18n="calc.ex2.b2">Next ₦2,200,000 at 15%: ₦330,000</li>
+              <li data-i18n="calc.ex2.b3">Remaining ₦480,000 at 18%: ₦86,400</li>
+            </ul>
+            <p data-i18n="calc.ex2.total">Total tax: ₦416,400 a year (about ₦34,700 a month), an effective rate of
+              10.4%.</p>
+          </div>
+
+          <div class="tax-example-card">
+            <h3 class="tax-example-card__title" data-i18n="calc.ex3.title">Example 3: earning ₦15,000,000 a year</h3>
+            <p data-i18n="calc.ex3.body">Pension and life assurance of ₦1,200,000, plus capped rent relief of ₦500,000,
+              bring deductions to ₦1,700,000 and chargeable income to ₦13,300,000.</p>
+            <ul>
+              <li data-i18n="calc.ex3.b1">First ₦800,000 at 0%: ₦0</li>
+              <li data-i18n="calc.ex3.b2">Next ₦2,200,000 at 15%: ₦330,000</li>
+              <li data-i18n="calc.ex3.b3">Next ₦9,000,000 at 18%: ₦1,620,000</li>
+              <li data-i18n="calc.ex3.b4">Remaining ₦1,300,000 at 21%: ₦273,000</li>
+            </ul>
+            <p data-i18n="calc.ex3.total">Total tax: ₦2,223,000 a year (about ₦185,250 a month), an effective rate of
+              14.8%.</p>
+          </div>
+        </section>
+
+        <!-- ============ APPROVED DEDUCTIONS ============ -->
+        <section class="tax-section" id="tax-deductions-guide" aria-labelledby="tax-deductions-title">
+          <h2 class="section-title" id="tax-deductions-title" data-i18n="calc.relief.title">Approved Deductions &amp;
+            Reliefs</h2>
+          <div class="details-grid">
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+                </svg>
+                <h3 data-i18n="calc.d1.title">Pension contribution</h3>
+              </div>
+              <p data-i18n="calc.d1.body">Contributions to an approved pension scheme under the Pension Reform Act.
+                For employees this is usually 8% of basic, housing and transport pay.</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                </svg>
+                <h3 data-i18n="calc.d2.title">Rent relief</h3>
+              </div>
+              <p data-i18n="calc.d2.body">20% of the rent you pay on the home you live in, up to ₦500,000 for the tax
+                year.</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                </svg>
+                <h3 data-i18n="calc.d3.title">Housing and health insurance</h3>
+              </div>
+              <p data-i18n="calc.d3.body">Contributions to the National Housing Fund (NHF) and the National Health
+                Insurance Scheme (NHIS).</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                </svg>
+                <h3 data-i18n="calc.d4.title">Life assurance premiums</h3>
+              </div>
+              <p data-i18n="calc.d4.body">Premiums paid on your own or your spouse’s life to an insurer licensed in
+                Nigeria.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ NEXT STEPS ============ -->
+        <section class="tax-section" id="tax-next-steps" aria-labelledby="tax-next-title">
+          <h2 class="section-title" id="tax-next-title" data-i18n="calc.next.title">What to do after estimating your
+            tax</h2>
+          <ol class="tax-steps">
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">1</span>
+              <h3 class="tax-step__title" data-i18n="calc.next1.title">Note your figures</h3>
+              <p data-i18n="calc.next1.body">Keep a record of your estimated tax, gross income and the deductions you
+                claimed.</p>
+            </li>
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">2</span>
+              <h3 class="tax-step__title" data-i18n="tax.step2.title">Generate a payment invoice (IPN)</h3>
+              <p data-i18n="calc.next2.body">Use the official OsunIRS e-payment portal to generate an Invoice Payment
+                Number for the tax you are paying.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a class="ext-link" href="https://osun.electroniccollectionsecg.com/payments/pay-bank-pos"
+                    data-i18n="tax.step2.link">Generate an IPN</a></li>
+              </ul>
+            </li>
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">3</span>
+              <h3 class="tax-step__title" data-i18n="tax.step3.title">Pay and keep your receipt</h3>
+              <p data-i18n="calc.next3.body">Pay online, or take your IPN to a participating bank or POS in Osun State.
+                Keep your Automated Revenue Receipt.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a class="ext-link" href="https://osun.electroniccollectionsecg.com/payments/pay"
+                    data-i18n="tax.channel.online.link">Pay online</a></li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section class="tax-section" id="tax-calculator-faq" aria-labelledby="calc-faq-title">
+          <h2 class="section-title" id="calc-faq-title" data-i18n="calc.faq.title">Tax Calculation Frequently Asked
+            Questions</h2>
+          <div class="tax-faq">
+            <details>
+              <summary data-i18n="calc.faq.q1">Is this estimate binding?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="calc.faq.a1">No. It is an estimate based on the rates in the Nigeria Tax Act 2025. Your
+                  final liability is set when OsunIRS assesses your return.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="calc.faq.q2">My employer deducts PAYE. Do I still need this?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="calc.faq.a2">Yes. You can check that your payroll deductions match the 2026 rates and
+                  that your pension and rent relief are being applied, and see what you may owe on other income.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="calc.faq.q3">I am self-employed. Which tax applies to me?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="calc.faq.a3">Sole proprietors, professionals and other self-employed people pay personal
+                  income tax by Direct Assessment at the same rates, and file an annual return by 31 March.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="calc.faq.q4">How is rent relief checked?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="calc.faq.a4">Keep your tenancy agreement and proof of rent payments. OsunIRS may ask for
+                  them
+                  when it reviews your return or issues a Tax Clearance Certificate.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="calc.faq.q5">What is the difference between gross and chargeable income?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="calc.faq.a5">Gross income is everything you earn before deductions. Chargeable income is
+                  what remains after pension, rent relief and other approved deductions, and the tax bands apply only to
+                  that amount.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- ============ CONTACT OsunIRS ============ -->
+        <section class="tax-section tax-contact" aria-labelledby="tax-help-title">
+          <div>
+            <h2 class="tax-contact__title" id="tax-help-title" data-i18n="tax.help.title">Need help with your tax?</h2>
+            <p class="tax-contact__lead" data-i18n="tax.help.body">OsunIRS customer care is open Monday to Friday, 8:00
+              AM
+              –
+              5:00 PM.</p>
+          </div>
+          <ul class="tax-contact__list">
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="tax.help.email">Email</span>
+                <a class="tax-contact__value" href="mailto:info@oirs.ng">info@oirs.ng</a>
+              </div>
+            </li>
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="tax.help.office">Head office</span>
+                <span class="tax-contact__value" data-i18n="tax.help.address">Omoluabi Holdings Building, beside the
+                  State Secretariat, Abere, Osogbo</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- ============ EMERGENCY + FEEDBACK ============ -->
+      <section class="container help-row">
+        <div class="emergency" role="note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" />
+          </svg>
+          <p><span data-i18n="emergency.text">In an emergency, call</span> <a class="emergency__number"
+              href="tel:112">112</a></p>
+        </div>
+
+        <div class="feedback" id="feedback">
+          <div class="feedback__ask">
+            <p class="feedback__q" id="feedback-q" data-i18n="feedback.q">Did you find what you were looking for?</p>
+            <div class="feedback__buttons" role="group" aria-labelledby="feedback-q">
+              <button type="button" class="btn btn--outline" data-feedback="yes" data-i18n="feedback.yes">Yes</button>
+              <button type="button" class="btn btn--outline" data-feedback="no" data-i18n="feedback.no">No</button>
+            </div>
+          </div>
+          <p class="feedback__thanks" role="status" hidden data-i18n="feedback.thanks">Thank you for your feedback.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__grid">
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.contact">Contact government</h2>
+        <address>
+          <span data-i18n="footer.address1">Governor's Office, State Secretariat</span><br>
+          <span data-i18n="footer.address2">Abere, Osogbo, Osun State, Nigeria</span>
+        </address>
+        <a href="#" data-i18n="footer.message">Send us a message</a>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.about">About Osun</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.about.1">History of the state</a></li>
+          <li><a href="#" data-i18n="footer.about.2">State symbols</a></li>
+          <li><a href="#" data-i18n="footer.about.3">Local Government Areas</a></li>
+          <li><a href="#" data-i18n="footer.about.4">Newsroom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.help">Help</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.help.1">Accessibility</a></li>
+          <li><a href="#" data-i18n="footer.help.2">Privacy</a></li>
+          <li><a href="#" data-i18n="footer.help.3">Terms of use</a></li>
+          <li><a href="#" data-i18n="utility.sitemap">Site Map</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.follow">Follow us</h2>
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-2.8 0-4 2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.7 3z" />
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; <span id="year">2026</span> <span data-i18n="footer.copyright">Government of Osun State. All rights
+            reserved.</span></p>
+        <button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/index.js"></script>
+</body>
+
+</html>

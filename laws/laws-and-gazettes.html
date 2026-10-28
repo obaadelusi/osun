@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="laws.meta.title">Laws and Gazettes | Government of Osun State</title>
+  <meta name="description" data-i18n-attr="content:laws.meta.description"
+    content="Search and access consolidated Laws of Osun State, Official Government Gazettes, Executive Orders, Subsidiary Legislation and House of Assembly Bills. Request a Certified True Copy (CTC) or publish a statutory notice.">
+  <meta name="theme-color" content="#00703c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://osunstate.gov.ng/laws/laws-and-gazettes.html">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ============ OFFICIAL TOP BAR ============ -->
+  <div class="official-topbar" aria-label="Official government website" data-i18n-attr="aria-label:topbar.label">
+    <div class="container official-topbar__inner">
+      <svg class="official-topbar__flag" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"
+        focusable="false">
+        <path d="M0 0h8v16H0zM16 0h8v16h-8z" fill="#008751" />
+        <path d="M8 0h8v16H8z" fill="#ffffff" />
+        <path d="M0 0h24v16H0z" fill="none" stroke="rgba(0, 0, 0, 0.15)" stroke-width="1" />
+      </svg>
+      <span class="official-topbar__text" data-i18n="topbar.official">This is NOT the official website of the Osun State
+        Government.</span>
+    </div>
+  </div>
+
+  <!-- ============ ALERT BANNER ============ -->
+  <div class="alert" id="site-alert" role="region" aria-labelledby="alert-title">
+    <div class="container alert__inner">
+      <svg class="alert__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 1 21h22L12 2zm1 15h-2v-2h2v2zm0-4h-2V9h2v4z" />
+      </svg>
+      <p class="alert__text">
+        <strong id="alert-title" data-i18n="alert.title">Rainy season advisory:</strong>
+        <span data-i18n="alert.body">Residents in flood-prone areas are urged to keep drainage channels clear and stay
+          alert to weather updates.</span>
+        <a href="#" data-i18n="alert.link">Flood safety information</a>
+      </p>
+      <button class="alert__close" type="button" data-i18n-attr="aria-label:alert.dismiss" aria-label="Dismiss alert">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" data-i18n-attr="aria-label:brand.home"
+        aria-label="Government of Osun State home">
+        <img class="brand__emblem" src="../assets/images/osun-logo.jpg" alt="Osun State Logo" width="64" height="64">
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Ọ̀ṣun</span>
+          <span class="brand__tagline" data-i18n="brand.tagline">State of the Living Spring</span>
+        </span>
+      </a>
+
+      <div class="site-header__tools">
+        <ul class="utility-nav" aria-label="Utility" data-i18n-attr="aria-label:utility.label">
+          <li><button type="button" class="link-button" id="print-btn" data-i18n="utility.print">Printer
+              Friendly</button></li>
+          <li><button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button></li>
+          <li><a href="#contact" data-i18n="utility.contact">Contact Government</a></li>
+        </ul>
+
+        <form class="search" role="search" id="search-form" action="#" autocomplete="off">
+          <label class="visually-hidden" for="search-input" data-i18n="search.label">Search osunstate.gov.ng</label>
+          <input class="search__input" id="search-input" type="search" name="q"
+            placeholder="Search for programs and online services" data-i18n-attr="placeholder:search.placeholder"
+            aria-controls="search-suggestions" aria-autocomplete="list" aria-expanded="false">
+          <button class="search__button" type="submit" data-i18n="search.button">Search</button>
+          <ul class="search__suggestions" id="search-suggestions" role="listbox" hidden></ul>
+        </form>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span data-i18n="nav.menu">Menu</span>
+      </button>
+    </div>
+
+    <!-- ============ PRIMARY NAV ============ -->
+    <nav class="primary-nav" id="primary-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <ul class="container primary-nav__list">
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-residents"
+            data-i18n="nav.residents">Resident Online Services</button>
+          <div class="mega" id="mega-residents" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.health">Health</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.health.1">Osun Health Insurance Scheme (OHIS)</a></li>
+                  <li><a href="#" data-i18n="mega.health.2">Hospitals and primary health centres</a></li>
+                  <li><a href="#" data-i18n="mega.health.3">Immunisation</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.education">Education</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.education.1">Public schools</a></li>
+                  <li><a href="#" data-i18n="mega.education.2">Scholarships and bursaries</a></li>
+                  <li><a href="#" data-i18n="mega.education.3">Tertiary institutions</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.land">Land and housing</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.land.1">Certificate of Occupancy</a></li>
+                  <li><a href="#" data-i18n="mega.land.2">Land search and GIS</a></li>
+                  <li><a href="#" data-i18n="mega.land.3">Building permits</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.records">Records and identity</h2>
+                <ul>
+                  <li><a href="../records/register-a-birth.html" data-i18n="mega.records.1">Birth and death
+                      registration</a></li>
+                  <li><a href="#" data-i18n="mega.records.2">Certificate of state of origin</a></li>
+                  <li><a href="#" data-i18n="mega.records.3">Driver and vehicle licensing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-business"
+            data-i18n="nav.business">Business</button>
+          <div class="mega" id="mega-business" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.start">Start and grow</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.start.1">Starting a business</a></li>
+                  <li><a href="#" data-i18n="mega.start.2">Registration and permits</a></li>
+                  <li><a href="#" data-i18n="mega.start.3">Support for small businesses</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.invest">Invest in Osun</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.invest.1">Investment opportunities</a></li>
+                  <li><a href="#" data-i18n="mega.invest.2">Agriculture and agribusiness</a></li>
+                  <li><a href="#" data-i18n="mega.invest.3">Solid minerals</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.tax">Taxes and procurement</h2>
+                <ul>
+                  <li><a href="../taxes/pay-your-taxes.html" data-i18n="mega.tax.1">Pay taxes online (OSIRS)</a></li>
+                  <li><a href="../taxes/calculate-personal-income-tax.html" data-i18n="mega.tax.calc">Calculate personal
+                      income tax</a></li>
+                  <li><a href="#" data-i18n="mega.tax.2">Tax clearance certificate</a></li>
+                  <li><a href="#" data-i18n="mega.tax.3">Tenders and contracts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-government"
+            data-i18n="nav.government">Government</button>
+          <div class="mega" id="mega-government" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.exec">Executive</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.exec.1">Office of the Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.2">Office of the Deputy Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.3">State Executive Council</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.arms">Legislature and judiciary</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.arms.1">Osun State House of Assembly</a></li>
+                  <li><a href="#" data-i18n="mega.arms.2">State Judiciary</a></li>
+                  <li><a href="laws-and-gazettes.html" aria-current="page" data-i18n="mega.arms.3">Laws and gazettes</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.orgs">Organisations</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.orgs.1">Ministries, departments and agencies</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.2">Local Government Areas</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.3">Budget and open data</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-visitors"
+            data-i18n="nav.visitors">Visitors</button>
+          <div class="mega" id="mega-visitors" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.see">Places to see</h2>
+                <ul>
+                  <li><a href="../tourism/tourist.html" data-i18n="mega.see.tourist">Tourist Centres</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=osun-sacred-grove"
+                      data-i18n="mega.see.1">Osun-Osogbo Sacred Grove</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=olumirin-waterfall" data-i18n="mega.see.2">Olumirin
+                      Waterfall, Erin-Ijesha</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=oduduwa-shrine" data-i18n="mega.see.3">Ile-Ife,
+                      cradle of the Yoruba</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.events">Culture and events</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.events.1">Osun-Osogbo Festival</a></li>
+                  <li><a href="#" data-i18n="mega.events.2">Festivals calendar</a></li>
+                  <li><a href="#" data-i18n="mega.events.3">Museums and arts</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.plan">Plan your trip</h2>
+                <ul>
+                  <li><a href="../tourism/plan-your-visit.html" data-i18n="plan.cta">Plan your visit</a></li>
+                  <li><a href="#" data-i18n="mega.plan.1">Getting to Osun</a></li>
+                  <li><a href="#" data-i18n="mega.plan.2">Hotels and accommodation</a></li>
+                  <li><a href="#" data-i18n="mega.plan.3">Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main" tabindex="-1">
+    <div id="laws-and-gazettes" data-laws-page>
+      <!-- Page Header with Breadcrumbs -->
+      <div class="container page-header page-header--with-breadcrumb tax-hero">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li><a href="../index.html" data-i18n="laws.breadcrumb.home">Home</a></li>
+            <li aria-current="page"><span data-i18n="laws.title">Laws and Gazettes</span></li>
+          </ol>
+        </nav>
+
+        <div class="tax-hero__grid">
+          <div>
+            <p class="tax-hero__eyebrow" data-i18n="laws.eyebrow">Ministry of Justice, Osun State House of Assembly
+              &amp; Government Press</p>
+            <h1 class="page-title" data-i18n="laws.title">Laws and Gazettes</h1>
+            <p class="page-lead" data-i18n="laws.lead">Search and consult the consolidated Laws of Osun State, Official
+              Government Gazettes, Executive Orders, Subsidiary Legislation, and House of Assembly Bills. Request a
+              stamped Certified True Copy (CTC) for legal proceedings or publish a statutory notice in the Official
+              Gazette.</p>
+            <div class="tax-hero__actions">
+              <a class="btn btn--primary btn--lg" href="#laws-explorer" data-i18n="laws.cta.search">Search laws &amp;
+                gazettes</a>
+              <a class="btn btn--outline btn--lg" href="#gazette-services" data-i18n="laws.cta.ctc">Order CTC or publish
+                notice</a>
+            </div>
+          </div>
+          <img class="tax-hero__img" src="../assets/images/laws-gazettes-hero.svg" alt="" width="480" height="360">
+        </div>
+      </div>
+
+      <!-- On this page -->
+      <nav class="tax-toc" aria-labelledby="laws-toc-label">
+        <div class="container tax-toc__inner">
+          <p class="tax-toc__label" id="laws-toc-label" data-i18n="tax.toc.label">On this page:</p>
+          <ul>
+            <li><a href="#laws-categories" data-i18n="laws.toc.1">Legal categories</a></li>
+            <li><a href="#laws-explorer" data-i18n="laws.toc.2">Search laws &amp; gazettes</a></li>
+            <li><a href="#laws-process" data-i18n="laws.toc.3">How laws are enacted</a></li>
+            <li><a href="#gazette-services" data-i18n="laws.toc.4">Order CTC &amp; gazette notices</a></li>
+            <li><a href="#laws-fees" data-i18n="laws.toc.5">Fees &amp; timelines</a></li>
+            <li><a href="#laws-faq" data-i18n="laws.toc.6">FAQs</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <!-- ============ STATUTORY AUTHENTICITY NOTICE ============ -->
+        <div class="tax-notice" role="note" aria-labelledby="laws-notice-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+          </svg>
+          <div>
+            <h2 class="tax-notice__title" id="laws-notice-title" data-i18n="laws.notice.title">Official reference copies
+              and Certified True Copies (CTC)</h2>
+            <p data-i18n="laws.notice.body">Electronic summaries and reference texts on this portal are provided free of
+              charge for public information, civic awareness, and legal research. Pursuant to the Evidence Act and the
+              Interpretation Law of Osun State, any person tendering a State Law, Subsidiary Instrument, or Official
+              Gazette before a court of law or tribunal must obtain an authenticated Certified True Copy (CTC) from the
+              Osun State Ministry of Justice or the Government Printer in Osogbo.</p>
+          </div>
+        </div>
+
+        <!-- ============ CATEGORIES OF LEGAL INSTRUMENTS ============ -->
+        <section class="tax-section" id="laws-categories" aria-labelledby="laws-categories-title">
+          <h2 class="section-title" id="laws-categories-title" data-i18n="laws.cat.title">Categories of laws and
+            official publications</h2>
+          <p class="tax-section__lead" data-i18n="laws.cat.lead">Select a category below to filter the legislative and
+            gazette repository or learn which authority issues and certifies each instrument.</p>
+
+          <ul class="tax-types">
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="laws.cat.law.title">Principal State Laws (Cap. &amp; Acts)</h3>
+              </div>
+              <p data-i18n="laws.cat.law.desc">Consolidated statutes enacted by the Osun State House of Assembly,
+                assented to by the Governor, and codified in the Revised Edition of the Laws of Osun State of Nigeria.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="laws.custodian">Custodian</dt>
+                <dd data-i18n="laws.cat.law.custodian">Ministry of Justice &amp; House of Assembly</dd>
+                <dt data-i18n="laws.citation">Citation format</dt>
+                <dd data-i18n="laws.cat.law.citation">Cap. No. / Year of Enactment</dd>
+              </dl>
+              <a class="tax-type__link" href="#laws-explorer" data-select-category="law"
+                data-i18n="laws.cat.law.link">Browse Principal State Laws</a>
+            </li>
+
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="laws.cat.gazette.title">Official Government Gazettes</h3>
+              </div>
+              <p data-i18n="laws.cat.gazette.desc">Official periodic publications of the Osun State Government Press
+                containing newly assented laws, statutory appointments, land revocation or acquisition notices,
+                chieftaincy declarations, and legal notices.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="laws.custodian">Custodian</dt>
+                <dd data-i18n="laws.cat.gazette.custodian">Osun State Government Press (SSG's Office)</dd>
+                <dt data-i18n="laws.citation">Citation format</dt>
+                <dd data-i18n="laws.cat.gazette.citation">Osun State Gazette Vol. &amp; No.</dd>
+              </dl>
+              <a class="tax-type__link" href="#laws-explorer" data-select-category="gazette"
+                data-i18n="laws.cat.gazette.link">Browse Official Gazettes</a>
+            </li>
+
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="laws.cat.regulation.title">Executive Orders &amp; Regulations</h3>
+              </div>
+              <p data-i18n="laws.cat.regulation.desc">Subsidiary legislation, Executive Orders of the Governor, High
+                Court Civil Procedure Rules, Practice Directions, and MDA schedules made pursuant to enabling State
+                Laws.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="laws.custodian">Custodian</dt>
+                <dd data-i18n="laws.cat.regulation.custodian">Office of the Governor, Judiciary &amp; MDAs</dd>
+                <dt data-i18n="laws.citation">Citation format</dt>
+                <dd data-i18n="laws.cat.regulation.citation">E.O. No. / Legal Notice (O.S.L.N.)</dd>
+              </dl>
+              <a class="tax-type__link" href="#laws-explorer" data-select-category="regulation"
+                data-i18n="laws.cat.regulation.link">Browse Orders &amp; Regulations</a>
+            </li>
+
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="laws.cat.bill.title">House Bills &amp; LGA Bye-Laws</h3>
+              </div>
+              <p data-i18n="laws.cat.bill.desc">Executive and Member Bills before the Osun State House of Assembly open
+                for public hearing memoranda, alongside local bye-laws enacted across the 30 Local Government Areas.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="laws.custodian">Custodian</dt>
+                <dd data-i18n="laws.cat.bill.custodian">House of Assembly Clerk &amp; LGA Councils</dd>
+                <dt data-i18n="laws.citation">Citation format</dt>
+                <dd data-i18n="laws.cat.bill.citation">House Bill (HB) / LGA Bye-Law</dd>
+              </dl>
+              <a class="tax-type__link" href="#laws-explorer" data-select-category="bill"
+                data-i18n="laws.cat.bill.link">Browse Bills &amp; Bye-Laws</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ============ INTERACTIVE LAWS & GAZETTES REPOSITORY ============ -->
+        <section class="tax-section" id="laws-explorer" aria-labelledby="laws-explorer-title">
+          <h2 class="section-title" id="laws-explorer-title" data-i18n="laws.explorer.title">Search Osun State Laws and
+            Official Gazettes</h2>
+          <p class="tax-section__lead" data-i18n="laws.explorer.lead">Filter by instrument category or sector, or search
+            by title, chapter (Cap.), gazette volume, or keyword to view statutory summaries, key provisions, and official
+            citations.</p>
+
+          <div class="birth-lga-finder laws-finder" id="laws-directory">
+            <div class="birth-lga-finder__header">
+              <div class="laws-finder__controls">
+                <div class="birth-lga-finder__field">
+                  <label for="laws-category-filter" class="laws-filter-label"
+                    data-i18n="laws.explorer.categoryLabel">Instrument category</label>
+                  <select id="laws-category-filter" class="birth-select">
+                    <option value="all" data-i18n="laws.explorer.cat.all">All Instruments (Laws, Gazettes, Orders &amp;
+                      Bills)</option>
+                    <option value="law" data-i18n="laws.explorer.cat.law">Principal State Laws (Cap. &amp; Acts)
+                    </option>
+                    <option value="gazette" data-i18n="laws.explorer.cat.gazette">Official Government Gazettes</option>
+                    <option value="regulation" data-i18n="laws.explorer.cat.regulation">Executive Orders &amp;
+                      Regulations</option>
+                    <option value="bill" data-i18n="laws.explorer.cat.bill">House Bills &amp; LGA Bye-Laws</option>
+                  </select>
+                </div>
+
+                <div class="birth-lga-finder__field">
+                  <label for="laws-sector-filter" class="laws-filter-label"
+                    data-i18n="laws.explorer.sectorLabel">Subject / sector</label>
+                  <select id="laws-sector-filter" class="birth-select">
+                    <option value="all" data-i18n="laws.explorer.sec.all">All Sectors &amp; Subjects</option>
+                    <option value="finance" data-i18n="laws.explorer.sec.finance">Taxation, Budget &amp; Public
+                      Procurement</option>
+                    <option value="justice" data-i18n="laws.explorer.sec.justice">Justice, Courts &amp; Human Rights
+                    </option>
+                    <option value="governance" data-i18n="laws.explorer.sec.governance">Governance, Chieftaincy &amp;
+                      LGAs</option>
+                    <option value="social" data-i18n="laws.explorer.sec.social">Health, Education &amp; Social
+                      Protection</option>
+                    <option value="environment" data-i18n="laws.explorer.sec.environment">Land, Environment &amp;
+                      Physical Planning</option>
+                    <option value="economy" data-i18n="laws.explorer.sec.economy">Digital Economy, Energy &amp;
+                      Investment</option>
+                  </select>
+                </div>
+
+                <div class="birth-lga-finder__field laws-finder__search-field">
+                  <label for="laws-search-input" class="laws-filter-label"
+                    data-i18n="laws.explorer.searchLabel">Keyword, Cap. or Gazette reference</label>
+                  <input type="search" id="laws-search-input" class="birth-search-input"
+                    placeholder="Search e.g. Revenue, Criminal Justice, Cap. O15, Gazette Vol. 36, OHIS, Land"
+                    data-i18n-attr="placeholder:laws.explorer.searchPlaceholder" autocomplete="off">
+                </div>
+              </div>
+            </div>
+
+            <div class="laws-finder__status-bar">
+              <p id="laws-count" class="birth-lga-finder__count" role="status" aria-live="polite"></p>
+              <button type="button" id="laws-reset-filters" class="btn btn--outline btn--sm" hidden
+                data-i18n="laws.explorer.reset">Clear filters</button>
+            </div>
+
+            <div id="laws-list" class="laws-grid"></div>
+
+            <div class="birth-lga-finder__more" id="laws-more-wrap">
+              <a href="#laws-directory" id="laws-more" class="birth-lga-more-link">
+                <span data-i18n="laws.explorer.showAll">Show all laws &amp; gazettes</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                  <path
+                    d="M16.59 5.59 18 7l-6 6-6-6 1.41-1.41L12 10.17l4.59-4.58zm0 6L18 13l-6 6-6-6 1.41-1.41L12 16.17l4.59-4.58z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ HOW A BILL BECOMES LAW & GAZETTE ============ -->
+        <section class="tax-section" id="laws-process" aria-labelledby="laws-process-title">
+          <h2 class="section-title" id="laws-process-title" data-i18n="laws.process.title">How a Bill becomes Law and is
+            published in the Official Gazette</h2>
+          <p class="tax-section__lead" data-i18n="laws.process.lead">Under the Constitution of the Federal Republic of
+            Nigeria 1999 (as amended) and the Standing Orders of the Osun State House of Assembly, every State Law
+            follows a transparent three-stage constitutional process.</p>
+
+          <ol class="tax-steps">
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">1</span>
+              <h3 class="tax-step__title" data-i18n="laws.step1.title">Legislative Passage (House of Assembly)</h3>
+              <p data-i18n="laws.step1.body">An Executive Bill or Member's Bill undergoes First and Second Readings in
+                the Osun State House of Assembly, public hearings before the relevant Standing Committee where citizens
+                submit memoranda, clause-by-clause consideration in the Committee of the Whole, and Third Reading
+                passage.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a href="#laws-explorer" data-select-category="bill" data-i18n="laws.step1.link1">View current House
+                    Bills</a></li>
+              </ul>
+            </li>
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">2</span>
+              <h3 class="tax-step__title" data-i18n="laws.step2.title">Governor's Assent &amp; Enrolment</h3>
+              <p data-i18n="laws.step2.body">The Clerk of the House transmits the clean copy of the passed Bill, vetted
+                by the Directorate of Legislative Drafting in the Ministry of Justice, to the Executive Governor for
+                formal Assent. Once signed, Sealed copies are enrolled at the High Court of Justice Registry.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a href="#laws-explorer" data-select-category="law" data-i18n="laws.step2.link1">Browse enacted
+                    State Laws</a></li>
+              </ul>
+            </li>
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">3</span>
+              <h3 class="tax-step__title" data-i18n="laws.step3.title">Official Gazetting &amp; Public Access</h3>
+              <p data-i18n="laws.step3.body">The Government Printer at the Osun State Government Press publishes the
+                enacted Law, Executive Order, or Legal Notice in the Osun State of Nigeria Official Gazette with a
+                Volume and Gazette Number, making it available for public purchase and Certified True Copy issuance.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a href="#gazette-services" data-i18n="laws.step3.link1">Request a Certified True Copy (CTC)</a>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <!-- ============ INTERACTIVE GAZETTE & CTC SERVICE ESTIMATOR ============ -->
+        <section class="tax-section tax-calc" id="gazette-services" aria-labelledby="laws-service-title">
+          <div class="tax-calc__head">
+            <svg class="tax-calc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+            </svg>
+            <div>
+              <h2 class="tax-calc__title" id="laws-service-title" data-i18n="laws.service.title">Order a Certified True
+                Copy (CTC) or publish in the Official Gazette</h2>
+              <p class="tax-calc__lead" data-i18n="laws.service.lead">Select the legal or gazette service you need to
+                calculate the official statutory fee, see required supporting documents, and find the issuing office in
+                Osogbo.</p>
+            </div>
+          </div>
+
+          <div class="tax-calc__grid">
+            <form class="tax-form" id="laws-service-form" novalidate>
+              <div class="tax-field">
+                <label for="laws-service-type" data-i18n="laws.form.service">Service required</label>
+                <p class="tax-field__hint" id="laws-service-hint" data-i18n="laws.form.service.hint">Choose whether you
+                  are requesting a certified copy, publishing a notice in the Gazette, or purchasing bound volumes.</p>
+                <select id="laws-service-type" name="service_type" class="birth-select"
+                  aria-describedby="laws-service-hint">
+                  <option value="ctc" data-i18n="laws.form.service.ctc">Certified True Copy (CTC) of a State Law or
+                    Official Gazette</option>
+                  <option value="notice-name" data-i18n="laws.form.service.name">Publish Change of Name / Personal
+                    Statutory Notice in Gazette</option>
+                  <option value="notice-statutory" data-i18n="laws.form.service.statutory">Publish Land, Chieftaincy,
+                    Corporate or Legal Notice in Gazette</option>
+                  <option value="volumes" data-i18n="laws.form.service.volumes">Purchase Printed Volumes of the Revised
+                    Laws of Osun State</option>
+                </select>
+              </div>
+
+              <div class="tax-field">
+                <label for="laws-applicant-type" data-i18n="laws.form.applicant">Applicant category</label>
+                <p class="tax-field__hint" id="laws-applicant-hint" data-i18n="laws.form.applicant.hint">Determines the
+                  applicable statutory schedule and identification documents required.</p>
+                <select id="laws-applicant-type" name="applicant_type" class="birth-select"
+                  aria-describedby="laws-applicant-hint">
+                  <option value="individual" data-i18n="laws.form.applicant.individual">Individual / Citizen</option>
+                  <option value="lawyer" data-i18n="laws.form.applicant.lawyer">Legal Practitioner / Law Chamber
+                  </option>
+                  <option value="corporate" data-i18n="laws.form.applicant.corporate">Corporate Body / NGO /
+                    Institution</option>
+                  <option value="mda" data-i18n="laws.form.applicant.mda">Government MDA / Local Government Council
+                  </option>
+                </select>
+              </div>
+
+              <div class="tax-field">
+                <label for="laws-target-doc" data-i18n="laws.form.doc">Select Law, Gazette or Notice Reference</label>
+                <p class="tax-field__hint" id="laws-doc-hint" data-i18n="laws.form.doc.hint">Select a specific law or
+                  gazette from the repository, or choose general gazette publication.</p>
+                <select id="laws-target-doc" name="target_doc" class="birth-select" aria-describedby="laws-doc-hint">
+                  <option value="acjl">Osun State Administration of Criminal Justice Law (ACJL)</option>
+                  <option value="revenue-law">Osun State Revenue Administration Law (Cap. O15)</option>
+                  <option value="procurement-law">Osun State Public Procurement Law</option>
+                  <option value="ohis-law">Osun State Health Insurance Agency Law (OHIS)</option>
+                  <option value="child-rights-law">Osun State Child's Rights Law</option>
+                  <option value="vapp-law">Osun State Violence Against Persons (Prohibition) Law</option>
+                  <option value="land-use-charge">Osun State Land Use Charge Law</option>
+                  <option value="environmental-law">Osun State Environmental Protection &amp; Waste Management Law
+                  </option>
+                  <option value="chiefs-law">Osun State Chiefs Law (Chieftaincy Declarations, Cap. 25)</option>
+                  <option value="lga-law">Osun State Local Government Administration Law</option>
+                  <option value="appropriation-2026">Osun State Appropriation Law 2026 (Gazette Vol. 36, No. 1)</option>
+                  <option value="startup-digital-law">Osun State Start-up &amp; Digital Economy Law</option>
+                  <option value="electricity-law">Osun State Electricity Market &amp; Energy Law</option>
+                  <option value="high-court-rules">High Court (Civil Procedure) Rules &amp; Practice Directions Gazette
+                  </option>
+                  <option value="eo-ease-business">Executive Order on Ease of Doing Business &amp; Transparency</option>
+                  <option value="rural-roads-bill">Osun State Rural Access &amp; Road Maintenance Bill, 2026</option>
+                  <option value="custom-gazette" data-i18n="laws.form.doc.custom">Other Gazette Volume / New Statutory
+                    Notice Publication</option>
+                </select>
+              </div>
+
+              <div class="tax-field">
+                <label for="laws-copies" data-i18n="laws.form.copies">Number of certified copies / sets</label>
+                <p class="tax-field__hint" id="laws-copies-hint" data-i18n="laws.form.copies.hint">Select how many
+                  stamped copies or gazette issues you require.</p>
+                <select id="laws-copies" name="copies" class="birth-select" aria-describedby="laws-copies-hint">
+                  <option value="1">1 copy / issue</option>
+                  <option value="2">2 copies / issues</option>
+                  <option value="3">3 copies / issues</option>
+                  <option value="5">5 copies / issues</option>
+                  <option value="10">10 copies / issues</option>
+                </select>
+              </div>
+
+              <div class="tax-form__actions">
+                <button type="submit" class="btn btn--primary" data-i18n="laws.form.submit">Generate fee &amp;
+                  checklist</button>
+                <button type="reset" class="btn btn--outline" data-i18n="laws.form.reset">Reset</button>
+              </div>
+            </form>
+
+            <div class="tax-results">
+              <!-- Default overview shown before interaction -->
+              <div id="laws-service-default">
+                <h3 class="tax-results__title" id="laws-default-title" data-i18n="laws.default.title">Summary of
+                  standard Gazette &amp; CTC services</h3>
+                <div class="tax-table-wrap">
+                  <table class="tax-table" aria-labelledby="laws-default-title">
+                    <thead>
+                      <tr>
+                        <th scope="col" data-i18n="laws.default.col1">Service</th>
+                        <th scope="col" data-i18n="laws.default.col2">Issuing authority</th>
+                        <th scope="col" class="num" data-i18n="laws.default.col3">Standard fee</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" data-i18n="laws.default.r1.srv">Certified True Copy (CTC) of Law / Gazette</th>
+                        <td data-i18n="laws.default.r1.auth">Ministry of Justice / Govt. Press</td>
+                        <td class="num" data-i18n="laws.default.r1.fee">₦5,000 per copy</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="laws.default.r2.srv">Change of Name / Personal Gazette Notice</th>
+                        <td data-i18n="laws.default.r2.auth">Osun State Government Press</td>
+                        <td class="num" data-i18n="laws.default.r2.fee">₦7,500</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="laws.default.r3.srv">Corporate, Land or Chieftaincy Notice</th>
+                        <td data-i18n="laws.default.r3.auth">Government Press &amp; Ministry of Justice</td>
+                        <td class="num" data-i18n="laws.default.r3.fee">₦25,000</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="laws.default.r4.srv">Printed Set — Laws of Osun State</th>
+                        <td data-i18n="laws.default.r4.auth">Law Review Dept., Ministry of Justice</td>
+                        <td class="num" data-i18n="laws.default.r4.fee">₦120,000 / set</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="tax-results__empty" data-i18n="laws.default.empty">Select your service options and press
+                  “Generate fee &amp; checklist” to view your exact statutory fee, OsunIRS revenue head, required
+                  documents, and collection office.</p>
+              </div>
+
+              <!-- Dynamically filled by scripts/index.js -->
+              <div id="laws-service-results" hidden></div>
+            </div>
+          </div>
+
+          <div id="laws-service-status" class="visually-hidden" role="status" aria-live="polite"></div>
+        </section>
+
+        <!-- ============ STATUTORY FEES & RELATED LEGAL RESOURCES ============ -->
+        <section class="tax-section" id="laws-fees" aria-labelledby="laws-fees-title">
+          <h2 class="section-title" id="laws-fees-title" data-i18n="laws.fees.title">Statutory fees, turnaround times
+            &amp; legal resources</h2>
+          <div class="tax-split">
+            <div>
+              <div class="tax-table-wrap">
+                <table class="tax-table tax-table--dates">
+                  <caption class="visually-hidden" data-i18n="laws.fees.title">Statutory fees and processing timelines
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" data-i18n="laws.fees.col1">Gazette or legal service</th>
+                      <th scope="col" data-i18n="laws.fees.col2">Turnaround window</th>
+                      <th scope="col" data-i18n="laws.fees.col3">Statutory fee</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" data-i18n="laws.fees.1.what">Online reading &amp; citation lookup</th>
+                      <td data-i18n="laws.fees.1.when">Immediate on this portal</td>
+                      <td class="tax-table__date" data-i18n="laws.fees.1.fee">Free (₦0)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" data-i18n="laws.fees.2.what">Certified True Copy (CTC) of Law / Gazette</th>
+                      <td data-i18n="laws.fees.2.when">2 – 3 working days</td>
+                      <td class="tax-table__date" data-i18n="laws.fees.2.fee">₦5,000 / copy (Official MDA: Free)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" data-i18n="laws.fees.3.what">Gazette publication (Change of Name)</th>
+                      <td data-i18n="laws.fees.3.when">Next scheduled Gazette issue (5 – 10 working days)</td>
+                      <td class="tax-table__date" data-i18n="laws.fees.3.fee">₦7,500</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" data-i18n="laws.fees.4.what">Statutory / Land / Chieftaincy Gazette Notice</th>
+                      <td data-i18n="laws.fees.4.when">5 – 14 working days after vetting</td>
+                      <td class="tax-table__date" data-i18n="laws.fees.4.fee">₦25,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="tax-section__note" data-i18n="laws.fees.note">All statutory fees for Official Gazettes and
+                Certified True Copies are payable solely into the Osun State Government Treasury Account via an Osun
+                Internal Revenue Service (OsunIRS) Invoice Payment Number (IPN). Cash payments to individuals are
+                strictly prohibited.</p>
+            </div>
+
+            <div class="panel tax-after">
+              <h3 class="panel__title" data-i18n="laws.resources.title">Related legal &amp; justice services</h3>
+              <ul class="chevron-list">
+                <li><a href="../taxes/pay-your-taxes.html" data-i18n="laws.resources.1">Generate an OsunIRS Invoice (IPN)
+                    to pay Gazette or CTC fees</a></li>
+                <li><a href="../taxes/calculate-personal-income-tax.html" data-i18n="laws.resources.2">Calculate Personal
+                    Income Tax under the 2025/2026 Tax Law</a></li>
+                <li><a href="../records/register-a-birth.html" data-i18n="laws.resources.3">Statutory Birth Registration
+                    &amp; Age Attestation requirements</a></li>
+                <li><a href="#laws-help" data-i18n="laws.resources.4">Contact the Directorate of Citizens' Rights &amp;
+                    Public Defender</a></li>
+                <li><a href="#laws-help" data-i18n="laws.resources.5">Submit a legislative memorandum to the Osun State
+                    House of Assembly</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section class="tax-section" id="laws-faq" aria-labelledby="laws-faq-title">
+          <h2 class="section-title" id="laws-faq-title" data-i18n="laws.faq.title">Frequently asked questions</h2>
+          <div class="tax-faq">
+            <details>
+              <summary data-i18n="laws.faq.q1">Are online copies of Osun State Laws admissible in court?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="laws.faq.a1">Online summaries and digital reference copies are provided for public
+                  information and legal research. Under the Evidence Act, if you need to tender a State Law, Subsidiary
+                  Instrument, or Official Gazette in court or administrative proceedings, you should obtain a stamped
+                  Certified True Copy (CTC) from the Osun State Ministry of Justice or the Government Printer, or tender
+                  an official printed volume published by authority of the State Government.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="laws.faq.q2">How do I publish a Change of Name or statutory notice in the Osun State
+                Official Gazette?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="laws.faq.a2">First, swear to an Affidavit of Change of Name or Declaration before a High
+                  Court or Magistrate Court Registry. Next, generate an OsunIRS Invoice Payment Number (IPN) for Official
+                  Gazette publication, pay the statutory fee (₦7,500 for personal change of name), and submit your court
+                  affidavit, NIN slip, passport photograph, and payment receipt to the Government Printer at the Osun
+                  State Government Press in Osogbo.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="laws.faq.q3">How do I cite a Law of Osun State in legal documents?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="laws.faq.a3">Consolidated laws in the Revised Edition are cited by their short title and
+                  Chapter number — for example, “Osun State Revenue Administration Law, Cap. O15, Laws of Osun State of
+                  Nigeria”. Laws enacted after the last consolidated revision are cited by their short title, year of
+                  enactment, and Official Gazette Volume and Number.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="laws.faq.q4">Where can law firms, libraries, and researchers buy the bound Volumes of
+                the Laws of Osun State?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="laws.faq.a4">Official printed sets of the Revised Edition of the Laws of Osun State and
+                  annual supplements are available for purchase through the Directorate of Law Review and Legislative
+                  Drafting at the Ministry of Justice, State Secretariat, Abere, Osogbo, upon presentation of a verified
+                  OsunIRS treasury receipt.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="laws.faq.q5">How can residents or civil society groups contribute to Bills before the
+                Osun State House of Assembly?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="laws.faq.a5">After a Bill passes Second Reading in the Osun State House of Assembly, the
+                  relevant Standing Committee schedules a public hearing and invites written memoranda from residents,
+                  professional bodies, traditional institutions, and civil society organisations. Memoranda can be
+                  submitted to the Office of the Clerk at the Assembly Complex, Abere, Osogbo.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="laws.faq.q6">Where can I verify Chieftaincy Declarations or Local Government Bye-Laws?
+              </summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="laws.faq.a6">Registered Chieftaincy Declarations made under the Chiefs Law are gazetted
+                  and custodied jointly by the Ministry of Local Government and Chieftaincy Affairs, the Ministry of
+                  Justice, and the Government Press. Local Government Bye-Laws can be inspected at the respective Local
+                  Government Council Secretariat or the Government Press archive in Osogbo.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- ============ CONTACT MINISTRY OF JUSTICE & GOVERNMENT PRESS ============ -->
+        <section class="tax-section tax-contact" id="laws-help" aria-labelledby="laws-help-title">
+          <div>
+            <h2 class="tax-contact__title" id="laws-help-title" data-i18n="laws.help.title">Need help with State Laws or
+              Official Gazettes?</h2>
+            <p class="tax-contact__lead" data-i18n="laws.help.body">The Osun State Ministry of Justice, House of
+              Assembly Clerk's Office, and Government Press are open Monday to Friday, 8:00 AM – 4:00 PM.</p>
+          </div>
+          <ul class="tax-contact__list">
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="laws.help.email">Email inquiries</span>
+                <a class="tax-contact__value"
+                  href="mailto:info@justice.os.gov.ng">info@justice.os.gov.ng</a>
+              </div>
+            </li>
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="laws.help.justice">Ministry of Justice &amp; Law
+                  Review</span>
+                <span class="tax-contact__value" data-i18n="laws.help.justice.addr">Ministry of Justice Complex, State
+                  Secretariat, Gbongan–Ibadan Road, Abere, Osogbo</span>
+              </div>
+            </li>
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="laws.help.press">Government Press &amp; House of
+                  Assembly</span>
+                <span class="tax-contact__value" data-i18n="laws.help.press.addr">Osun State Government Press (Old
+                  Secretariat, Osogbo) &amp; House of Assembly Complex, Abere, Osogbo</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- ============ LAW / GAZETTE DETAIL MODAL ============ -->
+      <dialog class="itinerary-modal law-modal" id="law-detail-modal" aria-labelledby="law-modal-title">
+        <div class="itinerary-card">
+          <div class="itinerary-card__header">
+            <div>
+              <span class="itinerary-card__eyebrow" id="law-modal-badge">State Law</span>
+              <h2 id="law-modal-title">Law Title</h2>
+            </div>
+            <button type="button" class="itinerary-modal__close" data-close-law-modal
+              aria-label="Close statutory summary">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path
+                  d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z" />
+              </svg>
+            </button>
+          </div>
+          <div class="itinerary-card__body" id="law-modal-body"></div>
+          <div class="itinerary-card__footer">
+            <button type="button" class="btn btn--primary" id="law-modal-ctc-btn" data-i18n="laws.modal.ctc">Request
+              Certified True Copy (CTC)</button>
+            <button type="button" class="btn btn--outline" id="law-modal-print-btn"
+              data-i18n="laws.modal.print">Print summary</button>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- ============ EMERGENCY + FEEDBACK ============ -->
+      <section class="container help-row">
+        <div class="emergency" role="note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" />
+          </svg>
+          <p><span data-i18n="emergency.text">In an emergency, call</span> <a class="emergency__number"
+              href="tel:112">112</a></p>
+        </div>
+
+        <div class="feedback" id="feedback">
+          <div class="feedback__ask">
+            <p class="feedback__q" id="feedback-q" data-i18n="feedback.q">Did you find what you were looking for?</p>
+            <div class="feedback__buttons" role="group" aria-labelledby="feedback-q">
+              <button type="button" class="btn btn--outline" data-feedback="yes" data-i18n="feedback.yes">Yes</button>
+              <button type="button" class="btn btn--outline" data-feedback="no" data-i18n="feedback.no">No</button>
+            </div>
+          </div>
+          <p class="feedback__thanks" role="status" hidden data-i18n="feedback.thanks">Thank you for your feedback.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__grid">
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.contact">Contact government</h2>
+        <address>
+          <span data-i18n="footer.address1">Governor's Office, State Secretariat</span><br>
+          <span data-i18n="footer.address2">Abere, Osogbo, Osun State, Nigeria</span>
+        </address>
+        <a href="#" data-i18n="footer.message">Send us a message</a>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.about">About Osun</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.about.1">History of the state</a></li>
+          <li><a href="#" data-i18n="footer.about.2">State symbols</a></li>
+          <li><a href="#" data-i18n="footer.about.3">Local Government Areas</a></li>
+          <li><a href="#" data-i18n="footer.about.4">Newsroom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.help">Help</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.help.1">Accessibility</a></li>
+          <li><a href="#" data-i18n="footer.help.2">Privacy</a></li>
+          <li><a href="#" data-i18n="footer.help.3">Terms of use</a></li>
+          <li><a href="#" data-i18n="utility.sitemap">Site Map</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.follow">Follow us</h2>
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-2.8 0-4 2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.7 3z" />
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; <span id="year">2026</span> <span data-i18n="footer.copyright">Government of Osun State. All rights
+            reserved.</span></p>
+        <button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/index.js"></script>
+</body>
+
+</html>

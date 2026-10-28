@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="tax.meta.title">Pay Your Taxes | Government of Osun State</title>
+  <meta name="description" data-i18n-attr="content:tax.meta.description"
+    content="Pay personal income tax, PAYE, Direct Assessment, levies and other Osun State revenue online through the Osun Internal Revenue Service (OsunIRS). Get a Payer ID, generate an IPN, calculate your tax and find key deadlines.">
+  <meta name="theme-color" content="#00703c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ============ OFFICIAL TOP BAR ============ -->
+  <div class="official-topbar" aria-label="Official government website" data-i18n-attr="aria-label:topbar.label">
+    <div class="container official-topbar__inner">
+      <svg class="official-topbar__flag" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"
+        focusable="false">
+        <rect width="8" height="16" fill="#008751" />
+        <rect x="8" width="8" height="16" fill="#ffffff" />
+        <rect x="16" width="8" height="16" fill="#008751" />
+        <rect width="24" height="16" fill="none" stroke="rgba(0, 0, 0, 0.15)" stroke-width="1" />
+      </svg>
+      <span class="official-topbar__text" data-i18n="topbar.official">This is NOT the official website of the Osun State
+        Government.</span>
+    </div>
+  </div>
+
+  <!-- ============ ALERT BANNER ============ -->
+  <div class="alert" id="site-alert" role="region" aria-labelledby="alert-title">
+    <div class="container alert__inner">
+      <svg class="alert__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 1 21h22L12 2zm1 15h-2v-2h2v2zm0-4h-2V9h2v4z" />
+      </svg>
+      <p class="alert__text">
+        <strong id="alert-title" data-i18n="alert.title">Rainy season advisory:</strong>
+        <span data-i18n="alert.body">Residents and visitors are advised to check weather updates before embarking on
+          outdoor hiking trails.</span>
+        <a href="#" data-i18n="alert.link">Flood safety information</a>
+      </p>
+      <button class="alert__close" type="button" data-i18n-attr="aria-label:alert.dismiss" aria-label="Dismiss alert">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" data-i18n-attr="aria-label:brand.home"
+        aria-label="Government of Osun State home">
+        <img class="brand__emblem" src="../assets/images/osun-logo.jpg" alt="Osun State Logo" width="64" height="64">
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Ọ̀ṣun</span>
+          <span class="brand__tagline" data-i18n="brand.tagline">State of the Living Spring</span>
+        </span>
+      </a>
+
+      <div class="site-header__tools">
+        <ul class="utility-nav" aria-label="Utility" data-i18n-attr="aria-label:utility.label">
+          <li><button type="button" class="link-button" id="print-btn" data-i18n="utility.print">Printer
+              Friendly</button></li>
+          <li><button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button></li>
+          <li><a href="#contact" data-i18n="utility.contact">Contact Government</a></li>
+        </ul>
+
+        <form class="search" role="search" id="search-form" action="#" autocomplete="off">
+          <label class="visually-hidden" for="search-input" data-i18n="search.label">Search osunstate.gov.ng</label>
+          <input class="search__input" id="search-input" type="search" name="q"
+            placeholder="Search for programs and online services" data-i18n-attr="placeholder:search.placeholder"
+            aria-controls="search-suggestions" aria-autocomplete="list" aria-expanded="false">
+          <button class="search__button" type="submit" data-i18n="search.button">Search</button>
+          <ul class="search__suggestions" id="search-suggestions" role="listbox" hidden></ul>
+        </form>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span data-i18n="nav.menu">Menu</span>
+      </button>
+    </div>
+
+    <!-- ============ PRIMARY NAV ============ -->
+    <nav class="primary-nav" id="primary-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <ul class="container primary-nav__list">
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-residents"
+            data-i18n="nav.residents">Resident Online Services</button>
+          <div class="mega" id="mega-residents" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.health">Health</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.health.1">Osun Health Insurance Scheme (OHIS)</a></li>
+                  <li><a href="#" data-i18n="mega.health.2">Hospitals and primary health centres</a></li>
+                  <li><a href="#" data-i18n="mega.health.3">Immunisation</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.education">Education</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.education.1">Public schools</a></li>
+                  <li><a href="#" data-i18n="mega.education.2">Scholarships and bursaries</a></li>
+                  <li><a href="#" data-i18n="mega.education.3">Tertiary institutions</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.land">Land and housing</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.land.1">Certificate of Occupancy</a></li>
+                  <li><a href="#" data-i18n="mega.land.2">Land search and GIS</a></li>
+                  <li><a href="#" data-i18n="mega.land.3">Building permits</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.records">Records and identity</h2>
+                <ul>
+                  <li><a href="../records/register-a-birth.html" data-i18n="mega.records.1">Birth and death registration</a></li>
+                  <li><a href="#" data-i18n="mega.records.2">Certificate of state of origin</a></li>
+                  <li><a href="#" data-i18n="mega.records.3">Driver and vehicle licensing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-business"
+            data-i18n="nav.business">Business</button>
+          <div class="mega" id="mega-business" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.start">Start and grow</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.start.1">Starting a business</a></li>
+                  <li><a href="#" data-i18n="mega.start.2">Registration and permits</a></li>
+                  <li><a href="#" data-i18n="mega.start.3">Support for small businesses</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.invest">Invest in Osun</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.invest.1">Investment opportunities</a></li>
+                  <li><a href="#" data-i18n="mega.invest.2">Agriculture and agribusiness</a></li>
+                  <li><a href="#" data-i18n="mega.invest.3">Solid minerals</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.tax">Taxes and procurement</h2>
+                <ul>
+                  <li><a href="pay-your-taxes.html" aria-current="page" data-i18n="mega.tax.1">Pay taxes online
+                      (OSIRS)</a></li>
+                  <li><a href="calculate-personal-income-tax.html" data-i18n="mega.tax.calc">Calculate personal
+                      income tax</a></li>
+                  <li><a href="#" data-i18n="mega.tax.2">Tax clearance certificate</a></li>
+                  <li><a href="#" data-i18n="mega.tax.3">Tenders and contracts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-government"
+            data-i18n="nav.government">Government</button>
+          <div class="mega" id="mega-government" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.exec">Executive</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.exec.1">Office of the Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.2">Office of the Deputy Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.3">State Executive Council</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.arms">Legislature and judiciary</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.arms.1">Osun State House of Assembly</a></li>
+                  <li><a href="#" data-i18n="mega.arms.2">State Judiciary</a></li>
+                  <li><a href="../laws/laws-and-gazettes.html" data-i18n="mega.arms.3">Laws and gazettes</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.orgs">Organisations</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.orgs.1">Ministries, departments and agencies</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.2">Local Government Areas</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.3">Budget and open data</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-visitors"
+            data-i18n="nav.visitors">Visitors</button>
+          <div class="mega" id="mega-visitors" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.see">Places to see</h2>
+                <ul>
+                  <li><a href="../tourism/tourist.html" data-i18n="mega.see.tourist">Tourist Centres</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=osun-sacred-grove">Osun-Osogbo Sacred Grove</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=olumirin-waterfall">Olumirin Waterfall,
+                      Erin-Ijesha</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=oduduwa-shrine">Ile-Ife, cradle of the Yoruba</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.events">Culture and events</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.events.1">Osun-Osogbo Festival</a></li>
+                  <li><a href="#" data-i18n="mega.events.2">Festivals calendar</a></li>
+                  <li><a href="#" data-i18n="mega.events.3">Museums and arts</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.plan">Plan your trip</h2>
+                <ul>
+                  <li><a href="../tourism/plan-your-visit.html" data-i18n="plan.cta">Plan your visit</a></li>
+                  <li><a href="#" data-i18n="mega.plan.1">Getting to Osun</a></li>
+                  <li><a href="#" data-i18n="mega.plan.2">Hotels and accommodation</a></li>
+                  <li><a href="#" data-i18n="mega.plan.3">Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main" tabindex="-1">
+    <div id="pay-your-taxes" data-tax-page>
+      <!-- Page Header with Breadcrumbs -->
+      <div class="container page-header page-header--with-breadcrumb tax-hero">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li aria-current="page"><span data-i18n="tax.title">Pay Your Taxes</span></li>
+          </ol>
+        </nav>
+
+        <div class="tax-hero__grid">
+          <div>
+            <p class="tax-hero__eyebrow" data-i18n="tax.eyebrow">Osun Internal Revenue Service (OsunIRS)</p>
+            <h1 class="page-title" data-i18n="tax.title">Pay Your Taxes</h1>
+            <p class="page-lead" data-i18n="tax.lead">Pay personal income tax, PAYE, levies and other State revenue
+              securely online, at a bank, or at an OsunIRS tax station — and receive an automated revenue receipt.</p>
+            <div class="tax-hero__actions">
+              <a class="btn btn--primary btn--lg ext-link" href="https://osun.electroniccollectionsecg.com/payments/pay"
+                data-i18n="tax.cta.pay">Pay online now</a>
+              <a class="btn btn--outline btn--lg" href="#tax-calculator" data-i18n="tax.cta.calc">Calculate your income
+                tax</a>
+            </div>
+          </div>
+          <img class="tax-hero__img" src="../assets/images/pay-taxes-hero.svg" alt="" width="480" height="360">
+        </div>
+      </div>
+
+      <!-- On this page -->
+      <nav class="tax-toc" aria-labelledby="tax-toc-label">
+        <div class="container tax-toc__inner">
+          <p class="tax-toc__label" id="tax-toc-label" data-i18n="tax.toc.label">On this page:</p>
+          <ul>
+            <li><a href="#tax-steps" data-i18n="tax.toc.1">How to pay</a></li>
+            <li><a href="#tax-types" data-i18n="tax.toc.2">What you can pay</a></li>
+            <li><a href="#tax-calculator" data-i18n="tax.toc.3">Tax estimator</a></li>
+            <li><a href="#tax-channels" data-i18n="tax.toc.4">Ways to pay</a></li>
+            <li><a href="#tax-dates" data-i18n="tax.toc.5">Deadlines</a></li>
+            <li><a href="#tax-faq" data-i18n="tax.toc.6">FAQs</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <!-- ============ OFFICIAL CHANNELS NOTICE ============ -->
+        <div class="tax-notice" role="note" aria-labelledby="tax-notice-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+          </svg>
+          <div>
+            <h2 class="tax-notice__title" id="tax-notice-title" data-i18n="tax.notice.title">Pay only through official
+              channels</h2>
+            <p data-i18n="tax.notice.body">OsunIRS does not work through agents or third parties. Pay only on the
+              official
+              e-payment portal, at participating banks, to accredited revenue marshals or at an OsunIRS tax station —
+              and
+              always ask for your Automated Revenue Receipt.</p>
+          </div>
+        </div>
+
+        <!-- ============ HOW TO PAY: 3 STEPS ============ -->
+        <section class="tax-section" id="tax-steps" aria-labelledby="tax-steps-title">
+          <h2 class="section-title" id="tax-steps-title" data-i18n="tax.steps.title">How to pay in three steps</h2>
+          <p class="tax-section__lead" data-i18n="tax.steps.lead">Every step is completed on the official Osun State
+            e-payment portal managed by OsunIRS.</p>
+
+          <ol class="tax-steps">
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">1</span>
+              <h3 class="tax-step__title" data-i18n="tax.step1.title">Get your Payer ID</h3>
+              <p data-i18n="tax.step1.body">Your Payer ID identifies you or your business on the State revenue system.
+                If you have paid before, it is printed at the top-left of your previous revenue receipt.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a class="ext-link" href="https://osun.electroniccollectionsecg.com/taxes/apply"
+                    data-i18n="tax.step1.link1">Register for a Payer ID</a></li>
+                <li><a class="ext-link" href="https://osun.electroniccollectionsecg.com/taxes/retrieve"
+                    data-i18n="tax.step1.link2">Retrieve an existing Payer ID</a></li>
+              </ul>
+            </li>
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">2</span>
+              <h3 class="tax-step__title" data-i18n="tax.step2.title">Generate a payment invoice (IPN)</h3>
+              <p data-i18n="tax.step2.body">Enter your Payer ID, choose your tax office and the revenue item you are
+                paying — for example PAYE, revenue code 401001 — and add a narration such as “PAYE for October 2026”.
+              </p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a class="ext-link" href="https://osun.electroniccollectionsecg.com/payments/pay-bank-pos"
+                    data-i18n="tax.step2.link">Generate an IPN</a></li>
+              </ul>
+            </li>
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">3</span>
+              <h3 class="tax-step__title" data-i18n="tax.step3.title">Pay and keep your receipt</h3>
+              <p data-i18n="tax.step3.body">Pay the IPN online by card or bank transfer, or take it to a participating
+                bank or POS. Your Automated Revenue Receipt is issued once payment is confirmed.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a class="ext-link" href="https://osun.electroniccollectionsecg.com/payments/pay-with-invoice"
+                    data-i18n="tax.step3.link1">Pay with your invoice</a></li>
+                <li><a class="ext-link" href="https://ecg.ng/osunverify" data-i18n="tax.step3.link2">Verify a
+                    receipt</a></li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <!-- ============ TAX TYPES ============ -->
+        <section class="tax-section" id="tax-types" aria-labelledby="tax-types-title">
+          <h2 class="section-title" id="tax-types-title" data-i18n="tax.types.title">What are you paying?</h2>
+          <p class="tax-section__lead" data-i18n="tax.types.lead">Choose the tax or levy that applies to you to see who
+            pays it, when it is due and where to find full guidance.</p>
+
+          <ul class="tax-types">
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="tax.type.paye.title">PAYE (Pay-As-You-Earn)</h3>
+              </div>
+              <p data-i18n="tax.type.paye.desc">Income tax deducted from employees’ salaries each month and remitted
+                to OsunIRS by the employer.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="tax.who">Who pays</dt>
+                <dd data-i18n="tax.type.paye.who">Employers, on behalf of their staff</dd>
+                <dt data-i18n="tax.due">When due</dt>
+                <dd data-i18n="tax.type.paye.due">By the 10th of the following month</dd>
+              </dl>
+              <a class="tax-type__link ext-link" href="https://irs.os.gov.ng/pay-as-you-earn/"
+                data-i18n="tax.type.paye.link">PAYE guidance</a>
+            </li>
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="tax.type.da.title">Direct Assessment</h3>
+              </div>
+              <p data-i18n="tax.type.da.desc">Self-assessed income tax: work out your tax, pay at a designated bank or
+                online, and receive an e-TCC without visiting a tax office.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="tax.who">Who pays</dt>
+                <dd data-i18n="tax.type.da.who">Self-employed people, traders and professionals</dd>
+                <dt data-i18n="tax.due">When due</dt>
+                <dd data-i18n="tax.type.da.due">Annual return by 31 March</dd>
+              </dl>
+              <a class="tax-type__link ext-link" href="https://irs.os.gov.ng/tax-schedule/direct-assesment/"
+                data-i18n="tax.type.da.link">Direct Assessment guidance</a>
+            </li>
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="tax.type.hb.title">Harmonised Bill (business levies)</h3>
+              </div>
+              <p data-i18n="tax.type.hb.desc">Pay all ministry, department and agency annual levies in one bill.
+                Certificates and receipts are sent to your registered email address.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="tax.who">Who pays</dt>
+                <dd data-i18n="tax.type.hb.who">Businesses and organisations</dd>
+                <dt data-i18n="tax.due">When due</dt>
+                <dd data-i18n="tax.type.hb.due">Yearly, as stated on your bill</dd>
+              </dl>
+              <a class="tax-type__link ext-link" href="https://ecg.ng/requestosunbill"
+                data-i18n="tax.type.hb.link">Request
+                your harmonised bill</a>
+            </li>
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="tax.type.luc.title">Land Use Charge</h3>
+              </div>
+              <p data-i18n="tax.type.luc.desc">A single charge that consolidates property tax, tenement rate and ground
+                rent payable in the State.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="tax.who">Who pays</dt>
+                <dd data-i18n="tax.type.luc.who">Property owners and occupiers</dd>
+                <dt data-i18n="tax.due">When due</dt>
+                <dd data-i18n="tax.type.luc.due">As stated on your demand notice</dd>
+              </dl>
+              <a class="tax-type__link ext-link" href="https://irs.os.gov.ng/tax-schedule/land-use-charge/"
+                data-i18n="tax.type.luc.link">Land Use Charge guidance</a>
+            </li>
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="tax.type.sd.title">Stamp Duty</h3>
+              </div>
+              <p data-i18n="tax.type.sd.desc">A tax on written documents and certain transactions between individuals,
+                such as tenancy agreements and sale deeds.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="tax.who">Who pays</dt>
+                <dd data-i18n="tax.type.sd.who">Individuals who sign qualifying documents</dd>
+                <dt data-i18n="tax.due">When due</dt>
+                <dd data-i18n="tax.type.sd.due">When the document is signed</dd>
+              </dl>
+              <a class="tax-type__link ext-link" href="https://irs.os.gov.ng/stamp-dutY"
+                data-i18n="tax.type.sd.link">Stamp
+                Duty guidance</a>
+            </li>
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="tax.type.mv.title">Motor Vehicle Licensing</h3>
+              </div>
+              <p data-i18n="tax.type.mv.desc">Vehicle licence, registration and related fees for vehicles in Osun
+                State.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="tax.who">Who pays</dt>
+                <dd data-i18n="tax.type.mv.who">Vehicle owners</dd>
+                <dt data-i18n="tax.due">When due</dt>
+                <dd data-i18n="tax.type.mv.due">On registration and at each renewal</dd>
+              </dl>
+              <a class="tax-type__link ext-link" href="https://irs.os.gov.ng/motor-vehicle-licensing"
+                data-i18n="tax.type.mv.link">View licensing fees</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ============ INCOME TAX ESTIMATOR TEASER ============ -->
+        <section class="tax-section tax-calc tax-calc--teaser" id="tax-calculator" aria-labelledby="tax-calc-title">
+          <div class="tax-calc__head">
+            <svg class="tax-calc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5.97 4.06L14.09 6l1.41 1.41L16.91 6l1.06 1.06-1.41 1.41 1.41 1.41-1.06 1.06-1.41-1.4-1.41 1.41-1.06-1.06 1.41-1.41-1.41-1.42zm-6.78.66h5v1.5h-5v-1.5zM11.5 16h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2V16zm6.5 1.25h-5v-1.5h5v1.5zm0-2.5h-5v-1.5h5v1.5z" />
+            </svg>
+            <div>
+              <h2 class="tax-calc__title" id="tax-calc-title" data-i18n="tax.calc.title">Calculate your personal income
+                tax</h2>
+              <p class="tax-calc__lead" data-i18n="tax.calc.lead">Uses the personal income tax rates in the Nigeria Tax
+                Act 2025, in force from 1 January 2026.</p>
+            </div>
+          </div>
+          <div class="tax-calc__teaser-action">
+            <a class="btn btn--primary btn--lg" href="calculate-personal-income-tax.html" data-i18n="tax.calc.view">View
+              tax calculator</a>
+          </div>
+        </section>
+
+        <!-- ============ WAYS TO PAY ============ -->
+        <section class="tax-section" id="tax-channels" aria-labelledby="tax-channels-title">
+          <h2 class="section-title" id="tax-channels-title" data-i18n="tax.channels.title">Ways to pay</h2>
+          <div class="details-grid tax-channels">
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                </svg>
+                <h3 data-i18n="tax.channel.online.title">Online</h3>
+              </div>
+              <p data-i18n="tax.channel.online.body">Pay your taxes instantly by debit card or internet banking on the
+                official e-payment portal. Use your IPN.</p>
+              <a class="tax-channel__link ext-link" href="https://osun.electroniccollectionsecg.com/payments/pay"
+                data-i18n="tax.channel.online.link">Pay online</a>
+            </div>
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z" />
+                </svg>
+                <h3 data-i18n="tax.channel.bank.title">Bank or POS</h3>
+              </div>
+              <p data-i18n="tax.channel.bank.body">Take your printed IPN to any participating bank branch in Osun State,
+                or pay at an accredited OsunIRS POS terminal.</p>
+              <a class="tax-channel__link ext-link"
+                href="https://osun.electroniccollectionsecg.com/payments/pay-bank-pos"
+                data-i18n="tax.channel.bank.link">Generate an IPN for the bank</a>
+            </div>
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" />
+                </svg>
+                <h3 data-i18n="tax.channel.station.title">OsunIRS tax station</h3>
+              </div>
+              <p data-i18n="tax.channel.station.body">Visit a tax station for help with registration, assessments,
+                payments and Tax Clearance Certificates.</p>
+              <a class="tax-channel__link ext-link" href="https://irs.os.gov.ng/tax-stations/"
+                data-i18n="tax.channel.station.link">Find your nearest tax station</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ DEADLINES + AFTER YOU PAY ============ -->
+        <section class="tax-section" id="tax-dates" aria-labelledby="tax-dates-title">
+          <h2 class="section-title" id="tax-dates-title" data-i18n="tax.dates.title">Key deadlines</h2>
+          <div class="tax-split">
+            <div>
+              <div class="tax-table-wrap">
+                <table class="tax-table tax-table--dates">
+                  <caption class="visually-hidden" data-i18n="tax.dates.title">Key deadlines</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" data-i18n="tax.dates.col1">Obligation</th>
+                      <th scope="col" data-i18n="tax.dates.col2">Who</th>
+                      <th scope="col" data-i18n="tax.dates.col3">Deadline</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" data-i18n="tax.dates.1.what">Monthly PAYE remittance</th>
+                      <td data-i18n="tax.dates.1.who">Employers</td>
+                      <td class="tax-table__date" data-i18n="tax.dates.1.when">10th of the following month</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" data-i18n="tax.dates.2.what">Employer annual returns (Form H1)</th>
+                      <td data-i18n="tax.dates.2.who">Employers</td>
+                      <td class="tax-table__date" data-i18n="tax.dates.2.when">31 January</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" data-i18n="tax.dates.3.what">Individual annual tax return</th>
+                      <td data-i18n="tax.dates.3.who">Taxable individuals, including the self-employed</td>
+                      <td class="tax-table__date" data-i18n="tax.dates.3.when">31 March</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="tax-section__note" data-i18n="tax.dates.note">Late filing or late payment attracts penalties
+                and interest under the Nigeria Tax Administration Act 2025.</p>
+            </div>
+
+            <div class="panel tax-after">
+              <h3 class="panel__title" data-i18n="tax.after.title">After you pay</h3>
+              <ul class="chevron-list">
+                <li><a class="ext-link" href="https://ecg.ng/osunverify" data-i18n="tax.after.1">Verify your receipt or
+                    Tax Clearance Certificate</a></li>
+                <li><a class="ext-link" href="https://osunstate.ecg.ng/osun-state-receipt-verification-application/"
+                    data-i18n="tax.after.2">Download the receipt verification app</a></li>
+                <li><a class="ext-link" href="https://irs.os.gov.ng/individual-annual-tax-returns/"
+                    data-i18n="tax.after.3">File an individual annual tax return</a></li>
+                <li><a class="ext-link" href="https://irs.os.gov.ng/annual-returns/" data-i18n="tax.after.4">File
+                    employer and corporate annual returns</a></li>
+                <li><a class="ext-link" href="https://taxid.nrs.gov.ng/" data-i18n="tax.after.5">Apply for a Tax
+                    ID</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section class="tax-section" id="tax-faq" aria-labelledby="tax-faq-title">
+          <h2 class="section-title" id="tax-faq-title" data-i18n="tax.faq.title">Frequently asked questions</h2>
+          <div class="tax-faq">
+            <details>
+              <summary data-i18n="tax.faq.q1">What is a Payer ID and where do I find mine?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="tax.faq.a1">A Payer ID is your unique number on the Osun State revenue system. It is
+                  printed at the top-left of any automated revenue receipt you have received before. If you have never
+                  paid, register for one on the e-payment portal; if you have lost it, use “Retrieve your Payer ID”.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="tax.faq.q2">What is an IPN?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="tax.faq.a2">An IPN (Invoice Payment Number) is a payment invoice generated for a specific
+                  revenue item and amount. Banks and the online portal use it to credit your payment to the right
+                  account, so always pay against an IPN.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="tax.faq.q3">My employer deducts PAYE. Do I still need to file a return?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="tax.faq.a3">Your employer remits and files returns for the PAYE it deducts. If you also
+                  earn other income — such as rent, a business or freelance work — you must file your own annual return
+                  by 31 March and pay any extra tax through Direct Assessment.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="tax.faq.q4">Will I pay any income tax on a low income?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="tax.faq.a4">From 1 January 2026, the first ₦800,000 of annual chargeable income is taxed
+                  at
+                  0%, so many low-income earners pay no personal income tax. Use the estimator above to check your
+                  position.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="tax.faq.q5">I paid but did not receive a receipt. What should I do?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="tax.faq.a5">Keep your bank teller or transfer evidence and contact OsunIRS customer care
+                  with
+                  your IPN and payment reference. Once the payment is confirmed you can verify and download your receipt
+                  online.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="tax.faq.q6">How do I get a Tax Clearance Certificate (TCC)?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="tax.faq.a6">When your tax for the preceding three years has been assessed and paid, apply
+                  to OsunIRS for an electronic TCC. Anyone you give it to can check that it is genuine on the OsunIRS
+                  verification portal.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- ============ CONTACT OsunIRS ============ -->
+        <section class="tax-section tax-contact" aria-labelledby="tax-help-title">
+          <div>
+            <h2 class="tax-contact__title" id="tax-help-title" data-i18n="tax.help.title">Need help with your tax?</h2>
+            <p class="tax-contact__lead" data-i18n="tax.help.body">OsunIRS customer care is open Monday to Friday, 8:00
+              AM
+              –
+              5:00 PM.</p>
+          </div>
+          <ul class="tax-contact__list">
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="tax.help.email">Email</span>
+                <a class="tax-contact__value" href="mailto:info@oirs.ng">info@oirs.ng</a>
+              </div>
+            </li>
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="tax.help.office">Head office</span>
+                <span class="tax-contact__value" data-i18n="tax.help.address">Omoluabi Holdings Building, beside the
+                  State Secretariat, Abere, Osogbo</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- ============ EMERGENCY + FEEDBACK ============ -->
+      <section class="container help-row">
+        <div class="emergency" role="note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" />
+          </svg>
+          <p><span data-i18n="emergency.text">In an emergency, call</span> <a class="emergency__number"
+              href="tel:112">112</a></p>
+        </div>
+
+        <div class="feedback" id="feedback">
+          <div class="feedback__ask">
+            <p class="feedback__q" id="feedback-q" data-i18n="feedback.q">Did you find what you were looking for?</p>
+            <div class="feedback__buttons" role="group" aria-labelledby="feedback-q">
+              <button type="button" class="btn btn--outline" data-feedback="yes" data-i18n="feedback.yes">Yes</button>
+              <button type="button" class="btn btn--outline" data-feedback="no" data-i18n="feedback.no">No</button>
+            </div>
+          </div>
+          <p class="feedback__thanks" role="status" hidden data-i18n="feedback.thanks">Thank you for your feedback.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__grid">
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.contact">Contact government</h2>
+        <address>
+          <span data-i18n="footer.address1">Governor's Office, State Secretariat</span><br>
+          <span data-i18n="footer.address2">Abere, Osogbo, Osun State, Nigeria</span>
+        </address>
+        <a href="#" data-i18n="footer.message">Send us a message</a>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.about">About Osun</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.about.1">History of the state</a></li>
+          <li><a href="#" data-i18n="footer.about.2">State symbols</a></li>
+          <li><a href="#" data-i18n="footer.about.3">Local Government Areas</a></li>
+          <li><a href="#" data-i18n="footer.about.4">Newsroom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.help">Help</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.help.1">Accessibility</a></li>
+          <li><a href="#" data-i18n="footer.help.2">Privacy</a></li>
+          <li><a href="#" data-i18n="footer.help.3">Terms of use</a></li>
+          <li><a href="#" data-i18n="utility.sitemap">Site Map</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.follow">Follow us</h2>
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-2.8 0-4 2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.7 3z" />
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; <span id="year">2026</span> <span data-i18n="footer.copyright">Government of Osun State. All rights
+            reserved.</span></p>
+        <button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/index.js"></script>
+</body>
+
+</html>

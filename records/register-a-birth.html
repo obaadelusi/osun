@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="birth.meta.title">Register a Birth | Government of Osun State</title>
+  <meta name="description" data-i18n-attr="content:birth.meta.description"
+    content="Register a birth in Osun State, obtain an official National Population Commission (NPC) birth certificate or adult birth attestation on the e-CRVS portal, check required documents and find LGA registration centres.">
+  <meta name="theme-color" content="#00703c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://osunstate.gov.ng/records/register-a-birth.html">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ============ OFFICIAL TOP BAR ============ -->
+  <div class="official-topbar" aria-label="Official government website" data-i18n-attr="aria-label:topbar.label">
+    <div class="container official-topbar__inner">
+      <svg class="official-topbar__flag" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"
+        focusable="false">
+        <path d="M0 0h8v16H0zM16 0h8v16h-8z" fill="#008751" />
+        <path d="M8 0h8v16H8z" fill="#ffffff" />
+        <path d="M0 0h24v16H0z" fill="none" stroke="rgba(0, 0, 0, 0.15)" stroke-width="1" />
+      </svg>
+      <span class="official-topbar__text" data-i18n="topbar.official">This is NOT the official website of the Osun State
+        Government.</span>
+    </div>
+  </div>
+
+  <!-- ============ ALERT BANNER ============ -->
+  <div class="alert" id="site-alert" role="region" aria-labelledby="alert-title">
+    <div class="container alert__inner">
+      <svg class="alert__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 1 21h22L12 2zm1 15h-2v-2h2v2zm0-4h-2V9h2v4z" />
+      </svg>
+      <p class="alert__text">
+        <strong id="alert-title" data-i18n="alert.title">Rainy season advisory:</strong>
+        <span data-i18n="alert.body">Residents in flood-prone areas are urged to keep drainage channels clear and stay
+          alert to weather updates.</span>
+        <a href="#" data-i18n="alert.link">Flood safety information</a>
+      </p>
+      <button class="alert__close" type="button" data-i18n-attr="aria-label:alert.dismiss" aria-label="Dismiss alert">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" data-i18n-attr="aria-label:brand.home"
+        aria-label="Government of Osun State home">
+        <img class="brand__emblem" src="../assets/images/osun-logo.jpg" alt="Osun State Logo" width="64" height="64">
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Ọ̀ṣun</span>
+          <span class="brand__tagline" data-i18n="brand.tagline">State of the Living Spring</span>
+        </span>
+      </a>
+
+      <div class="site-header__tools">
+        <ul class="utility-nav" aria-label="Utility" data-i18n-attr="aria-label:utility.label">
+          <li><button type="button" class="link-button" id="print-btn" data-i18n="utility.print">Printer
+              Friendly</button></li>
+          <li><button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button></li>
+          <li><a href="#contact" data-i18n="utility.contact">Contact Government</a></li>
+        </ul>
+
+        <form class="search" role="search" id="search-form" action="#" autocomplete="off">
+          <label class="visually-hidden" for="search-input" data-i18n="search.label">Search osunstate.gov.ng</label>
+          <input class="search__input" id="search-input" type="search" name="q"
+            placeholder="Search for programs and online services" data-i18n-attr="placeholder:search.placeholder"
+            aria-controls="search-suggestions" aria-autocomplete="list" aria-expanded="false">
+          <button class="search__button" type="submit" data-i18n="search.button">Search</button>
+          <ul class="search__suggestions" id="search-suggestions" role="listbox" hidden></ul>
+        </form>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span data-i18n="nav.menu">Menu</span>
+      </button>
+    </div>
+
+    <!-- ============ PRIMARY NAV ============ -->
+    <nav class="primary-nav" id="primary-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <ul class="container primary-nav__list">
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-residents"
+            data-i18n="nav.residents">Resident Online Services</button>
+          <div class="mega" id="mega-residents" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.health">Health</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.health.1">Osun Health Insurance Scheme (OHIS)</a></li>
+                  <li><a href="#" data-i18n="mega.health.2">Hospitals and primary health centres</a></li>
+                  <li><a href="#" data-i18n="mega.health.3">Immunisation</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.education">Education</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.education.1">Public schools</a></li>
+                  <li><a href="#" data-i18n="mega.education.2">Scholarships and bursaries</a></li>
+                  <li><a href="#" data-i18n="mega.education.3">Tertiary institutions</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.land">Land and housing</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.land.1">Certificate of Occupancy</a></li>
+                  <li><a href="#" data-i18n="mega.land.2">Land search and GIS</a></li>
+                  <li><a href="#" data-i18n="mega.land.3">Building permits</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.records">Records and identity</h2>
+                <ul>
+                  <li><a href="register-a-birth.html" aria-current="page" data-i18n="mega.records.1">Birth and death
+                      registration</a></li>
+                  <li><a href="#" data-i18n="mega.records.2">Certificate of state of origin</a></li>
+                  <li><a href="#" data-i18n="mega.records.3">Driver and vehicle licensing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-business"
+            data-i18n="nav.business">Business</button>
+          <div class="mega" id="mega-business" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.start">Start and grow</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.start.1">Starting a business</a></li>
+                  <li><a href="#" data-i18n="mega.start.2">Registration and permits</a></li>
+                  <li><a href="#" data-i18n="mega.start.3">Support for small businesses</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.invest">Invest in Osun</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.invest.1">Investment opportunities</a></li>
+                  <li><a href="#" data-i18n="mega.invest.2">Agriculture and agribusiness</a></li>
+                  <li><a href="#" data-i18n="mega.invest.3">Solid minerals</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.tax">Taxes and procurement</h2>
+                <ul>
+                  <li><a href="../taxes/pay-your-taxes.html" data-i18n="mega.tax.1">Pay taxes online (OSIRS)</a></li>
+                  <li><a href="../taxes/calculate-personal-income-tax.html" data-i18n="mega.tax.calc">Calculate personal
+                      income tax</a></li>
+                  <li><a href="#" data-i18n="mega.tax.2">Tax clearance certificate</a></li>
+                  <li><a href="#" data-i18n="mega.tax.3">Tenders and contracts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-government"
+            data-i18n="nav.government">Government</button>
+          <div class="mega" id="mega-government" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.exec">Executive</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.exec.1">Office of the Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.2">Office of the Deputy Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.3">State Executive Council</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.arms">Legislature and judiciary</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.arms.1">Osun State House of Assembly</a></li>
+                  <li><a href="#" data-i18n="mega.arms.2">State Judiciary</a></li>
+                  <li><a href="../laws/laws-and-gazettes.html" data-i18n="mega.arms.3">Laws and gazettes</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.orgs">Organisations</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.orgs.1">Ministries, departments and agencies</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.2">Local Government Areas</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.3">Budget and open data</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-visitors"
+            data-i18n="nav.visitors">Visitors</button>
+          <div class="mega" id="mega-visitors" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.see">Places to see</h2>
+                <ul>
+                  <li><a href="../tourism/tourist.html" data-i18n="mega.see.tourist">Tourist Centres</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=osun-sacred-grove"
+                      data-i18n="mega.see.1">Osun-Osogbo Sacred Grove</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=olumirin-waterfall" data-i18n="mega.see.2">Olumirin
+                      Waterfall, Erin-Ijesha</a></li>
+                  <li><a href="../tourism/plan-your-visit.html?site=oduduwa-shrine" data-i18n="mega.see.3">Ile-Ife,
+                      cradle of the Yoruba</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.events">Culture and events</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.events.1">Osun-Osogbo Festival</a></li>
+                  <li><a href="#" data-i18n="mega.events.2">Festivals calendar</a></li>
+                  <li><a href="#" data-i18n="mega.events.3">Museums and arts</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.plan">Plan your trip</h2>
+                <ul>
+                  <li><a href="../tourism/plan-your-visit.html" data-i18n="plan.cta">Plan your visit</a></li>
+                  <li><a href="#" data-i18n="mega.plan.1">Getting to Osun</a></li>
+                  <li><a href="#" data-i18n="mega.plan.2">Hotels and accommodation</a></li>
+                  <li><a href="#" data-i18n="mega.plan.3">Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main" tabindex="-1">
+    <div id="register-a-birth" data-birth-page>
+      <!-- Page Header with Breadcrumbs -->
+      <div class="container page-header page-header--with-breadcrumb tax-hero">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li><a href="../index.html" data-i18n="birth.breadcrumb.home">Home</a></li>
+            <li aria-current="page"><span data-i18n="birth.title">Register a Birth</span></li>
+          </ol>
+        </nav>
+
+        <div class="tax-hero__grid">
+          <div>
+            <p class="tax-hero__eyebrow" data-i18n="birth.eyebrow">National Population Commission (NPC) &amp; Osun State
+              Ministry of Health</p>
+            <h1 class="page-title" data-i18n="birth.title">Register a Birth</h1>
+            <p class="page-lead" data-i18n="birth.lead">Register a newborn or child in Osun State free of charge, apply
+              for an adult Certificate of Birth Attestation on the official e-CRVS portal, check required documents, and
+              find accredited registration centres across all 30 Local Government Areas.</p>
+            <div class="tax-hero__actions">
+              <a class="btn btn--primary btn--lg" href="#birth-checker" data-i18n="birth.cta.checker">Check what you
+                need</a>
+              <a class="btn btn--outline btn--lg ext-link" href="https://ecrvs.nationalpopulation.gov.ng/"
+                data-i18n="birth.cta.online">Register on e-CRVS portal</a>
+            </div>
+          </div>
+          <img class="tax-hero__img" src="../assets/images/register-birth-hero.svg" alt="" width="480" height="360">
+        </div>
+      </div>
+
+      <!-- On this page -->
+      <nav class="tax-toc" aria-labelledby="birth-toc-label">
+        <div class="container tax-toc__inner">
+          <p class="tax-toc__label" id="birth-toc-label" data-i18n="tax.toc.label">On this page:</p>
+          <ul>
+            <li><a href="#birth-steps" data-i18n="birth.toc.1">How to register</a></li>
+            <li><a href="#birth-categories" data-i18n="birth.toc.2">Who &amp; what to register</a></li>
+            <li><a href="#birth-checker" data-i18n="birth.toc.3">Requirements checker</a></li>
+            <li><a href="#birth-centres" data-i18n="birth.toc.4">Registration centres</a></li>
+            <li><a href="#birth-timelines" data-i18n="birth.toc.5">Timelines &amp; fees</a></li>
+            <li><a href="#birth-faq" data-i18n="birth.toc.6">FAQs</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <!-- ============ STATUTORY FREE REGISTRATION NOTICE ============ -->
+        <div class="tax-notice" role="note" aria-labelledby="birth-notice-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+          </svg>
+          <div>
+            <h2 class="tax-notice__title" id="birth-notice-title" data-i18n="birth.notice.title">Register within 60 days
+              — child birth registration is free</h2>
+            <p data-i18n="birth.notice.body">Under the Births, Deaths, etc. (Compulsory Registration) Act, every child
+              born in Osun State must be registered within 60 days of birth. Registration of newborns and children at
+              National Population Commission (NPC) desks and public health facilities is free of charge. Do not pay
+              unaccredited agents, and ensure you receive a verifiable NPC Certificate of Birth.</p>
+          </div>
+        </div>
+
+        <!-- ============ HOW TO REGISTER: 3 STEPS ============ -->
+        <section class="tax-section" id="birth-steps" aria-labelledby="birth-steps-title">
+          <h2 class="section-title" id="birth-steps-title" data-i18n="birth.steps.title">How to register a birth in
+            three steps</h2>
+          <p class="tax-section__lead" data-i18n="birth.steps.lead">Birth registration in Osun State is digitised on the
+            National Population Commission electronic Civil Registration and Vital Statistics (e-CRVS) platform and
+            linked with the National Identification Number (NIN).</p>
+
+          <ol class="tax-steps">
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">1</span>
+              <h3 class="tax-step__title" data-i18n="birth.step1.title">Get a Birth Notification and Parent's NIN</h3>
+              <p data-i18n="birth.step1.body">Collect the medical Birth Notification slip from the hospital, Primary
+                Health Centre, or maternity clinic where the baby was delivered. At least one parent or legal informant
+                must have a valid 11-digit National Identification Number (NIN).</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a class="ext-link" href="https://nimc.gov.ng/nimc-enrolment-centres/"
+                    data-i18n="birth.step1.link1">Find a NIN enrolment centre (NIMC)</a></li>
+                <li><a href="#birth-checker" data-i18n="birth.step1.link2">Check documents for home deliveries</a></li>
+              </ul>
+            </li>
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">2</span>
+              <h3 class="tax-step__title" data-i18n="birth.step2.title">Pre-register online or visit an NPC centre</h3>
+              <p data-i18n="birth.step2.body">Begin your application on the official NPC e-CRVS (VitalReg) self-service
+                portal, or present your Birth Notification slip and NIN to an accredited NPC Registrar at your hospital,
+                Primary Health Centre, or Local Government Secretariat.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a class="ext-link" href="https://ecrvs.nationalpopulation.gov.ng/"
+                    data-i18n="birth.step2.link1">Start on NPC e-CRVS portal</a></li>
+                <li><a href="#birth-centres" data-i18n="birth.step2.link2">Find an Osun LGA registration desk</a></li>
+              </ul>
+            </li>
+            <li class="tax-step">
+              <span class="tax-step__num" aria-hidden="true">3</span>
+              <h3 class="tax-step__title" data-i18n="birth.step3.title">Collect and verify your Birth Certificate</h3>
+              <p data-i18n="birth.step3.body">Once the Registrar verifies and approves the record, the birth is entered
+                into the National Civil Register and an official digital and printable Certificate of Birth with a QR
+                verification code is issued.</p>
+              <ul class="chevron-list chevron-list--compact tax-step__links">
+                <li><a class="ext-link" href="https://ecrvs.nationalpopulation.gov.ng/"
+                    data-i18n="birth.step3.link1">Download or verify a certificate</a></li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <!-- ============ REGISTRATION CATEGORIES ============ -->
+        <section class="tax-section" id="birth-categories" aria-labelledby="birth-categories-title">
+          <h2 class="section-title" id="birth-categories-title" data-i18n="birth.cat.title">Which registration service
+            do you need?</h2>
+          <p class="tax-section__lead" data-i18n="birth.cat.lead">Select the category that matches the age of the person
+            being registered to see who can apply, statutory fees, and required supporting documents.</p>
+
+          <ul class="tax-types">
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2c2.76 0 5 2.24 5 5 0 2.05-1.23 3.81-3 4.58V14h3v2h-3v6h-4v-6H7v-2h3v-2.42C8.23 10.81 7 9.05 7 7c0-2.76 2.24-5 5-5zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="birth.cat.newborn.title">Newborn Registration (0 – 60 days)</h3>
+              </div>
+              <p data-i18n="birth.cat.newborn.desc">Standard compulsory registration for babies within 60 days of
+                delivery at a hospital, Primary Health Centre, maternity clinic, or home in Osun State.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="birth.who">Who applies</dt>
+                <dd data-i18n="birth.cat.newborn.who">Mother, father or authorised informant</dd>
+                <dt data-i18n="birth.fee">Statutory fee</dt>
+                <dd data-i18n="birth.cat.newborn.fee">Free (₦0)</dd>
+              </dl>
+              <a class="tax-type__link" href="#birth-checker" data-select-age="newborn"
+                data-i18n="birth.cat.newborn.link">View newborn requirements</a>
+            </li>
+
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="birth.cat.child.title">Child &amp; Minor Registration (61 days –
+                  17 years)</h3>
+              </div>
+              <p data-i18n="birth.cat.child.desc">Late registration for infants, school-age children, and minors under
+                18 years whose birth was not registered within the initial 60-day window.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="birth.who">Who applies</dt>
+                <dd data-i18n="birth.cat.child.who">Parents or legal guardian</dd>
+                <dt data-i18n="birth.fee">Statutory fee</dt>
+                <dd data-i18n="birth.cat.child.fee">Free at NPC &amp; PHC centres (court affidavit if required)</dd>
+              </dl>
+              <a class="tax-type__link" href="#birth-checker" data-select-age="minor"
+                data-i18n="birth.cat.child.link">View child &amp; minor requirements</a>
+            </li>
+
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="birth.cat.adult.title">Adult Birth Attestation (18 years &amp;
+                  above)</h3>
+              </div>
+              <p data-i18n="birth.cat.adult.desc">Official Certificate of Birth Attestation for adults aged 18 and older
+                whose birth was not registered at childhood. Required for Nigerian passports, visas, employment, and
+                civil service verification.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="birth.who">Who applies</dt>
+                <dd data-i18n="birth.cat.adult.who">Adults aged 18 years and older</dd>
+                <dt data-i18n="birth.fee">Statutory fee</dt>
+                <dd data-i18n="birth.cat.adult.fee">Official NPC portal fee via Remita</dd>
+              </dl>
+              <a class="tax-type__link" href="#birth-checker" data-select-age="adult"
+                data-i18n="birth.cat.adult.link">View Birth Attestation requirements</a>
+            </li>
+
+            <li class="tax-type">
+              <div class="tax-type__head">
+                <svg class="tax-type__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4H6z" />
+                </svg>
+                <h3 class="tax-type__title" data-i18n="birth.cat.replace.title">Certified True Copy &amp; Verification
+                </h3>
+              </div>
+              <p data-i18n="birth.cat.replace.desc">Digitise an older paper NPC birth certificate, verify certificate
+                authenticity, or apply for a Certified True Copy if your original certificate was lost or damaged.</p>
+              <dl class="tax-type__meta">
+                <dt data-i18n="birth.who">Who applies</dt>
+                <dd data-i18n="birth.cat.replace.who">Certificate holder or parent of minor</dd>
+                <dt data-i18n="birth.fee">Statutory fee</dt>
+                <dd data-i18n="birth.cat.replace.fee">Official e-CRVS verification fee</dd>
+              </dl>
+              <a class="tax-type__link ext-link" href="https://ecrvs.nationalpopulation.gov.ng/"
+                data-i18n="birth.cat.replace.link">Verify or replace on e-CRVS</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ============ INTERACTIVE REQUIREMENTS & CHECKLIST TOOL ============ -->
+        <section class="tax-section tax-calc" id="birth-checker" aria-labelledby="birth-checker-title">
+          <div class="tax-calc__head">
+            <svg class="tax-calc__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+            </svg>
+            <div>
+              <h2 class="tax-calc__title" id="birth-checker-title" data-i18n="birth.checker.title">Check your
+                requirements and generate a checklist</h2>
+              <p class="tax-calc__lead" data-i18n="birth.checker.lead">Select the age group, place of birth, and Local
+                Government Area to generate a personalised document checklist and find your nearest NPC registration
+                desk.</p>
+            </div>
+          </div>
+
+          <div class="tax-calc__grid">
+            <form class="tax-form" id="birth-checker-form" novalidate>
+              <div class="tax-field">
+                <label for="birth-age-group" data-i18n="birth.form.age">Age of person being registered</label>
+                <p class="tax-field__hint" id="birth-age-hint" data-i18n="birth.form.age.hint">Determines whether
+                  standard registration, late registration, or adult attestation applies.</p>
+                <select id="birth-age-group" name="age_group" class="birth-select" aria-describedby="birth-age-hint">
+                  <option value="newborn" data-i18n="birth.form.age.newborn">Newborn (0 to 60 days old)</option>
+                  <option value="child" data-i18n="birth.form.age.child">Infant (61 days to 12 months old)</option>
+                  <option value="minor" data-i18n="birth.form.age.minor">Child or teenager (1 to 17 years old)</option>
+                  <option value="adult" data-i18n="birth.form.age.adult">Adult (18 years and older — Birth Attestation)
+                  </option>
+                </select>
+              </div>
+
+              <div class="tax-field">
+                <label for="birth-place" data-i18n="birth.form.place">Place of birth / delivery</label>
+                <p class="tax-field__hint" id="birth-place-hint" data-i18n="birth.form.place.hint">Determines the
+                  primary proof of birth required by the NPC Registrar.</p>
+                <select id="birth-place" name="birth_place" class="birth-select" aria-describedby="birth-place-hint">
+                  <option value="hospital" data-i18n="birth.form.place.hospital">Government or private hospital /
+                    maternity clinic</option>
+                  <option value="phc" data-i18n="birth.form.place.phc">Primary Health Centre (PHC) in Osun State
+                  </option>
+                  <option value="home" data-i18n="birth.form.place.home">Home, traditional birth centre or faith-based
+                    clinic</option>
+                </select>
+              </div>
+
+              <div class="tax-field">
+                <label for="birth-informant" data-i18n="birth.form.informant">Who is applying / registering?</label>
+                <p class="tax-field__hint" id="birth-informant-hint" data-i18n="birth.form.informant.hint">The parent,
+                  legal guardian, or adult applicant providing NIN verification.</p>
+                <select id="birth-informant" name="informant" class="birth-select"
+                  aria-describedby="birth-informant-hint">
+                  <option value="parents" data-i18n="birth.form.informant.parents">Mother or Father of the child
+                  </option>
+                  <option value="guardian" data-i18n="birth.form.informant.guardian">Legal guardian or relative present
+                    at birth</option>
+                  <option value="self" data-i18n="birth.form.informant.self">Self (Adult 18+ applying for Birth
+                    Attestation)</option>
+                </select>
+              </div>
+
+              <div class="tax-field">
+                <label for="birth-lga" data-i18n="birth.form.lga">Local Government Area (LGA) in Osun State</label>
+                <p class="tax-field__hint" id="birth-lga-hint" data-i18n="birth.form.lga.hint">Choose your LGA to view
+                  your nearest NPC Vital Registration Office.</p>
+                <select id="birth-lga" name="lga" class="birth-select" aria-describedby="birth-lga-hint">
+                  <option value="osogbo">Osogbo LGA (Osogbo)</option>
+                  <option value="olorunda">Olorunda LGA (Igbona, Osogbo)</option>
+                  <option value="ife-central">Ife Central LGA (Ile-Ife)</option>
+                  <option value="ife-east">Ife East LGA (Oke-Ogbo, Ile-Ife)</option>
+                  <option value="ife-east-area">Ife East Area Office (Modakeke)</option>
+                  <option value="ife-north">Ife North LGA (Ipetumodu)</option>
+                  <option value="ife-south">Ife South LGA (Ifetedo)</option>
+                  <option value="ilesa-east">Ilesa East LGA (Iyemogun, Ilesa)</option>
+                  <option value="ilesa-west">Ilesa West LGA (Ereja Square, Ilesa)</option>
+                  <option value="ede-north">Ede North LGA (Oja Timi, Ede)</option>
+                  <option value="ede-south">Ede South LGA (Ede)</option>
+                  <option value="iwo">Iwo LGA (Iwo)</option>
+                  <option value="ejigbo">Ejigbo LGA (Ejigbo)</option>
+                  <option value="ikire">Irewole LGA (Ikire)</option>
+                  <option value="ikirun">Ifelodun LGA (Ikirun)</option>
+                  <option value="ila">Ila LGA (Ila Orangun)</option>
+                  <option value="iwo-ayedire">Ayedire LGA (Ile-Ogbo)</option>
+                  <option value="ayedaade">Ayedaade LGA (Gbongan)</option>
+                  <option value="atakunmosa-east">Atakunmosa East LGA (Iperindo)</option>
+                  <option value="atakunmosa-west">Atakunmosa West LGA (Osu)</option>
+                  <option value="boluwaduro">Boluwaduro LGA (Otan Ayegbaju)</option>
+                  <option value="boripe">Boripe LGA (Iragbiji)</option>
+                  <option value="egbedore">Egbedore LGA (Awo)</option>
+                  <option value="ifeday">Ifedayo LGA (Oke-Ila Orangun)</option>
+                  <option value="irepodun">Irepodun LGA (Ilobu)</option>
+                  <option value="isokan">Isokan LGA (Apomu)</option>
+                  <option value="obokun">Obokun LGA (Ibokun)</option>
+                  <option value="odo-otin">Odo-Otin LGA (Okuku)</option>
+                  <option value="ola-oluwa">Ola-Oluwa LGA (Bode Osi)</option>
+                  <option value="oriade">Oriade LGA (Ijebu-Jesa)</option>
+                  <option value="orolu">Orolu LGA (Ifon-Osun)</option>
+                </select>
+              </div>
+
+              <div class="tax-form__actions">
+                <button type="submit" class="btn btn--primary" data-i18n="birth.form.submit">Generate my
+                  checklist</button>
+                <button type="reset" class="btn btn--outline" data-i18n="birth.form.reset">Reset</button>
+              </div>
+            </form>
+
+            <div class="tax-results">
+              <!-- Default overview shown before interaction or without JS -->
+              <div id="birth-checker-default">
+                <h3 class="tax-results__title" id="birth-default-title" data-i18n="birth.default.title">Quick summary of
+                  standard requirements</h3>
+                <div class="tax-table-wrap">
+                  <table class="tax-table" aria-labelledby="birth-default-title">
+                    <thead>
+                      <tr>
+                        <th scope="col" data-i18n="birth.default.col1">Age group</th>
+                        <th scope="col" data-i18n="birth.default.col2">Primary document</th>
+                        <th scope="col" class="num" data-i18n="birth.default.col3">Fee</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" data-i18n="birth.default.r1.age">0 – 60 days</th>
+                        <td data-i18n="birth.default.r1.doc">Birth Notification + Parent's NIN</td>
+                        <td class="num" data-i18n="birth.default.r1.fee">Free (₦0)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="birth.default.r2.age">61 days – 12 months</th>
+                        <td data-i18n="birth.default.r2.doc">Birth Notification / Immunisation Card + NIN</td>
+                        <td class="num" data-i18n="birth.default.r2.fee">Free (₦0)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="birth.default.r3.age">1 – 17 years</th>
+                        <td data-i18n="birth.default.r3.doc">Birth record + Parent's NIN + Affidavit</td>
+                        <td class="num" data-i18n="birth.default.r3.fee">Free at NPC</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-i18n="birth.default.r4.age">18+ years (Adult)</th>
+                        <td data-i18n="birth.default.r4.doc">Applicant's NIN + Court Age Affidavit</td>
+                        <td class="num" data-i18n="birth.default.r4.fee">Portal fee</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="tax-results__empty" data-i18n="birth.default.empty">Select your options and press “Generate my
+                  checklist” to see your tailored document checklist and local NPC office.</p>
+              </div>
+
+              <!-- Filled in dynamically by scripts/index.js -->
+              <div id="birth-checker-results" hidden></div>
+            </div>
+          </div>
+
+          <div id="birth-checker-status" class="visually-hidden" role="status" aria-live="polite"></div>
+        </section>
+
+        <!-- ============ WHERE TO REGISTER & LGA DIRECTORY ============ -->
+        <section class="tax-section" id="birth-centres" aria-labelledby="birth-centres-title">
+          <h2 class="section-title" id="birth-centres-title" data-i18n="birth.centres.title">Where to register in Osun
+            State</h2>
+          <p class="tax-section__lead" data-i18n="birth.centres.lead">Birth registration services are available online
+            and in person across all three senatorial districts, 30 Local Government Areas, and accredited health
+            facilities.</p>
+
+          <div class="details-grid tax-channels">
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" />
+                </svg>
+                <h3 data-i18n="birth.channel.online.title">Online (e-CRVS Portal)</h3>
+              </div>
+              <p data-i18n="birth.channel.online.body">Pre-register a child's birth or apply for an Adult Birth
+                Attestation on the official National Population Commission e-CRVS portal using your NIN.</p>
+              <a class="tax-channel__link ext-link" href="https://ecrvs.nationalpopulation.gov.ng/"
+                data-i18n="birth.channel.online.link">Go to e-CRVS portal</a>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z" />
+                </svg>
+                <h3 data-i18n="birth.channel.phc.title">Hospitals &amp; Primary Health Centres</h3>
+              </div>
+              <p data-i18n="birth.channel.phc.body">Register your newborn before discharge at State General Hospitals,
+                UNIOSUN Teaching Hospital, OAUTHC Ile-Ife, and 332 Ward Primary Health Centres.</p>
+              <a class="tax-channel__link" href="#birth-lga-directory" data-i18n="birth.channel.phc.link">Find centres
+                in your LGA</a>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__header">
+                <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+                </svg>
+                <h3 data-i18n="birth.channel.lga.title">NPC Local Government Offices</h3>
+              </div>
+              <p data-i18n="birth.channel.lga.body">Every Local Government Secretariat in Osun State hosts an NPC Vital
+                Registration Desk open Monday to Friday, 8:00 AM to 4:00 PM.</p>
+              <a class="tax-channel__link" href="#birth-lga-directory" data-i18n="birth.channel.lga.link">Browse all 30
+                LGA offices</a>
+            </div>
+          </div>
+
+          <!-- Interactive Osun LGA Registration Centre Finder -->
+          <div class="birth-lga-finder" id="birth-lga-directory">
+            <div class="birth-lga-finder__header">
+              <div>
+                <h3 class="birth-lga-finder__title" data-i18n="birth.directory.title">Find an NPC Registration Centre by
+                  Local Government Area</h3>
+                <p class="birth-lga-finder__sub" data-i18n="birth.directory.sub">Filter by senatorial district or search
+                  by town or LGA name to locate your local Vital Registration Office.</p>
+              </div>
+              <div class="birth-lga-finder__controls">
+                <div class="birth-lga-finder__field">
+                  <label for="birth-district-filter" class="visually-hidden"
+                    data-i18n="birth.directory.districtLabel">Filter by Senatorial District</label>
+                  <select id="birth-district-filter" class="birth-select">
+                    <option value="all" data-i18n="birth.directory.allDistricts">All Senatorial Districts (30 LGAs + 1
+                      Area Office)</option>
+                    <option value="central" data-i18n="birth.directory.central">Osun Central Senatorial District
+                    </option>
+                    <option value="east" data-i18n="birth.directory.east">Osun East Senatorial District (Ife / Ijesa)
+                    </option>
+                    <option value="west" data-i18n="birth.directory.west">Osun West Senatorial District</option>
+                  </select>
+                </div>
+                <div class="birth-lga-finder__field">
+                  <label for="birth-lga-search" class="visually-hidden" data-i18n="birth.directory.searchLabel">Search
+                    LGA or headquarters town</label>
+                  <input type="search" id="birth-lga-search" class="birth-search-input"
+                    placeholder="Search LGA or town (e.g. Osogbo, Ile-Ife, Ilesa, Iwo)"
+                    data-i18n-attr="placeholder:birth.directory.searchPlaceholder" autocomplete="off">
+                </div>
+              </div>
+            </div>
+
+            <p id="birth-lga-count" class="birth-lga-finder__count" role="status" aria-live="polite"></p>
+            <div id="birth-lga-list" class="birth-lga-grid"></div>
+            <div class="birth-lga-finder__more" id="birth-lga-more-wrap">
+              <a href="#birth-lga-directory" id="birth-lga-more" class="birth-lga-more-link">
+                <span data-i18n="birth.directory.showAll">Show all LGAs</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                  <path
+                    d="M16.59 5.59 18 7l-6 6-6-6 1.41-1.41L12 10.17l4.59-4.58zm0 6L18 13l-6 6-6-6 1.41-1.41L12 16.17l4.59-4.58z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ STATUTORY TIMELINES + AFTER YOU REGISTER ============ -->
+        <section class="tax-section" id="birth-timelines" aria-labelledby="birth-timelines-title">
+          <h2 class="section-title" id="birth-timelines-title" data-i18n="birth.timelines.title">Statutory timelines
+            &amp; official fees</h2>
+          <div class="tax-split">
+            <div>
+              <div class="tax-table-wrap">
+                <table class="tax-table tax-table--dates">
+                  <caption class="visually-hidden" data-i18n="birth.timelines.title">Statutory timelines and official
+                    fees</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" data-i18n="birth.timelines.col1">Registration category</th>
+                      <th scope="col" data-i18n="birth.timelines.col2">Statutory window</th>
+                      <th scope="col" data-i18n="birth.timelines.col3">Official fee</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" data-i18n="birth.timelines.1.what">Newborn birth registration</th>
+                      <td data-i18n="birth.timelines.1.when">Within 60 days of birth</td>
+                      <td class="tax-table__date" data-i18n="birth.timelines.1.fee">Free (₦0)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" data-i18n="birth.timelines.2.what">Child registration (under 18 years)</th>
+                      <td data-i18n="birth.timelines.2.when">61 days to 17 years of age</td>
+                      <td class="tax-table__date" data-i18n="birth.timelines.2.fee">Free at NPC / PHC centres</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" data-i18n="birth.timelines.3.what">Adult Birth Attestation</th>
+                      <td data-i18n="birth.timelines.3.when">18 years and older</td>
+                      <td class="tax-table__date" data-i18n="birth.timelines.3.fee">Official e-CRVS portal fee</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" data-i18n="birth.timelines.4.what">Certified True Copy / Replacement</th>
+                      <td data-i18n="birth.timelines.4.when">Any time after initial registration</td>
+                      <td class="tax-table__date" data-i18n="birth.timelines.4.fee">Official e-CRVS portal fee</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="tax-section__note" data-i18n="birth.timelines.note">Governed by the Births, Deaths, etc.
+                (Compulsory Registration) Act. If a court-sworn affidavit of age or loss is required for late or
+                replacement applications, standard court registry fees apply at the Judiciary.</p>
+            </div>
+
+            <div class="panel tax-after">
+              <h3 class="panel__title" data-i18n="birth.after.title">After you register a birth</h3>
+              <ul class="chevron-list">
+                <li><a class="ext-link" href="https://ecrvs.nationalpopulation.gov.ng/" data-i18n="birth.after.1">Verify
+                    or download your digital Birth Certificate</a></li>
+                <li><a class="ext-link" href="https://nimc.gov.ng/" data-i18n="birth.after.2">Enrol your child for a
+                    National Identification Number (NIN)</a></li>
+                <li><a href="#" data-i18n="birth.after.3">Check the Osun State childhood immunisation schedule</a></li>
+                <li><a href="#" data-i18n="birth.after.4">Enrol your child in the Osun Health Insurance Scheme
+                    (OHIS)</a></li>
+                <li><a href="#" data-i18n="birth.after.5">Apply for an Osun State Certificate of State of Origin</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section class="tax-section" id="birth-faq" aria-labelledby="birth-faq-title">
+          <h2 class="section-title" id="birth-faq-title" data-i18n="birth.faq.title">Frequently asked questions</h2>
+          <div class="tax-faq">
+            <details>
+              <summary data-i18n="birth.faq.q1">Who is legally authorised to issue a Birth Certificate in Osun State?
+              </summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="birth.faq.a1">The National Population Commission (NPC) is the sole statutory body
+                  mandated by Federal law to issue official Birth Certificates and Certificates of Birth Attestation in
+                  Osun State and across Nigeria. Hospital birth notifications and local government declarations are
+                  supporting records, not substitutes for an NPC Birth Certificate.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="birth.faq.q2">Is a hospital Birth Notification slip the same as a Birth Certificate?
+              </summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="birth.faq.a2">No. A hospital, Primary Health Centre, or maternity clinic issues a medical
+                  Birth Notification confirming the date, time, and parentage at delivery. You must present that
+                  notification to an NPC Registrar (at the health facility, an LGA office, or via the e-CRVS portal) to
+                  be issued the official Certificate of Birth.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="birth.faq.q3">Do both parents need a National Identification Number (NIN) to register
+                a child?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="birth.faq.a3">At least one parent or legal informant must provide a valid 11-digit
+                  National Identification Number (NIN) to link the child's birth record on the electronic Civil
+                  Registration and Vital Statistics (e-CRVS) system. Providing both parents' NINs is strongly
+                  recommended.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="birth.faq.q4">What if my baby was born at home or outside a hospital?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="birth.faq.a4">You can still register your baby free of charge. Visit your nearest Primary
+                  Health Centre (PHC) or the NPC Vital Registration Desk at your Local Government Secretariat with your
+                  NIN, the child's immunisation card, and a signed confirmation from the traditional birth attendant,
+                  community head (Baálẹ̀ / Ọba), or religious leader.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="birth.faq.q5">I am 18 years or older and do not have a Birth Certificate. What should
+                I do?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="birth.faq.a5">Adults aged 18 years and above cannot apply for a child birth certificate.
+                  Instead, apply for an official Certificate of Birth Attestation on the NPC e-CRVS self-service portal
+                  using your NIN and a sworn Affidavit of Age Declaration obtained from a High Court or Magistrate
+                  Court.</p>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="birth.faq.q6">How do I correct a spelling mistake on a Birth Certificate?</summary>
+              <div class="tax-faq__answer">
+                <p data-i18n="birth.faq.a6">Visit the National Population Commission Osun State Directorate in Osogbo
+                  or the LGA office where the birth was registered. Bring the original certificate, the hospital Birth
+                  Notification slip, and your NIN slip so an authorised Vital Registration Officer can process a formal
+                  amendment on the e-CRVS registry.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- ============ CONTACT NPC OSUN STATE ============ -->
+        <section class="tax-section tax-contact" id="birth-help" aria-labelledby="birth-help-title">
+          <div>
+            <h2 class="tax-contact__title" id="birth-help-title" data-i18n="birth.help.title">Need help with birth
+              registration?</h2>
+            <p class="tax-contact__lead" data-i18n="birth.help.body">The National Population Commission (NPC) Osun State
+              Directorate and LGA Vital Registration desks are open Monday to Friday, 8:00 AM – 4:00 PM.</p>
+          </div>
+          <ul class="tax-contact__list">
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="birth.help.email">Email</span>
+                <a class="tax-contact__value"
+                  href="mailto:statedirector.osun@nationalpopulation.gov.ng">statedirector.osun@nationalpopulation.gov.ng</a>
+              </div>
+            </li>
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="birth.help.portal">Official e-CRVS portal</span>
+                <a class="tax-contact__value ext-link"
+                  href="https://ecrvs.nationalpopulation.gov.ng/">ecrvs.nationalpopulation.gov.ng</a>
+              </div>
+            </li>
+            <li class="tax-contact__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <div>
+                <span class="tax-contact__label" data-i18n="birth.help.office">State headquarters</span>
+                <span class="tax-contact__value" data-i18n="birth.help.address">National Population Commission (NPC)
+                  State Office, Old Secretariat, Gbongan–Ibadan Road, Osogbo, Osun State</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- ============ EMERGENCY + FEEDBACK ============ -->
+      <section class="container help-row">
+        <div class="emergency" role="note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" />
+          </svg>
+          <p><span data-i18n="emergency.text">In an emergency, call</span> <a class="emergency__number"
+              href="tel:112">112</a></p>
+        </div>
+
+        <div class="feedback" id="feedback">
+          <div class="feedback__ask">
+            <p class="feedback__q" id="feedback-q" data-i18n="feedback.q">Did you find what you were looking for?</p>
+            <div class="feedback__buttons" role="group" aria-labelledby="feedback-q">
+              <button type="button" class="btn btn--outline" data-feedback="yes" data-i18n="feedback.yes">Yes</button>
+              <button type="button" class="btn btn--outline" data-feedback="no" data-i18n="feedback.no">No</button>
+            </div>
+          </div>
+          <p class="feedback__thanks" role="status" hidden data-i18n="feedback.thanks">Thank you for your feedback.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__grid">
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.contact">Contact government</h2>
+        <address>
+          <span data-i18n="footer.address1">Governor's Office, State Secretariat</span><br>
+          <span data-i18n="footer.address2">Abere, Osogbo, Osun State, Nigeria</span>
+        </address>
+        <a href="#" data-i18n="footer.message">Send us a message</a>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.about">About Osun</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.about.1">History of the state</a></li>
+          <li><a href="#" data-i18n="footer.about.2">State symbols</a></li>
+          <li><a href="#" data-i18n="footer.about.3">Local Government Areas</a></li>
+          <li><a href="#" data-i18n="footer.about.4">Newsroom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.help">Help</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.help.1">Accessibility</a></li>
+          <li><a href="#" data-i18n="footer.help.2">Privacy</a></li>
+          <li><a href="#" data-i18n="footer.help.3">Terms of use</a></li>
+          <li><a href="#" data-i18n="utility.sitemap">Site Map</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.follow">Follow us</h2>
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-2.8 0-4 2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.7 3z" />
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; <span id="year">2026</span> <span data-i18n="footer.copyright">Government of Osun State. All rights
+            reserved.</span></p>
+        <button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/index.js"></script>
+</body>
+
+</html>

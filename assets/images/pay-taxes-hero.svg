@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A phone showing a paid tax receipt beside a stack of naira coins">
+  <rect width="480" height="360" rx="8" fill="#e5f1ea"/>
+  <circle cx="400" cy="70" r="90" fill="#cfe5d8"/>
+  <circle cx="70" cy="320" r="110" fill="#cfe5d8"/>
+  <!-- bank -->
+  <g transform="translate(40 150)">
+    <path d="M0 40 L60 4 L120 40 Z" fill="#0f3b26"/>
+    <rect x="10" y="46" width="14" height="70" fill="#00703c"/>
+    <rect x="40" y="46" width="14" height="70" fill="#00703c"/>
+    <rect x="70" y="46" width="14" height="70" fill="#00703c"/>
+    <rect x="96" y="46" width="14" height="70" fill="#00703c"/>
+    <rect x="0" y="116" width="120" height="10" fill="#0f3b26"/>
+  </g>
+  <!-- phone -->
+  <g transform="translate(170 40)">
+    <rect width="150" height="280" rx="20" fill="#0f3b26"/>
+    <rect x="10" y="22" width="130" height="236" rx="8" fill="#fff"/>
+    <rect x="58" y="8" width="34" height="6" rx="3" fill="#00703c"/>
+    <circle cx="75" cy="70" r="26" fill="#00703c"/>
+    <path d="M62 70 l9 10 l18 -20" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="35" y="110" width="80" height="9" rx="4" fill="#0f3b26"/>
+    <rect x="25" y="132" width="100" height="6" rx="3" fill="#d0d4d1"/>
+    <rect x="25" y="148" width="100" height="6" rx="3" fill="#d0d4d1"/>
+    <rect x="25" y="164" width="70" height="6" rx="3" fill="#d0d4d1"/>
+    <rect x="25" y="186" width="100" height="1.5" fill="#d0d4d1"/>
+    <text x="25" y="212" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="700" fill="#5c5c5c">PAID</text>
+    <text x="125" y="212" text-anchor="end" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="800" fill="#0f3b26">₦</text>
+    <rect x="25" y="228" width="100" height="20" rx="4" fill="#f2b705"/>
+  </g>
+  <!-- coins -->
+  <g transform="translate(340 210)">
+    <ellipse cx="50" cy="96" rx="48" ry="14" fill="#c99700"/>
+    <rect x="2" y="78" width="96" height="18" fill="#f2b705"/>
+    <ellipse cx="50" cy="78" rx="48" ry="14" fill="#ffd34d"/>
+    <ellipse cx="50" cy="66" rx="48" ry="14" fill="#c99700"/>
+    <rect x="2" y="48" width="96" height="18" fill="#f2b705"/>
+    <ellipse cx="50" cy="48" rx="48" ry="14" fill="#ffd34d"/>
+    <ellipse cx="50" cy="36" rx="48" ry="14" fill="#c99700"/>
+    <rect x="2" y="18" width="96" height="18" fill="#f2b705"/>
+    <ellipse cx="50" cy="18" rx="48" ry="14" fill="#ffd34d"/>
+    <text x="50" y="24" text-anchor="middle" font-family="Noto Sans, Arial, sans-serif" font-size="18" font-weight="800" fill="#8a6700">₦</text>
+  </g>
+</svg>

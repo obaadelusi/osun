@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">Government of Osun State | State of the Living Spring</title>
+  <meta name="description" data-i18n-attr="content:meta.description"
+    content="Official website of the Government of Osun State, Nigeria. Find programs, online services, news and information for residents, businesses and visitors.">
+  <meta name="theme-color" content="#00703c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ============ OFFICIAL TOP BAR ============ -->
+  <div class="official-topbar" aria-label="Not official government website" data-i18n-attr="aria-label:topbar.label">
+    <div class="container official-topbar__inner">
+      <svg class="official-topbar__flag" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"
+        focusable="false">
+        <rect width="8" height="16" fill="#008751" />
+        <rect x="8" width="8" height="16" fill="#ffffff" />
+        <rect x="16" width="8" height="16" fill="#008751" />
+        <rect width="24" height="16" fill="none" stroke="rgba(0, 0, 0, 0.15)" stroke-width="1" />
+      </svg>
+      <span class="official-topbar__text" data-i18n="topbar.official">This is NOT the official website of the Osun State
+        Government.</span>
+    </div>
+  </div>
+
+  <!-- ============ ALERT BANNER ============ -->
+  <div class="alert" id="site-alert" role="region" aria-labelledby="alert-title">
+    <div class="container alert__inner">
+      <svg class="alert__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 1 21h22L12 2zm1 15h-2v-2h2v2zm0-4h-2V9h2v4z" />
+      </svg>
+      <p class="alert__text">
+        <strong id="alert-title" data-i18n="alert.title">Rainy season advisory:</strong>
+        <span data-i18n="alert.body">Residents in flood-prone areas are urged to keep drainage channels clear and stay
+          alert to weather updates.</span>
+        <a href="#" data-i18n="alert.link">Flood safety information</a>
+      </p>
+      <button class="alert__close" type="button" data-i18n-attr="aria-label:alert.dismiss" aria-label="Dismiss alert">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" data-i18n-attr="aria-label:brand.home"
+        aria-label="Government of Osun State home">
+        <img class="brand__emblem" src="assets/images/osun-logo.jpg" alt="Osun State Logo" width="64" height="64">
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Ọ̀ṣun</span>
+          <span class="brand__tagline" data-i18n="brand.tagline">State of the Living Spring</span>
+        </span>
+      </a>
+
+      <div class="site-header__tools">
+        <ul class="utility-nav" aria-label="Utility" data-i18n-attr="aria-label:utility.label">
+          <li><button type="button" class="link-button" id="print-btn" data-i18n="utility.print">Printer
+              Friendly</button></li>
+          <li><button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button></li>
+
+          <li><a href="#contact" data-i18n="utility.contact">Contact Government</a></li>
+        </ul>
+
+        <form class="search" role="search" id="search-form" action="#" autocomplete="off">
+          <label class="visually-hidden" for="search-input" data-i18n="search.label">Search osunstate.gov.ng</label>
+          <input class="search__input" id="search-input" type="search" name="q"
+            placeholder="Search for programs and online services" data-i18n-attr="placeholder:search.placeholder"
+            aria-controls="search-suggestions" aria-autocomplete="list" aria-expanded="false">
+          <button class="search__button" type="submit" data-i18n="search.button">Search</button>
+          <ul class="search__suggestions" id="search-suggestions" role="listbox" hidden></ul>
+        </form>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span data-i18n="nav.menu">Menu</span>
+      </button>
+    </div>
+
+    <!-- ============ PRIMARY NAV ============ -->
+    <nav class="primary-nav" id="primary-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <ul class="container primary-nav__list">
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-residents"
+            data-i18n="nav.residents">Resident Online Services</button>
+          <div class="mega" id="mega-residents" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.health">Health</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.health.1">Osun Health Insurance Scheme (OHIS)</a></li>
+                  <li><a href="#" data-i18n="mega.health.2">Hospitals and primary health centres</a></li>
+                  <li><a href="#" data-i18n="mega.health.3">Immunisation</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.education">Education</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.education.1">Public schools</a></li>
+                  <li><a href="#" data-i18n="mega.education.2">Scholarships and bursaries</a></li>
+                  <li><a href="#" data-i18n="mega.education.3">Tertiary institutions</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.land">Land and housing</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.land.1">Certificate of Occupancy</a></li>
+                  <li><a href="#" data-i18n="mega.land.2">Land search and GIS</a></li>
+                  <li><a href="#" data-i18n="mega.land.3">Building permits</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.records">Records and identity</h2>
+                <ul>
+                  <li><a href="records/register-a-birth.html" data-i18n="mega.records.1">Birth and death registration</a></li>
+                  <li><a href="#" data-i18n="mega.records.2">Certificate of state of origin</a></li>
+                  <li><a href="#" data-i18n="mega.records.3">Driver and vehicle licensing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-business"
+            data-i18n="nav.business">Business</button>
+          <div class="mega" id="mega-business" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.start">Start and grow</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.start.1">Starting a business</a></li>
+                  <li><a href="#" data-i18n="mega.start.2">Registration and permits</a></li>
+                  <li><a href="#" data-i18n="mega.start.3">Support for small businesses</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.invest">Invest in Osun</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.invest.1">Investment opportunities</a></li>
+                  <li><a href="#" data-i18n="mega.invest.2">Agriculture and agribusiness</a></li>
+                  <li><a href="#" data-i18n="mega.invest.3">Solid minerals</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.tax">Taxes and procurement</h2>
+                <ul>
+                  <li><a href="taxes/pay-your-taxes.html" data-i18n="mega.tax.1">Pay taxes online (OSIRS)</a></li>
+                  <li><a href="taxes/calculate-personal-income-tax.html" data-i18n="mega.tax.calc">Calculate personal income tax</a></li>
+                  <li><a href="#" data-i18n="mega.tax.2">Tax clearance certificate</a></li>
+                  <li><a href="#" data-i18n="mega.tax.3">Tenders and contracts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-government"
+            data-i18n="nav.government">Government</button>
+          <div class="mega" id="mega-government" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.exec">Executive</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.exec.1">Office of the Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.2">Office of the Deputy Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.3">State Executive Council</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.arms">Legislature and judiciary</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.arms.1">Osun State House of Assembly</a></li>
+                  <li><a href="#" data-i18n="mega.arms.2">State Judiciary</a></li>
+                  <li><a href="laws/laws-and-gazettes.html" data-i18n="mega.arms.3">Laws and gazettes</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.orgs">Organisations</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.orgs.1">Ministries, departments and agencies</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.2">Local Government Areas</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.3">Budget and open data</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-visitors"
+            data-i18n="nav.visitors">Visitors</button>
+          <div class="mega" id="mega-visitors" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.see">Places to see</h2>
+                <ul>
+                  <li><a href="tourism/tourist.html" data-i18n="mega.see.tourist">Tourist Centres</a></li>
+                  <li><a href="tourism/plan-your-visit.html?site=osun-sacred-grove" data-i18n="mega.see.1">Osun-Osogbo Sacred
+                      Grove</a></li>
+                  <li><a href="tourism/plan-your-visit.html?site=olumirin-waterfall" data-i18n="mega.see.2">Olumirin Waterfall,
+                      Erin-Ijesha</a></li>
+                  <li><a href="tourism/plan-your-visit.html?site=oduduwa-shrine" data-i18n="mega.see.3">Ile-Ife, cradle of the
+                      Yoruba</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.events">Culture and events</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.events.1">Osun-Osogbo Festival</a></li>
+                  <li><a href="#" data-i18n="mega.events.2">Festivals calendar</a></li>
+                  <li><a href="#" data-i18n="mega.events.3">Museums and arts</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.plan">Plan your trip</h2>
+                <ul>
+                  <li><a href="tourism/plan-your-visit.html" data-i18n="plan.cta">Plan your visit</a></li>
+                  <li><a href="#" data-i18n="mega.plan.1">Getting to Osun</a></li>
+                  <li><a href="#" data-i18n="mega.plan.2">Hotels and accommodation</a></li>
+                  <li><a href="#" data-i18n="mega.plan.3">Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <h1 class="visually-hidden" data-i18n="meta.h1">Government of Osun State</h1>
+
+    <!-- ============ HERO CAROUSEL ============ -->
+    <section class="container hero" aria-roledescription="carousel" aria-label="Featured"
+      data-i18n-attr="aria-label:hero.label">
+      <div class="hero__viewport" aria-live="off" id="hero-viewport">
+        <article class="hero__slide is-active" aria-roledescription="slide" aria-label="1 / 3">
+          <img class="hero__img" src="assets/images/civic-centre.jpg" alt="" width="1376" height="768">
+          <div class="hero__panel">
+            <p class="hero__eyebrow" data-i18n="hero.1.eyebrow">Inauguration 2026</p>
+            <h2 class="hero__title" data-i18n="hero.1.title">Swearing-in of the Executive Governor of Osun State</h2>
+            <p class="hero__date"><time data-date="2026-11-27" datetime="2026-11-27">27 November 2026</time></p>
+            <a class="btn btn--primary" href="#" data-i18n="hero.1.cta">Learn more</a>
+          </div>
+        </article>
+        <article class="hero__slide" aria-roledescription="slide" aria-label="2 / 3">
+          <img class="hero__img" src="assets/images/olumirin-waterfall.jpg" alt="" width="1376" height="768"
+            loading="lazy">
+          <div class="hero__panel">
+            <p class="hero__eyebrow" data-i18n="hero.2.eyebrow">Osun at 35</p>
+            <h2 class="hero__title" data-i18n="hero.2.title">Celebrating 35 years of statehood</h2>
+            <p class="hero__date">1991 – 2026</p>
+            <a class="btn btn--primary" href="#" data-i18n="hero.2.cta">Explore our history</a>
+          </div>
+        </article>
+        <article class="hero__slide" aria-roledescription="slide" aria-label="3 / 3">
+          <img class="hero__img" src="assets/images/osun-sacred-grove.jpg" alt="" width="1376" height="768"
+            loading="lazy">
+          <div class="hero__panel">
+            <p class="hero__eyebrow" data-i18n="hero.3.eyebrow">Visit Osun</p>
+            <h2 class="hero__title" data-i18n="hero.3.title">Osun-Osogbo Sacred Grove, a UNESCO World Heritage Site</h2>
+            <p class="hero__date" data-i18n="hero.3.sub">Open to visitors all year round</p>
+            <a class="btn btn--primary" href="tourism/plan-your-visit.html?site=osun-sacred-grove" data-i18n="hero.3.cta">Plan
+              your visit</a>
+          </div>
+        </article>
+      </div>
+
+      <button class="hero__arrow hero__arrow--prev" type="button" data-hero-prev data-i18n-attr="aria-label:hero.prev"
+        aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z" />
+        </svg>
+      </button>
+      <button class="hero__arrow hero__arrow--next" type="button" data-hero-next data-i18n-attr="aria-label:hero.next"
+        aria-label="Next slide">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z" />
+        </svg>
+      </button>
+
+      <div class="hero__controls">
+        <button class="hero__pause" type="button" data-hero-pause aria-pressed="false">
+          <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+          </svg>
+          <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          <span class="visually-hidden" data-hero-pause-label data-i18n="hero.pause">Pause slideshow</span>
+        </button>
+        <div class="hero__dots" role="group" aria-label="Choose slide" data-i18n-attr="aria-label:hero.choose">
+          <button type="button" class="hero__dot" aria-label="1" aria-current="true"></button>
+          <button type="button" class="hero__dot" aria-label="2"></button>
+          <button type="button" class="hero__dot" aria-label="3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUICK LINK BOXES ============ -->
+    <section class="container link-boxes" aria-label="Quick links" data-i18n-attr="aria-label:boxes.label">
+      <div class="link-box">
+        <h2 class="link-box__title" data-i18n="boxes.resident">I am a resident looking for...</h2>
+        <ul class="chevron-list">
+          <li><a href="#" data-i18n="boxes.resident.2">Jobs</a></li>
+          <li><a href="#" data-i18n="boxes.resident.1">Financial assistance</a></li>
+          <li><a href="tourism/tourist.html" data-i18n="boxes.resident.3">Tourist Centres</a></li>
+          <li><a href="#" data-i18n="boxes.resident.4">Schools and scholarships</a></li>
+          <li><a href="#" data-i18n="boxes.resident.5">Driver and vehicle licensing</a></li>
+          <li><a href="#" data-i18n="boxes.resident.7">Forms</a></li>
+          <li><a href="#" data-i18n="boxes.resident.8">Online services</a></li>
+        </ul>
+      </div>
+      <div class="link-box">
+        <h2 class="link-box__title" data-i18n="boxes.business">Business resources</h2>
+        <ul class="chevron-list">
+          <li><a href="#" data-i18n="boxes.business.2">Invest in Osun</a></li>
+          <li><a href="#" data-i18n="boxes.business.1">Starting a business</a></li>
+          <li><a href="#" data-i18n="boxes.business.3">Registration, permits and licensing</a></li>
+          <li><a href="#" data-i18n="boxes.resident.6">Land and Governor's Consent</a></li>
+          <li><a href="https://irs.os.gov.ng/" data-i18n="boxes.business.4">Pay taxes (OsunIRS)</a></li>
+          <li><a href="#" data-i18n="boxes.business.5">Tenders and procurement</a></li>
+          <li><a href="#" data-i18n="boxes.business.6">Agriculture and agribusiness</a></li>
+        </ul>
+      </div>
+      <div class="link-box">
+        <h2 class="link-box__title" data-i18n="boxes.other">Other links</h2>
+        <ul class="chevron-list">
+          <li><a href="#" data-i18n="boxes.other.3">Local Government Areas (LGAs)</a></li>
+          <li><a href="#" data-i18n="boxes.other.1">Ministries, Departments and Agencies (MDAs)</a></li>
+          <li><a href="#" data-i18n="boxes.other.2">Osun State House of Assembly</a></li>
+          <li><a href="laws/laws-and-gazettes.html" data-i18n="boxes.other.4">Laws and gazettes</a></li>
+          <li><a href="#" data-i18n="boxes.other.5">State budgets</a></li>
+          <li><a href="#" data-i18n="boxes.other.6">Government jobs</a></li>
+          <li><a href="#" data-i18n="boxes.other.7">Emergency contacts</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ POPULAR SERVICES (Ontario-style cards) ============ -->
+    <section class="container services" aria-labelledby="services-title">
+      <h2 class="section-title" id="services-title" data-i18n="services.title">Popular online services</h2>
+      <ul class="services__grid">
+        <li><a class="service-card" href="taxes/pay-your-taxes.html">
+            <svg class="service-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h18v14H3zm2 2v2h14V7zm0 5v5h14v-5zm2 1h4v2H7z" />
+            </svg>
+            <span class="service-card__title" data-i18n="services.1.title">Pay your taxes</span>
+            <span class="service-card__desc" data-i18n="services.1.desc">Personal income tax, levies and e-payment
+              receipts</span>
+          </a></li>
+        <li><a class="service-card" href="#">
+            <svg class="service-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.2 5.3 3.1 1.7-1.9 3.2-3.1 5.3-3.1 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21zm-1-12v3H8v2h3v3h2v-3h3v-2h-3V9z" />
+            </svg>
+            <span class="service-card__title" data-i18n="services.2.title">Enrol in health insurance</span>
+            <span class="service-card__desc" data-i18n="services.2.desc">Join the Osun Health Insurance Scheme</span>
+          </a></li>
+        <li><a class="service-card" href="records/register-a-birth.html">
+            <svg class="service-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM9 12v2h8v-2zm0 4v2h8v-2z" />
+            </svg>
+            <span class="service-card__title" data-i18n="services.3.title">Register a birth</span>
+            <span class="service-card__desc" data-i18n="services.3.desc">Birth, death and vital records</span>
+          </a></li>
+        <li><a class="service-card" href="#">
+            <svg class="service-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+            </svg>
+            <span class="service-card__title" data-i18n="services.4.title">Search land records</span>
+            <span class="service-card__desc" data-i18n="services.4.desc">Title documents and Certificate of
+              Occupancy</span>
+          </a></li>
+        <li><a class="service-card" href="#">
+            <svg class="service-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M5 11 6.5 6.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11v8h-2v-2H7v2H5zm2.2-1h9.6l-1-3H8.2zM7.5 12a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+            </svg>
+            <span class="service-card__title" data-i18n="services.5.title">Renew vehicle papers</span>
+            <span class="service-card__desc" data-i18n="services.5.desc">Vehicle licence, road worthiness and driver's
+              licence</span>
+          </a></li>
+        <li><a class="service-card" href="#">
+            <svg class="service-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h16v10H4zm2 2v6h12V6zM2 16h20v2H2zm7 3h6v2H9z" />
+            </svg>
+            <span class="service-card__title" data-i18n="services.6.title">Find a government job</span>
+            <span class="service-card__desc" data-i18n="services.6.desc">Civil service vacancies and recruitment</span>
+          </a></li>
+      </ul>
+    </section>
+
+    <!-- ============ GOVERNOR / NEWS / VISIT (Manitoba bottom row) ============ -->
+    <section class="container feature-row" aria-label="Government news and features"
+      data-i18n-attr="aria-label:feature.label">
+      <div class="panel panel--governor">
+        <h2 class="panel__title" data-i18n="gov.title">Governor</h2>
+        <figure class="governor">
+          <img class="governor__photo" src="assets/images/governor-ademola-adeleke.webp"
+            alt="Portrait of the Governor of Osun State" data-i18n-attr="alt:gov.photoAlt" width="120" height="140">
+          <figcaption>
+            <strong class="governor__name">Governor Ademola Jackson Nurudeen Adeleke</strong>
+            <span class="governor__role" data-i18n="gov.role">Executive Governor of Osun State</span>
+          </figcaption>
+        </figure>
+        <ul class="chevron-list chevron-list--compact">
+          <li><a href="#" data-i18n="gov.link1">Office of the Governor</a></li>
+          <li><a href="#" data-i18n="gov.link2">Deputy Governor: Prince Kola Adewusi</a></li>
+          <li><a href="#" data-i18n="gov.link3">State Executive Council</a></li>
+        </ul>
+      </div>
+
+      <div class="panel panel--news">
+        <h2 class="panel__title" data-i18n="news.title">News feed</h2>
+        <!-- Sample headlines for the prototype: wire to the newsroom CMS/RSS feed -->
+        <ul class="news-list">
+          <li><time data-date="2026-10-08" datetime="2026-10-08">8 October 2026</time> – <a href="#"
+              data-i18n="news.1">State Government flags off rural road rehabilitation across the three senatorial
+              districts</a></li>
+          <li><time data-date="2026-10-06" datetime="2026-10-06">6 October 2026</time> – <a href="#"
+              data-i18n="news.2">Inauguration Committee announces programme for the November 27 swearing-in ceremony</a>
+          </li>
+          <li><time data-date="2026-10-02" datetime="2026-10-02">2 October 2026</time> – <a href="#"
+              data-i18n="news.3">Ministry of Health begins statewide immunisation campaign for children under five</a>
+          </li>
+          <li><time data-date="2026-09-30" datetime="2026-09-30">30 September 2026</time> – <a href="#"
+              data-i18n="news.4">Enrolment for the Osun Health Insurance Scheme now open online</a></li>
+          <li><time data-date="2026-09-25" datetime="2026-09-25">25 September 2026</time> – <a href="#"
+              data-i18n="news.5">Rainy season advisory: residents urged to keep drainage channels clear</a></li>
+        </ul>
+        <a class="more-link" href="#" data-i18n="news.all">All news releases</a>
+      </div>
+
+      <div class="panel panel--visit">
+        <h2 class="panel__title" data-i18n="visit.title">Visit Osun</h2>
+        <img class="visit__img" src="assets/images/olumirin-waterfall.jpg"
+          alt="Olumirin Waterfall surrounded by tropical forest in Erin-Ijesha" data-i18n-attr="alt:visit.imgAlt"
+          width="1376" height="768" loading="lazy">
+        <p data-i18n="visit.body">From the sacred groves of Osogbo to the waterfalls of Erin-Ijesha and the ancient city
+          of Ile-Ife, discover the heart of Yoruba heritage.</p>
+        <a class="more-link" href="tourism/tourist.html" data-i18n="visit.cta">Things to see and do</a>
+      </div>
+    </section>
+
+    <!-- ============ FACTS BAND ============ -->
+    <section class="facts" aria-labelledby="facts-title">
+      <div class="container">
+        <h2 class="section-title section-title--light" id="facts-title" data-i18n="facts.title">Osun at a glance</h2>
+        <dl class="facts__grid">
+          <div class="fact">
+            <dt data-i18n="facts.capital">Capital</dt>
+            <dd data-i18n="facts.capital.value">Òṣogbo</dd>
+          </div>
+          <div class="fact">
+            <dt data-i18n="facts.created">Created</dt>
+            <dd><time data-date="1991-08-27" datetime="1991-08-27">27 August 1991</time></dd>
+          </div>
+          <div class="fact">
+            <dt data-i18n="facts.lgas">Local Government Areas</dt>
+            <dd data-i18n="facts.lgas.value">30 + 1 Area Office</dd>
+          </div>
+          <div class="fact">
+            <dt data-i18n="facts.districts">Senatorial districts</dt>
+            <dd>3</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ EMERGENCY + FEEDBACK ============ -->
+    <section class="container help-row">
+      <div class="emergency" role="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" />
+        </svg>
+        <p><span data-i18n="emergency.text">In an emergency, call</span> <a class="emergency__number"
+            href="tel:112">112</a></p>
+      </div>
+
+      <div class="feedback" id="feedback">
+        <div class="feedback__ask">
+          <p class="feedback__q" id="feedback-q" data-i18n="feedback.q">Did you find what you were looking for?</p>
+          <div class="feedback__buttons" role="group" aria-labelledby="feedback-q">
+            <button type="button" class="btn btn--outline" data-feedback="yes" data-i18n="feedback.yes">Yes</button>
+            <button type="button" class="btn btn--outline" data-feedback="no" data-i18n="feedback.no">No</button>
+          </div>
+        </div>
+        <p class="feedback__thanks" role="status" hidden data-i18n="feedback.thanks">Thank you for your feedback.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__grid">
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.contact">Contact government</h2>
+        <address>
+          <span data-i18n="footer.address1">Governor's Office, State Secretariat</span><br>
+          <span data-i18n="footer.address2">Abere, Osogbo, Osun State, Nigeria</span>
+        </address>
+        <a href="#" data-i18n="footer.message">Send us a message</a>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.about">About Osun</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.about.1">History of the state</a></li>
+          <li><a href="#" data-i18n="footer.about.2">State symbols</a></li>
+          <li><a href="#" data-i18n="footer.about.3">Local Government Areas</a></li>
+          <li><a href="#" data-i18n="footer.about.4">Newsroom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.help">Help</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.help.1">Accessibility</a></li>
+          <li><a href="#" data-i18n="footer.help.2">Privacy</a></li>
+          <li><a href="#" data-i18n="footer.help.3">Terms of use</a></li>
+          <li><a href="#" data-i18n="utility.sitemap">Site Map</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.follow">Follow us</h2>
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-2.8 0-4 2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.7 3z" />
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; <span id="year">2026</span> <span data-i18n="footer.copyright">Government of Osun State. All rights
+            reserved.</span></p>
+        <button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/index.js"></script>
+</body>
+
+</html>

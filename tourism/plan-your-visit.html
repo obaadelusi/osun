@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="plan.meta.title">Plan Your Visit | Government of Osun State</title>
+  <meta name="description" data-i18n-attr="content:meta.description"
+    content="Plan your visit to Osun State tourist centres: Osun-Osogbo Sacred Grove, Olumirin Waterfall, Oke Maria, Oduduwa Shrine, Moremi Statue, and Osogbo Civic Centre. Opening hours, entry fees, and trip guidance.">
+  <meta name="theme-color" content="#00703c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ============ OFFICIAL TOP BAR ============ -->
+  <div class="official-topbar" aria-label="Official government website" data-i18n-attr="aria-label:topbar.label">
+    <div class="container official-topbar__inner">
+      <svg class="official-topbar__flag" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"
+        focusable="false">
+        <rect width="8" height="16" fill="#008751" />
+        <rect x="8" width="8" height="16" fill="#ffffff" />
+        <rect x="16" width="8" height="16" fill="#008751" />
+        <rect width="24" height="16" fill="none" stroke="rgba(0, 0, 0, 0.15)" stroke-width="1" />
+      </svg>
+      <span class="official-topbar__text" data-i18n="topbar.official">This is NOT the official website of the Osun State
+        Government.</span>
+    </div>
+  </div>
+
+  <!-- ============ ALERT BANNER ============ -->
+  <div class="alert" id="site-alert" role="region" aria-labelledby="alert-title">
+    <div class="container alert__inner">
+      <svg class="alert__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 1 21h22L12 2zm1 15h-2v-2h2v2zm0-4h-2V9h2v4z" />
+      </svg>
+      <p class="alert__text">
+        <strong id="alert-title" data-i18n="alert.title">Rainy season advisory:</strong>
+        <span data-i18n="alert.body">Residents and visitors are advised to check weather updates before embarking on
+          outdoor hiking trails.</span>
+        <a href="#" data-i18n="alert.link">Flood safety information</a>
+      </p>
+      <button class="alert__close" type="button" data-i18n-attr="aria-label:alert.dismiss" aria-label="Dismiss alert">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" data-i18n-attr="aria-label:brand.home"
+        aria-label="Government of Osun State home">
+        <img class="brand__emblem" src="../assets/images/osun-logo.jpg" alt="Osun State Logo" width="64" height="64">
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Ọ̀ṣun</span>
+          <span class="brand__tagline" data-i18n="brand.tagline">State of the Living Spring</span>
+        </span>
+      </a>
+
+      <div class="site-header__tools">
+        <ul class="utility-nav" aria-label="Utility" data-i18n-attr="aria-label:utility.label">
+          <li><button type="button" class="link-button" id="print-btn" data-i18n="utility.print">Printer
+              Friendly</button></li>
+          <li><button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button></li>
+          <li><a href="#contact" data-i18n="utility.contact">Contact Government</a></li>
+        </ul>
+
+        <form class="search" role="search" id="search-form" action="#" autocomplete="off">
+          <label class="visually-hidden" for="search-input" data-i18n="search.label">Search osunstate.gov.ng</label>
+          <input class="search__input" id="search-input" type="search" name="q"
+            placeholder="Search for programs and online services" data-i18n-attr="placeholder:search.placeholder"
+            aria-controls="search-suggestions" aria-autocomplete="list" aria-expanded="false">
+          <button class="search__button" type="submit" data-i18n="search.button">Search</button>
+          <ul class="search__suggestions" id="search-suggestions" role="listbox" hidden></ul>
+        </form>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span data-i18n="nav.menu">Menu</span>
+      </button>
+    </div>
+
+    <!-- ============ PRIMARY NAV ============ -->
+    <nav class="primary-nav" id="primary-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <ul class="container primary-nav__list">
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-residents"
+            data-i18n="nav.residents">Resident Online Services</button>
+          <div class="mega" id="mega-residents" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.health">Health</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.health.1">Osun Health Insurance Scheme (OHIS)</a></li>
+                  <li><a href="#" data-i18n="mega.health.2">Hospitals and primary health centres</a></li>
+                  <li><a href="#" data-i18n="mega.health.3">Immunisation</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.education">Education</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.education.1">Public schools</a></li>
+                  <li><a href="#" data-i18n="mega.education.2">Scholarships and bursaries</a></li>
+                  <li><a href="#" data-i18n="mega.education.3">Tertiary institutions</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.land">Land and housing</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.land.1">Certificate of Occupancy</a></li>
+                  <li><a href="#" data-i18n="mega.land.2">Land search and GIS</a></li>
+                  <li><a href="#" data-i18n="mega.land.3">Building permits</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.records">Records and identity</h2>
+                <ul>
+                  <li><a href="../records/register-a-birth.html" data-i18n="mega.records.1">Birth and death registration</a></li>
+                  <li><a href="#" data-i18n="mega.records.2">Certificate of state of origin</a></li>
+                  <li><a href="#" data-i18n="mega.records.3">Driver and vehicle licensing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-business"
+            data-i18n="nav.business">Business</button>
+          <div class="mega" id="mega-business" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.start">Start and grow</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.start.1">Starting a business</a></li>
+                  <li><a href="#" data-i18n="mega.start.2">Registration and permits</a></li>
+                  <li><a href="#" data-i18n="mega.start.3">Support for small businesses</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.invest">Invest in Osun</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.invest.1">Investment opportunities</a></li>
+                  <li><a href="#" data-i18n="mega.invest.2">Agriculture and agribusiness</a></li>
+                  <li><a href="#" data-i18n="mega.invest.3">Solid minerals</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.tax">Taxes and procurement</h2>
+                <ul>
+                  <li><a href="../taxes/pay-your-taxes.html" data-i18n="mega.tax.1">Pay taxes online (OSIRS)</a></li>
+                  <li><a href="../taxes/calculate-personal-income-tax.html" data-i18n="mega.tax.calc">Calculate personal income tax</a></li>
+                  <li><a href="#" data-i18n="mega.tax.2">Tax clearance certificate</a></li>
+                  <li><a href="#" data-i18n="mega.tax.3">Tenders and contracts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-government"
+            data-i18n="nav.government">Government</button>
+          <div class="mega" id="mega-government" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.exec">Executive</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.exec.1">Office of the Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.2">Office of the Deputy Governor</a></li>
+                  <li><a href="#" data-i18n="mega.exec.3">State Executive Council</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.arms">Legislature and judiciary</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.arms.1">Osun State House of Assembly</a></li>
+                  <li><a href="#" data-i18n="mega.arms.2">State Judiciary</a></li>
+                  <li><a href="../laws/laws-and-gazettes.html" data-i18n="mega.arms.3">Laws and gazettes</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.orgs">Organisations</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.orgs.1">Ministries, departments and agencies</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.2">Local Government Areas</a></li>
+                  <li><a href="#" data-i18n="mega.orgs.3">Budget and open data</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="primary-nav__item">
+          <button class="primary-nav__trigger" type="button" aria-expanded="false" aria-controls="mega-visitors"
+            data-i18n="nav.visitors">Visitors</button>
+          <div class="mega" id="mega-visitors" hidden>
+            <div class="container mega__grid">
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.see">Places to see</h2>
+                <ul>
+                  <li><a href="tourist.html" data-i18n="mega.see.tourist">Tourist Centres</a></li>
+                  <li><a href="plan-your-visit.html?site=osun-sacred-grove">Osun-Osogbo Sacred Grove</a></li>
+                  <li><a href="plan-your-visit.html?site=olumirin-waterfall">Olumirin Waterfall, Erin-Ijesha</a></li>
+                  <li><a href="plan-your-visit.html?site=oduduwa-shrine">Ile-Ife, cradle of the Yoruba</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.events">Culture and events</h2>
+                <ul>
+                  <li><a href="#" data-i18n="mega.events.1">Osun-Osogbo Festival</a></li>
+                  <li><a href="#" data-i18n="mega.events.2">Festivals calendar</a></li>
+                  <li><a href="#" data-i18n="mega.events.3">Museums and arts</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mega__heading" data-i18n="mega.plan">Plan your trip</h2>
+                <ul>
+                  <li><a href="plan-your-visit.html" data-i18n="plan.cta">Plan your visit</a></li>
+                  <li><a href="#" data-i18n="mega.plan.1">Getting to Osun</a></li>
+                  <li><a href="#" data-i18n="mega.plan.2">Hotels and accommodation</a></li>
+                  <li><a href="#" data-i18n="mega.plan.3">Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main" tabindex="-1">
+    <div id="plan-your-visit" data-plan-page>
+      <!-- Page Header with Breadcrumbs -->
+      <div class="container page-header page-header--with-breadcrumb">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="tourist.html">Tourist Centres</a></li>
+            <li aria-current="page"><span data-i18n="plan.title">Plan Your Visit</span></li>
+          </ol>
+        </nav>
+        <h1 class="page-title" data-i18n="plan.title">Plan Your Visit</h1>
+        <p class="page-lead" data-i18n="plan.lead">Explore the rich cultural heritage, sacred landscapes, and natural
+          wonders of Osun State. Select any tourist centre below for visitor guidelines, opening hours, directions, and
+          trip planning.</p>
+      </div>
+
+      <!-- ============ TOURIST CENTRE SELECTOR ============ -->
+      <section class="plan-selector-section" aria-labelledby="selector-heading">
+        <div class="container">
+          <div class="plan-selector-header">
+            <label class="plan-selector-title" id="selector-heading" for="plan-site-select"
+              data-i18n="plan.select.label">Select Tourist Centre:</label>
+            <div class="plan-dropdown-wrap">
+              <select id="plan-site-select" class="plan-dropdown" aria-controls="centre-showcase">
+                <option value="osun-sacred-grove">Osun-Osogbo Sacred Grove</option>
+                <option value="olumirin-waterfall">Olumirin Waterfall, Erin-Ijesha</option>
+                <option value="oke-maria">Oke Maria Pilgrimage Centre</option>
+                <option value="oduduwa-shrine">Oduduwa Shrine & Grove</option>
+                <option value="moremi-statue">Moremi Statue of Liberty</option>
+                <option value="civic-centre">Osogbo Civic Centre</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accessible screen-reader status update -->
+      <div id="plan-status-live" class="visually-hidden" role="status" aria-live="polite"></div>
+
+      <!-- ============ SHOWCASE SECTION ============ -->
+      <div class="container" id="centre-showcase">
+        <article class="showcase-card">
+          <!-- Hero Banner -->
+          <div class="showcase-banner">
+            <img id="site-hero-img" src="../assets/images/osun-sacred-grove.jpg" alt="Osun-Osogbo Sacred Grove"
+              loading="eager">
+            <span class="showcase-badge" id="site-badge">UNESCO World Heritage Site</span>
+            <div class="showcase-meta-bar">
+              <h2 id="site-name">Osun-Osogbo Sacred Grove</h2>
+              <span class="showcase-location">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                <span id="site-location">Osogbo LGA, Osogbo</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Body Description -->
+          <div class="showcase-body">
+            <p class="showcase-lead" id="site-tagline">Ancient spiritual sanctuary along the winding banks of the sacred
+              Osun river.</p>
+            <p class="showcase-overview" id="site-overview">The Osun-Osogbo Sacred Grove is one of the last remaining
+              remnants of primary high forest in southern Nigeria. Designated a UNESCO World Heritage Site in 2005, the
+              sacred landscape is dedicated to Osun, the Yoruba goddess of fertility and waters.</p>
+
+            <!-- Visitor Details Matrix -->
+            <div class="details-grid">
+              <!-- Hours -->
+              <div class="info-card">
+                <div class="info-card__header">
+                  <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                  </svg>
+                  <h3 data-i18n="plan.hours">Opening Hours</h3>
+                </div>
+                <p id="site-hours">Monday to Sunday: 8:00 AM – 6:00 PM (Annual festival peak takes place every August)
+                </p>
+              </div>
+
+              <!-- Admission -->
+              <div class="info-card">
+                <div class="info-card__header">
+                  <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                  </svg>
+                  <h3 data-i18n="plan.admission">Admission & Fees</h3>
+                </div>
+                <p id="site-admission">Adults: ₦500 | Students & Children: ₦200 | International Visitors: ₦2,000 |
+                  Camera Permit: ₦1,000</p>
+              </div>
+
+              <!-- Guided Tours -->
+              <div class="info-card">
+                <div class="info-card__header">
+                  <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z" />
+                  </svg>
+                  <h3 data-i18n="plan.guides">Tour Guides</h3>
+                </div>
+                <p id="site-guides">Official NCMM accredited tour guides stationed at the entrance pavilion. Available
+                  in English, Yorùbá, and French.</p>
+              </div>
+
+              <!-- Accessibility & Terrain -->
+              <div class="info-card">
+                <div class="info-card__header">
+                  <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z" />
+                  </svg>
+                  <h3 data-i18n="plan.accessibility">Accessibility & Terrain</h3>
+                </div>
+                <p id="site-access">Shaded unpaved natural forest trails. Gentle to moderate walking difficulty.
+                  Comfortable flat shoes recommended.</p>
+              </div>
+
+              <!-- Visitor Rules -->
+              <div class="info-card">
+                <div class="info-card__header">
+                  <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+                  </svg>
+                  <h3 data-i18n="plan.rules">Rules & Etiquette</h3>
+                </div>
+                <p id="site-rules">Strict environmental preservation: no littering, swimming, or fishing in the sacred
+                  river. Shoes must be removed when entering designated sanctums.</p>
+              </div>
+
+              <!-- Facilities -->
+              <div class="info-card">
+                <div class="info-card__header">
+                  <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V18z" />
+                  </svg>
+                  <h3 data-i18n="plan.facilities">Facilities</h3>
+                </div>
+                <p id="site-facilities">Visitor reception centre, traditional arts and crafts market, restrooms, parking
+                  area at entrance.</p>
+              </div>
+
+              <!-- Directions -->
+              <div class="info-card">
+                <div class="info-card__header">
+                  <svg class="info-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M21.71 11.29l-9-9a.996.996 0 0 0-1.41 0l-9 9a.996.996 0 0 0 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9a.996.996 0 0 0 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z" />
+                  </svg>
+                  <h3 data-i18n="plan.directions">Directions & Transit</h3>
+                </div>
+                <p id="site-directions">10 minutes drive south of Osogbo city centre along Heritage Site Road. Direct
+                  signposts from Olaiya Junction.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============ INTERACTIVE VISIT PLANNER TOOL ============ -->
+        <section class="planner-section" aria-labelledby="planner-heading">
+          <h2 class="planner-heading" id="planner-heading" data-i18n="plan.form.title">Build Your Visit Plan</h2>
+          <p class="planner-lead" data-i18n="plan.form.desc">Provide your travel details to estimate entrance fees,
+            select tour options, and generate a printable visit summary checklist.</p>
+
+          <form id="visit-planner-form">
+            <div class="planner-form-grid">
+              <!-- Selected Destination -->
+              <div class="form-field">
+                <label for="planner-site-display" data-i18n="plan.form.site">Selected Tourist Centre</label>
+                <div id="planner-site-name" class="form-field-context">
+                  <svg class="form-field-context__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
+                    focusable="false">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  <span id="planner-site-text">Osun-Osogbo Sacred Grove</span>
+                </div>
+              </div>
+
+              <!-- Visit Date -->
+              <div class="form-field">
+                <label for="visit-date" data-i18n="plan.form.date">Planned Visit Date</label>
+                <input type="date" id="visit-date" name="visit_date" required>
+              </div>
+
+              <!-- Arrival Time -->
+              <div class="form-field">
+                <label for="visit-time" data-i18n="plan.form.time">Estimated Arrival Time</label>
+                <select id="visit-time" name="visit_time">
+                  <option value="morning">Morning (8:00 AM – 11:30 AM)</option>
+                  <option value="midday">Midday (11:30 AM – 2:30 PM)</option>
+                  <option value="afternoon">Afternoon (2:30 PM – 5:30 PM)</option>
+                </select>
+              </div>
+
+              <!-- Group Composition -->
+              <div class="form-field">
+                <label for="visit-party" data-i18n="plan.form.party">Visiting Group</label>
+                <select id="visit-party" name="visit_party">
+                  <option value="individual" data-i18n="plan.form.party.solo">Individual / Couple (1–2 persons)</option>
+                  <option value="family" data-i18n="plan.form.party.family">Family (approx. 4 persons)</option>
+                  <option value="group" data-i18n="plan.form.party.group">School / Educational Group (approx. 15
+                    persons)</option>
+                  <option value="tour" data-i18n="plan.form.party.tour">Large Tour Delegation (approx. 30 persons)
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Optional Services -->
+            <fieldset class="checkbox-group">
+              <legend>Additional Requirements & Preferences:</legend>
+              <div class="checkbox-list">
+                <label class="checkbox-item">
+                  <input type="checkbox" id="req-guide" name="req_guide">
+                  <span data-i18n="plan.form.guide_req">Request accredited on-site tour guide service (+₦3,000 guide
+                    service)</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" id="req-camera" name="req_camera">
+                  <span data-i18n="plan.form.camera_req">Include professional camera / photography permit</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" id="req-access" name="req_access">
+                  <span data-i18n="plan.form.access_req">Special accessibility assistance (step-free guidance /
+                    support)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="planner-cta-row">
+              <button type="submit" class="btn btn--primary" data-i18n="plan.form.submit">Generate Visit
+                Itinerary</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- ============ EXPLORE OTHER SITES ============ -->
+        <section class="other-sites-section" aria-labelledby="other-sites-heading">
+          <h2 class="other-sites-heading" id="other-sites-heading" data-i18n="plan.other.title">Explore Other Tourist
+            Centres in Osun</h2>
+          <p class="other-sites-lead" data-i18n="plan.other.desc">Select any destination below to switch guidelines and
+            plan your itinerary across Osun State.</p>
+
+          <div class="other-sites-grid">
+            <!-- Grove -->
+            <article class="other-site-card" data-site-card="osun-sacred-grove">
+              <img src="../assets/images/osun-sacred-grove.jpg" alt="Osun-Osogbo Sacred Grove" loading="lazy">
+              <div class="other-site-card__content">
+                <h3>Osun-Osogbo Sacred Grove</h3>
+                <p>UNESCO World Heritage site dedicated to the fertility goddess Osun with sacred sculptures and river.
+                </p>
+                <button type="button" class="btn btn--outline btn--sm switch-btn"
+                  data-switch-site="osun-sacred-grove">View & Plan Visit</button>
+              </div>
+            </article>
+
+            <!-- Waterfall -->
+            <article class="other-site-card" data-site-card="olumirin-waterfall">
+              <img src="../assets/images/olumirin-waterfall.jpg" alt="Olumirin Waterfall" loading="lazy">
+              <div class="other-site-card__content">
+                <h3>Olumirin Waterfall</h3>
+                <p>Breathtaking 7-tier cascading mountain waterfall at Erin-Ijesha with natural pools.</p>
+                <button type="button" class="btn btn--outline btn--sm switch-btn"
+                  data-switch-site="olumirin-waterfall">View & Plan Visit</button>
+              </div>
+            </article>
+
+            <!-- Oke Maria -->
+            <article class="other-site-card" data-site-card="oke-maria">
+              <img src="../assets/images/oke-maria.jpg" alt="Oke Maria" loading="lazy">
+              <div class="other-site-card__content">
+                <h3>Oke Maria Pilgrimage Centre</h3>
+                <p>Hillside Catholic pilgrimage shrine in Otan Ayegbaju offering panoramic mountain valley views.</p>
+                <button type="button" class="btn btn--outline btn--sm switch-btn" data-switch-site="oke-maria">View &
+                  Plan Visit</button>
+              </div>
+            </article>
+
+            <!-- Oduduwa Shrine -->
+            <article class="other-site-card" data-site-card="oduduwa-shrine">
+              <img src="../assets/images/oduduwa-shrine-groove.jpg" alt="Oduduwa Shrine" loading="lazy">
+              <div class="other-site-card__content">
+                <h3>Oduduwa Shrine & Grove</h3>
+                <p>Ancestral cradle in Ile-Ife marking the site where Oduduwa founded the divine Yoruba kingdom.</p>
+                <button type="button" class="btn btn--outline btn--sm switch-btn" data-switch-site="oduduwa-shrine">View
+                  & Plan Visit</button>
+              </div>
+            </article>
+
+            <!-- Moremi Statue -->
+            <article class="other-site-card" data-site-card="moremi-statue">
+              <img src="../assets/images/moremi-statue.jpg" alt="Moremi Statue" loading="lazy">
+              <div class="other-site-card__content">
+                <h3>Moremi Statue of Liberty</h3>
+                <p>Nigeria’s tallest statue standing 42 feet in Ile-Ife, honouring legendary heroine Queen Moremi.</p>
+                <button type="button" class="btn btn--outline btn--sm switch-btn" data-switch-site="moremi-statue">View
+                  & Plan Visit</button>
+              </div>
+            </article>
+
+            <!-- Civic Centre -->
+            <article class="other-site-card" data-site-card="civic-centre">
+              <img src="../assets/images/civic-centre.jpg" alt="Osogbo Civic Centre" loading="lazy">
+              <div class="other-site-card__content">
+                <h3>Osogbo Civic Centre</h3>
+                <p>Premier cultural hub in Osogbo hosting art expos, theatrical stage events, and civic gatherings.</p>
+                <button type="button" class="btn btn--outline btn--sm switch-btn" data-switch-site="civic-centre">View &
+                  Plan Visit</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <!-- ============ EMERGENCY + FEEDBACK ============ -->
+      <section class="container help-row">
+        <div class="emergency" role="note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" />
+          </svg>
+          <p><span data-i18n="emergency.text">In an emergency, call</span> <a class="emergency__number"
+              href="tel:112">112</a></p>
+        </div>
+
+        <div class="feedback" id="feedback">
+          <div class="feedback__ask">
+            <p class="feedback__q" id="feedback-q" data-i18n="feedback.q">Did you find what you were looking for?</p>
+            <div class="feedback__buttons" role="group" aria-labelledby="feedback-q">
+              <button type="button" class="btn btn--outline" data-feedback="yes" data-i18n="feedback.yes">Yes</button>
+              <button type="button" class="btn btn--outline" data-feedback="no" data-i18n="feedback.no">No</button>
+            </div>
+          </div>
+          <p class="feedback__thanks" role="status" hidden data-i18n="feedback.thanks">Thank you for your feedback.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__grid">
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.contact">Contact government</h2>
+        <address>
+          <span data-i18n="footer.address1">Governor's Office, State Secretariat</span><br>
+          <span data-i18n="footer.address2">Abere, Osogbo, Osun State, Nigeria</span>
+        </address>
+        <a href="#" data-i18n="footer.message">Send us a message</a>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.about">About Osun</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.about.1">History of the state</a></li>
+          <li><a href="#" data-i18n="footer.about.2">State symbols</a></li>
+          <li><a href="#" data-i18n="footer.about.3">Local Government Areas</a></li>
+          <li><a href="#" data-i18n="footer.about.4">Newsroom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.help">Help</h2>
+        <ul>
+          <li><a href="#" data-i18n="footer.help.1">Accessibility</a></li>
+          <li><a href="#" data-i18n="footer.help.2">Privacy</a></li>
+          <li><a href="#" data-i18n="footer.help.3">Terms of use</a></li>
+          <li><a href="#" data-i18n="utility.sitemap">Site Map</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading" data-i18n="footer.follow">Follow us</h2>
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-2.8 0-4 2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.7 3z" />
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>&copy; <span id="year">2026</span> <span data-i18n="footer.copyright">Government of Osun State. All rights
+            reserved.</span></p>
+        <button type="button" class="link-button lang-toggle" lang="yo" data-lang-toggle>Yorùbá</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Generated Itinerary Modal -->
+  <dialog id="itinerary-modal" class="itinerary-modal" aria-labelledby="itinerary-modal-title">
+    <button type="button" class="itinerary-modal__close" data-close-itinerary aria-label="Close">&times;</button>
+    <div id="itinerary-summary" class="summary-card"></div>
+  </dialog>
+
+  <script type="module" src="../scripts/index.js"></script>
+</body>
+
+</html>

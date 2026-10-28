@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustrated volumes of the Laws of Osun State, an Official Gazette with a gold seal, and scales of justice">
+  <!-- Background card -->
+  <path d="M8 0h464a8 8 0 0 1 8 8v344a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8z" fill="#e5f1ea"/>
+  <!-- Decorative soft circles -->
+  <path d="M405 68m-88 0a88 88 0 1 0 176 0a88 88 0 1 0-176 0" fill="#cfe5d8"/>
+  <path d="M72 310m-100 0a100 100 0 1 0 200 0a100 100 0 1 0-200 0" fill="#cfe5d8"/>
+
+  <!-- Left: Bound Volume of Revised Laws of Osun State -->
+  <g transform="translate(28 96)">
+    <!-- Book shadow -->
+    <path d="M16 14h118a8 8 0 0 1 8 8v182a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8z" fill="#b8d5c5"/>
+    <!-- Book cover -->
+    <path d="M10 6h118a8 8 0 0 1 8 8v182a8 8 0 0 1-8 8H10a8 8 0 0 1-8-8V14a8 8 0 0 1 8-8z" fill="#0f3b26"/>
+    <!-- Book spine -->
+    <path d="M10 6h20v198H10a8 8 0 0 1-8-8V14a8 8 0 0 1 8-8z" fill="#005a30"/>
+    <!-- Spine gold bands -->
+    <path d="M2 28h28v5H2zm0 32h28v4H2zm0 96h28v4H2zm0 32h28v5H2z" fill="#f2b705"/>
+    <!-- Gold border frame on cover -->
+    <path d="M42 24h74v144H42V24zm4 4v136h66V28H46z" fill="#f2b705"/>
+    <!-- Scales of Justice emblem on cover -->
+    <path d="M77 44h4v44h-4z" fill="#f2b705"/>
+    <path d="M65 86h28v5H65z" fill="#f2b705"/>
+    <path d="M57 54h44v3H57z" fill="#f2b705"/>
+    <path d="M59 57l-6 14h12l-6-14zm40 0l-6 14h12l-6-14z" fill="#ffd34d"/>
+    <path d="M51 71a8 6 0 0 0 16 0H51zm40 0a8 6 0 0 0 16 0H91z" fill="#f2b705"/>
+    <!-- Cover title lines ("LAWS OF OSUN STATE") -->
+    <path d="M54 106h50v6H54zm6 12h38v5H60zm-4 14h46v4H56z" fill="#ffffff"/>
+    <!-- Page edges at bottom -->
+    <path d="M14 194h116v8H14a4 4 0 0 1 0-8z" fill="#f4f5f4"/>
+  </g>
+
+  <!-- Centre: Official Gazette Document -->
+  <g transform="translate(154 24)">
+    <!-- Document shadow -->
+    <path d="M22 12h192a12 12 0 0 1 12 12v278a12 12 0 0 1-12 12H22a12 12 0 0 1-12-12V24a12 12 0 0 1 12-12z" fill="#b8d5c5"/>
+    <!-- Outer frame -->
+    <path d="M16 4h192a12 12 0 0 1 12 12v278a12 12 0 0 1-12 12H16A12 12 0 0 1 4 294V16A12 12 0 0 1 16 4z" fill="#0f3b26"/>
+    <!-- Inner white paper -->
+    <path d="M26 16h172a6 6 0 0 1 6 6v258a6 6 0 0 1-6 6H26a6 6 0 0 1-6-6V22a6 6 0 0 1 6-6z" fill="#ffffff"/>
+    <!-- Top official header banner -->
+    <path d="M26 16h172a6 6 0 0 1 6 6v36H20V22a6 6 0 0 1 6-6z" fill="#00703c"/>
+    <path d="M20 50h184v4H20z" fill="#f2b705"/>
+    <!-- Nigerian flag emblem inside Gazette banner -->
+    <path d="M34 26h8v14h-8z" fill="#0f3b26"/>
+    <path d="M42 26h8v14h-8z" fill="#ffffff"/>
+    <path d="M50 26h8v14h-8z" fill="#0f3b26"/>
+    <!-- Gazette header bars -->
+    <path d="M68 26h112v6H68zm0 10h78v5H68z" fill="#ffffff"/>
+
+    <!-- Official Gazette masthead & volume bar -->
+    <path d="M36 66h152v18H36z" fill="#edf3ef"/>
+    <path d="M44 72h68v6H44zm92 0h44v6h-44z" fill="#005a30"/>
+
+    <!-- Two-column statutory text layout -->
+    <!-- Section 1 heading -->
+    <path d="M36 96h96v7H36z" fill="#0f3b26"/>
+    <!-- Paragraph bars -->
+    <path d="M36 112h152v5H36zm0 11h152v5H36zm0 11h128v5H36z" fill="#9fb5a8"/>
+    <!-- Section 2 heading -->
+    <path d="M36 150h108v7H36z" fill="#0f3b26"/>
+    <path d="M36 166h152v5H36zm0 11h152v5H36zm0 11h140v5H36zm0 11h112v5H36z" fill="#9fb5a8"/>
+
+    <!-- Divider line -->
+    <path d="M36 218h152v2H36z" fill="#d0d4d1"/>
+
+    <!-- Bottom left: Assent / Legislative Verification QR & Stamp -->
+    <path d="M36 230h34v34H36z" fill="#0f3b26"/>
+    <path d="M40 234h10v10H40zm16 0h10v10H56zm-16 16h10v10H40zm16 2h8v8h-8z" fill="#ffffff"/>
+    <path d="M78 236h54v6H78zm0 12h42v5H78zm0 10h48v4H78z" fill="#00703c"/>
+
+    <!-- Bottom right: Gold Official Gazette Seal & Ribbons -->
+    <path d="M160 258l-8 24 12-6 8 8 6-24z" fill="#c99700"/>
+    <path d="M172 258l8 24-12-6-8 8-6-24z" fill="#00703c"/>
+    <path d="M166 246m-20 0a20 20 0 1 0 40 0a20 20 0 1 0-40 0" fill="#f2b705"/>
+    <path d="M166 246m-14 0a14 14 0 1 0 28 0a14 14 0 1 0-28 0" fill="#ffd34d"/>
+    <path d="M160 246l4 4 9-9" fill="none" stroke="#0f3b26" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Right top badge: Legislative Gavel / House of Assembly Assent -->
+  <g transform="translate(362 64)">
+    <path d="M44 0a44 44 0 1 0 0 88a44 44 0 1 0 0-88z" fill="#f2b705"/>
+    <path d="M44 8a36 36 0 1 0 0 72a36 36 0 1 0 0-72z" fill="#ffd34d"/>
+    <!-- Gavel head & handle -->
+    <path d="M30 28l14-14 12 12-14 14-12-12z" fill="#0f3b26"/>
+    <path d="M41 35l19 19-5 5-19-19 5-5z" fill="#00703c"/>
+    <!-- Sound block base -->
+    <path d="M22 60h32v6H22z" fill="#0f3b26"/>
+  </g>
+
+  <!-- Right bottom card: Certified True Copy (CTC) Stamp Card -->
+  <g transform="translate(352 204)">
+    <path d="M10 0h88a10 10 0 0 1 10 10v84a10 10 0 0 1-10 10H10A10 10 0 0 1 0 94V10A10 10 0 0 1 10 0z" fill="#0f3b26"/>
+    <path d="M10 0h88a10 10 0 0 1 10 10v16H0V10A10 10 0 0 1 10 0z" fill="#00703c"/>
+    <path d="M22 8h64v6H22z" fill="#f2b705"/>
+    <!-- Verified shield icon inside card -->
+    <path d="M54 34l-20 8v14c0 13 8.5 24.5 20 28 11.5-3.5 20-15 20-28V42l-20-8z" fill="#00703c"/>
+    <path d="M46 58l6 6 12-13" fill="none" stroke="#f2b705" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
