@@ -19,6 +19,7 @@ const i18n = await createI18n({
     if (typeof updateTaxPageLanguage === 'function') updateTaxPageLanguage();
     if (typeof updateBirthPageLanguage === 'function') updateBirthPageLanguage();
     if (typeof updateLawsPageLanguage === 'function') updateLawsPageLanguage();
+    if (typeof updateJobsPageLanguage === 'function') updateJobsPageLanguage();
   },
 });
 
@@ -3290,6 +3291,421 @@ let updateLawsPageLanguage = null;
   };
 
   renderLawsRepository();
+})();
+
+/* ---------------------------------------------------------
+   Jobs and careers page
+   --------------------------------------------------------- */
+const OSUN_JOBS_DATA = [
+  {
+    id: 'OSG/2026/001',
+    title: { en: 'Registered Nurse / Midwife', yo: 'Nọ́ọ̀sì Tí A Forúkọ Sílẹ̀ / Agbẹ̀bí' },
+    dept: { en: 'Osun State Hospitals Management Board', yo: 'Ìgbìmọ̀ Ìṣàkóso Àwọn Ilé-ìwòsàn Ìpínlẹ̀ Ọ̀ṣun' },
+    field: 'health',
+    type: 'permanent',
+    location: 'Osogbo',
+    closes: '2026-11-20',
+    summary: {
+      en: 'Provide nursing and maternal care in state secondary hospitals, including ward duty, immunisation and antenatal clinics.',
+      yo: 'Pèsè ìtọ́jú nọ́ọ̀sì àti ìtọ́jú ìyá tó ń bímọ ní àwọn ilé-ìwòsàn ìpínlẹ̀, pẹ̀lú iṣẹ́ ẹgbẹ́ aláìsàn, abẹ́rẹ́ ìdènà àti ilé-ìtọ́jú oyún.',
+    },
+    requirements: {
+      en: ['RN/RM certificate from an accredited school of nursing', 'Valid Nursing and Midwifery Council of Nigeria licence', 'Not more than 40 years of age'],
+      yo: ['Ìwé-ẹ̀rí RN/RM láti ilé-ẹ̀kọ́ nọ́ọ̀sì tí a mọ̀', 'Ìwé-àṣẹ Nursing and Midwifery Council of Nigeria tó wà ní ìlò', 'Kí ó má ju ọmọ ọdún 40 lọ'],
+    },
+  },
+  {
+    id: 'OSG/2026/002',
+    title: { en: 'Primary School Teacher (Mathematics and English)', yo: 'Olùkọ́ Ilé-ìwé Alákọ̀ọ́bẹ̀rẹ̀ (Ìṣirò àti Èdè Gẹ̀ẹ́sì)' },
+    dept: { en: 'State Universal Basic Education Board (SUBEB)', yo: 'Ìgbìmọ̀ Ẹ̀kọ́ Ìpìlẹ̀ Fún Gbogbo Ènìyàn (SUBEB)' },
+    field: 'education',
+    type: 'permanent',
+    location: 'Ede',
+    closes: '2026-11-27',
+    summary: {
+      en: 'Teach Mathematics and English to pupils in public primary schools and take part in school assessments and community activities.',
+      yo: 'Kọ́ àwọn ọmọ ilé-ìwé alákọ̀ọ́bẹ̀rẹ̀ ìjọba ní Ìṣirò àti Èdè Gẹ̀ẹ́sì, kí o sì kópa nínú ìdánwò ilé-ìwé àti iṣẹ́ àdúgbò.',
+    },
+    requirements: {
+      en: ['NCE or B.Ed in Education or a related subject', 'Teachers Registration Council of Nigeria (TRCN) registration', 'Willingness to serve in a rural school'],
+      yo: ['NCE tàbí B.Ed nínú Ẹ̀kọ́ tàbí ẹ̀kọ́ tó jọ mọ́ ọn', 'Ìforúkọsílẹ̀ pẹ̀lú Teachers Registration Council of Nigeria (TRCN)', 'Ìfẹ́ láti sìn ní ilé-ìwé ìgbèríko'],
+    },
+  },
+  {
+    id: 'OSG/2026/003',
+    title: { en: 'Civil Engineer (Roads)', yo: 'Onímọ̀-ẹ̀rọ Ìkọ́lé (Ọ̀nà)' },
+    dept: { en: 'Ministry of Works and Transport', yo: 'Iléeṣẹ́ Iṣẹ́ Ọwọ́ àti Ìrìnnà' },
+    field: 'engineering',
+    type: 'contract',
+    location: 'Osogbo',
+    closes: '2026-11-14',
+    summary: {
+      en: 'Design, supervise and inspect rural and urban road projects for a 24-month contract, reporting to the Director of Roads.',
+      yo: 'Ṣe àwòrán, ṣe àbójútó àti yẹ iṣẹ́ ọ̀nà ìgbèríko àti ìlú wò fún àdéhùn oṣù mẹ́rìnlélógún, kí o sì jábọ̀ fún Alákòóso Ọ̀nà.',
+    },
+    requirements: {
+      en: ['B.Eng or HND in Civil Engineering', 'COREN registration', 'At least 3 years of road construction experience'],
+      yo: ['B.Eng tàbí HND nínú Ìmọ̀-ẹ̀rọ Ìkọ́lé', 'Ìforúkọsílẹ̀ COREN', 'Ó kéré tán ọdún mẹ́ta ìrírí nínú kíkọ́ ọ̀nà'],
+    },
+  },
+  {
+    id: 'OSG/2026/004',
+    title: { en: 'Land Surveyor', yo: 'Onímọ̀ Ìwọ̀n Ilẹ̀' },
+    dept: { en: 'Ministry of Lands, Physical Planning and Urban Development', yo: 'Iléeṣẹ́ Ilẹ̀, Ìgbékalẹ̀ Ìlú àti Ìdàgbàsókè Ìlú' },
+    field: 'engineering',
+    type: 'permanent',
+    location: 'Ile-Ife',
+    closes: '2026-12-04',
+    summary: {
+      en: 'Carry out cadastral and topographic surveys, prepare survey plans and support the state land registration programme.',
+      yo: 'Ṣe ìwọ̀n ilẹ̀ àti àwòrán ilẹ̀, pèsè àwòrán ìwọ̀n ilẹ̀ kí o sì ṣe àtìlẹ́yìn fún ètò ìforúkọsílẹ̀ ilẹ̀ ìpínlẹ̀.',
+    },
+    requirements: {
+      en: ['HND or B.Sc in Surveying and Geoinformatics', 'SURCON registration', 'Proficiency in GIS and total station equipment'],
+      yo: ['HND tàbí B.Sc nínú Surveying and Geoinformatics', 'Ìforúkọsílẹ̀ SURCON', 'Ìmọ̀ GIS àti ohun èlò total station'],
+    },
+  },
+  {
+    id: 'OSG/2026/005',
+    title: { en: 'Revenue Officer', yo: 'Òṣìṣẹ́ Owó-Orí' },
+    dept: { en: 'Osun State Internal Revenue Service', yo: 'Iléeṣẹ́ Owó-Orí Ìpínlẹ̀ Ọ̀ṣun' },
+    field: 'admin',
+    type: 'permanent',
+    location: 'Ilesa',
+    closes: '2026-11-30',
+    summary: {
+      en: 'Assess and collect state revenue, assist taxpayers and keep accurate records in a zonal revenue office.',
+      yo: 'Díwọ̀n kí o sì gba owó-orí ìpínlẹ̀, ran àwọn agbowó-orí lọ́wọ́ kí o sì tọ́jú àkọsílẹ̀ tó péye ní ọ́fíìsì owó-orí agbègbè.',
+    },
+    requirements: {
+      en: ['B.Sc or HND in Accounting, Economics or Business Administration', 'Knowledge of Nigerian tax law', 'Good communication skills'],
+      yo: ['B.Sc tàbí HND nínú Ìṣirò-owó, Ọrọ̀-Ajé tàbí Ìṣàkóso Okòwò', 'Ìmọ̀ òfin owó-orí Nàìjíríà', 'Agbára ìbánisọ̀rọ̀ tó dára'],
+    },
+  },
+  {
+    id: 'OSG/2026/006',
+    title: { en: 'Agricultural Extension Officer', yo: 'Òṣìṣẹ́ Ìmọ̀ràn Ọ̀gbìn' },
+    dept: { en: 'Ministry of Agriculture', yo: 'Iléeṣẹ́ Ọ̀gbìn' },
+    field: 'agriculture',
+    type: 'permanent',
+    location: 'Iwo',
+    closes: '2026-12-11',
+    summary: {
+      en: 'Advise farmers on crop and livestock practices, run demonstration plots and link smallholders to inputs and markets.',
+      yo: 'Gba àwọn àgbẹ̀ nímọ̀ràn lórí ọ̀gbìn àti ẹran-ọ̀sìn, ṣe ìfihàn oko kí o sì so àwọn àgbẹ̀ kéékèèké mọ́ ohun èlò àti ọjà.',
+    },
+    requirements: {
+      en: ['B.Agric, B.Sc or HND in Agriculture', 'Ability to ride a motorcycle', 'Fluency in Yorùbá'],
+      yo: ['B.Agric, B.Sc tàbí HND nínú Ọ̀gbìn', 'Agbára láti wa alùpùpù', 'Ìjáfáfá nínú èdè Yorùbá'],
+    },
+  },
+  {
+    id: 'OSG/2026/007',
+    title: { en: 'Software Developer (e-Government)', yo: 'Olùdàgbàsókè Sọ́fítíwia (e-Government)' },
+    dept: { en: 'Ministry of Communication and Digital Economy', yo: 'Iléeṣẹ́ Ìbánisọ̀rọ̀ àti Ọrọ̀-Ajé Ayélujára' },
+    field: 'ict',
+    type: 'contract',
+    location: 'Osogbo',
+    closes: '2026-11-18',
+    summary: {
+      en: 'Build and maintain accessible online services for residents, working with a small team on a 12-month contract.',
+      yo: 'Kọ́ kí o sì tọ́jú àwọn iṣẹ́ orí ayélujára tí gbogbo ènìyàn lè lò fún àwọn olùgbé, pẹ̀lú ẹgbẹ́ kékeré lórí àdéhùn oṣù méjìlá.',
+    },
+    requirements: {
+      en: ['B.Sc or HND in Computer Science or a related field', '2 years of experience with HTML, CSS and JavaScript', 'Understanding of web accessibility'],
+      yo: ['B.Sc tàbí HND nínú Computer Science tàbí ẹ̀kọ́ tó jọ mọ́ ọn', 'Ọdún méjì ìrírí pẹ̀lú HTML, CSS àti JavaScript', 'Òye ìrọ̀rùn wíwọlé ojú-òpó wẹ́ẹ̀bù'],
+    },
+  },
+  {
+    id: 'OSG/2026/008',
+    title: { en: 'Medical Laboratory Scientist', yo: 'Onímọ̀ Ẹ̀rọ Yàrá Ìṣègùn' },
+    dept: { en: 'Osun State Hospitals Management Board', yo: 'Ìgbìmọ̀ Ìṣàkóso Àwọn Ilé-ìwòsàn Ìpínlẹ̀ Ọ̀ṣun' },
+    field: 'health',
+    type: 'permanent',
+    location: 'Ilesa',
+    closes: '2026-12-02',
+    summary: {
+      en: 'Run diagnostic tests in the hospital laboratory, maintain equipment and ensure quality control.',
+      yo: 'Ṣe àyẹ̀wò nínú yàrá ilé-ìwòsàn, tọ́jú ohun èlò kí o sì rí i pé àyẹ̀wò péye.',
+    },
+    requirements: {
+      en: ['B.MLS or equivalent degree', 'MLSCN licence and completed internship', 'Experience with haematology and microbiology'],
+      yo: ['B.MLS tàbí oyè tó dọ́gba', 'Ìwé-àṣẹ MLSCN àti ìparí ìdánrawò', 'Ìrírí nínú ẹ̀kọ́ ẹ̀jẹ̀ àti kòkòrò-àìfojúrí'],
+    },
+  },
+  {
+    id: 'OSG/2026/009',
+    title: { en: 'Graduate Intern, Budget and Planning', yo: 'Akẹ́kọ̀ọ́ṣẹ́ Gboyè, Ìṣúná àti Ìgbékalẹ̀' },
+    dept: { en: 'Ministry of Budget and Economic Planning', yo: 'Iléeṣẹ́ Ìṣúná àti Ètò Ọrọ̀-Ajé' },
+    field: 'admin',
+    type: 'internship',
+    location: 'Osogbo',
+    closes: '2026-11-25',
+    summary: {
+      en: 'Learn how the state budget is prepared by supporting data collection and analysis during a 6-month paid internship.',
+      yo: 'Kọ́ bí a ṣe ń pèsè ìṣúná ìpínlẹ̀ nípa ṣíṣe àtìlẹ́yìn fún ìkójọ àti ìtúpalẹ̀ ìròyìn, nínú ìdánrawò oṣù mẹ́fà tí a ń san owó fún.',
+    },
+    requirements: {
+      en: ['Graduated within the last 3 years', 'Degree in Economics, Statistics or Public Administration', 'Skill with spreadsheets'],
+      yo: ['Parí ilé-ẹ̀kọ́ láàrin ọdún mẹ́ta sẹ́yìn', 'Oyè nínú Ọrọ̀-Ajé, Ìṣirò-Ìkànìyàn tàbí Ìṣàkóso Ìjọba', 'Ìmọ̀ lílo ìwé ìṣirò'],
+    },
+  },
+  {
+    id: 'OSG/2026/010',
+    title: { en: 'NYSC Placement: Teaching Assistant', yo: 'Ìfìdíkalẹ̀ NYSC: Olùrànlọ́wọ́ Olùkọ́' },
+    dept: { en: 'State Ministry of Tertiary Education', yo: 'Iléeṣẹ́ Ẹ̀kọ́ Gíga Ìpínlẹ̀' },
+    field: 'education',
+    type: 'internship',
+    location: 'Ile-Ife',
+    closes: '2026-12-15',
+    summary: {
+      en: 'Corps members assist lecturers with tutorials, marking and laboratory sessions at a state tertiary institution.',
+      yo: 'Àwọn ọmọ ẹgbẹ́ NYSC ń ran àwọn olùkọ́ni lọ́wọ́ ní ìkẹ́kọ̀ọ́, ìṣàmì àti iṣẹ́ yàrá ní ilé-ẹ̀kọ́ gíga ìpínlẹ̀.',
+    },
+    requirements: {
+      en: ['Valid NYSC call-up letter', 'Degree with at least Second Class Lower', 'Interest in teaching'],
+      yo: ['Ìwé ìpè NYSC tó wà ní ìlò', 'Oyè pẹ̀lú Second Class Lower tó kéré jù', 'Ìfẹ́ sí ẹ̀kọ́ kíkọ́'],
+    },
+  },
+  {
+    id: 'OSG/2026/011',
+    title: { en: 'Community Health Extension Worker', yo: 'Òṣìṣẹ́ Ìlera Àdúgbò' },
+    dept: { en: 'Osun State Primary Health Care Development Board', yo: 'Ìgbìmọ̀ Ìdàgbàsókè Ìtọ́jú Ìlera Ìpìlẹ̀ Ìpínlẹ̀ Ọ̀ṣun' },
+    field: 'health',
+    type: 'contract',
+    location: 'Ikirun',
+    closes: '2026-11-09',
+    summary: {
+      en: 'Deliver outreach, immunisation and health education in primary health centres on a 12-month renewable contract.',
+      yo: 'Ṣe ìbẹ̀wò àdúgbò, abẹ́rẹ́ ìdènà àti ẹ̀kọ́ ìlera ní àwọn ilé-ìtọ́jú ìlera ìpìlẹ̀ lórí àdéhùn oṣù méjìlá tí a lè tún ṣe.',
+    },
+    requirements: {
+      en: ['CHEW diploma from an accredited school', 'CHPRBN registration', 'Residence in or near the posting'],
+      yo: ['Dípílómà CHEW láti ilé-ẹ̀kọ́ tí a mọ̀', 'Ìforúkọsílẹ̀ CHPRBN', 'Gbígbé nítòsí ibi tí a ó yàn ọ́ sí'],
+    },
+  },
+  {
+    id: 'OSG/2026/012',
+    title: { en: 'Accountant (Internal Audit)', yo: 'Oníṣirò-owó (Àyẹ̀wò Inú)' },
+    dept: { en: 'Office of the State Auditor-General', yo: 'Ọ́fíìsì Olùṣàyẹ̀wò Àgbà Ìpínlẹ̀' },
+    field: 'admin',
+    type: 'permanent',
+    location: 'Osogbo',
+    closes: '2026-12-18',
+    summary: {
+      en: 'Audit ministry accounts, test financial controls and prepare reports for the State Auditor-General.',
+      yo: 'Ṣàyẹ̀wò ìwé-owó àwọn iléeṣẹ́, dán ìdarí ìnáwó wò kí o sì pèsè ìròyìn fún Olùṣàyẹ̀wò Àgbà Ìpínlẹ̀.',
+    },
+    requirements: {
+      en: ['B.Sc in Accounting and ICAN or ANAN membership', 'At least 2 years of audit experience', 'Knowledge of IPSAS'],
+      yo: ['B.Sc nínú Ìṣirò-owó àti ọmọ ẹgbẹ́ ICAN tàbí ANAN', 'Ó kéré tán ọdún méjì ìrírí àyẹ̀wò', 'Ìmọ̀ IPSAS'],
+    },
+  },
+];
+
+let updateJobsPageLanguage = null;
+
+(function initJobsPage() {
+  const jobsRoot = document.getElementById('jobs-page');
+  if (!jobsRoot) return;
+
+  const typeFilter = jobsRoot.querySelector('#jobs-type-filter');
+  const fieldFilter = jobsRoot.querySelector('#jobs-field-filter');
+  const locationFilter = jobsRoot.querySelector('#jobs-location-filter');
+  const searchInput = jobsRoot.querySelector('#jobs-search-input');
+  const resetBtn = jobsRoot.querySelector('#jobs-reset-filters');
+  const countEl = jobsRoot.querySelector('#jobs-count');
+  const listEl = jobsRoot.querySelector('#jobs-list');
+  const moreWrapEl = jobsRoot.querySelector('#jobs-more-wrap');
+  const moreBtn = jobsRoot.querySelector('#jobs-more');
+
+  const modal = document.getElementById('job-detail-modal');
+  const modalBadge = document.getElementById('job-modal-badge');
+  const modalTitle = document.getElementById('job-modal-title');
+  const modalBody = document.getElementById('job-modal-body');
+  const modalApplyBtn = document.getElementById('job-modal-apply-btn');
+  const modalPrintBtn = document.getElementById('job-modal-print-btn');
+
+  const INITIAL_JOBS_LIMIT = 7;
+  let showAllJobs = false;
+  let activeJobId = null;
+
+  const pick = (obj) => obj[i18n.lang === 'yo' ? 'yo' : 'en'] || obj.en;
+  const fill = (key, values) =>
+    Object.entries(values).reduce((s, [k, v]) => s.replace(`{${k}}`, v), i18n.t(key));
+
+  // Whole days from today to the closing date (UTC), so the result does not shift with timezone.
+  function daysLeft(closes) {
+    const today = new Date().toISOString().slice(0, 10);
+    return Math.round((Date.parse(`${closes}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 86400000);
+  }
+
+  function formatDate(iso) {
+    const date = new Date(`${iso}T00:00:00Z`);
+    try {
+      return new Intl.DateTimeFormat(i18n.lang === 'yo' ? 'yo-NG' : 'en-NG', { dateStyle: 'long', timeZone: 'UTC' }).format(date);
+    } catch (e) {
+      return new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeZone: 'UTC' }).format(date);
+    }
+  }
+
+  function closingText(job) {
+    const n = daysLeft(job.closes);
+    if (n === 0) return i18n.t('jobs.closing.today');
+    if (n === 1) return i18n.t('jobs.closing.tomorrow');
+    return fill('jobs.closing.days', { n });
+  }
+
+  // Only vacancies that have not closed are listed, soonest closing date first.
+  const openJobs = OSUN_JOBS_DATA.filter((job) => daysLeft(job.closes) >= 0).sort((a, b) =>
+    a.closes.localeCompare(b.closes)
+  );
+
+  // Location options come from the data; place names are not translated.
+  if (locationFilter) {
+    [...new Set(openJobs.map((job) => job.location))].sort().forEach((place) => {
+      const opt = document.createElement('option');
+      opt.value = place;
+      opt.textContent = place;
+      locationFilter.append(opt);
+    });
+  }
+
+  function renderJobs() {
+    if (!listEl) return;
+    const typeVal = typeFilter ? typeFilter.value : 'all';
+    const fieldVal = fieldFilter ? fieldFilter.value : 'all';
+    const placeVal = locationFilter ? locationFilter.value : 'all';
+    const query = searchInput ? normalise(searchInput.value.trim()) : '';
+
+    if (resetBtn) {
+      resetBtn.hidden = typeVal === 'all' && fieldVal === 'all' && placeVal === 'all' && !query;
+    }
+
+    const filtered = openJobs.filter((job) => {
+      if (typeVal !== 'all' && job.type !== typeVal) return false;
+      if (fieldVal !== 'all' && job.field !== fieldVal) return false;
+      if (placeVal !== 'all' && job.location !== placeVal) return false;
+      if (!query) return true;
+      return normalise(
+        `${job.id} ${job.title.en} ${job.title.yo} ${job.dept.en} ${job.dept.yo} ${job.location} ${job.summary.en} ${job.summary.yo}`
+      ).includes(query);
+    });
+
+    if (countEl) countEl.textContent = fill('jobs.count', { shown: filtered.length, total: openJobs.length });
+
+    if (filtered.length === 0) {
+      listEl.innerHTML = `<div class="birth-lga-empty"><p>${i18n.t('jobs.empty')}</p></div>`;
+      return;
+    }
+
+    const visible = showAllJobs ? filtered : filtered.slice(0, INITIAL_JOBS_LIMIT);
+    if (moreWrapEl) moreWrapEl.hidden = filtered.length <= visible.length;
+
+    listEl.innerHTML = visible
+      .map(
+        (job) => `
+          <article class="job-row job-row--${job.type}">
+            <div class="job-row__main">
+              <p class="law-card__citation">${job.id}</p>
+              <h3 class="law-card__title">${pick(job.title)}</h3>
+              <p class="job-row__meta">
+                <span class="law-badge job-badge--${job.type}">${i18n.t(`jobs.type.${job.type}`)}</span>
+                <span>${job.location}</span>
+              </p>
+            </div>
+            <div class="job-row__side">
+              <p class="job-row__closes"><span>${i18n.t('jobs.card.closes')}</span> ${formatDate(job.closes)}</p>
+              <a href="#" class="job-row__link" data-view-job="${job.id}">${i18n.t('jobs.card.view')}</a>
+            </div>
+          </article>
+        `
+      )
+      .join('');
+  }
+
+  function openJobModal(jobId) {
+    const job = openJobs.find((item) => item.id === jobId);
+    if (!job || !modal) return;
+    activeJobId = job.id;
+
+    modalBadge.textContent = `${i18n.t(`jobs.type.${job.type}`)} • ${job.id}`;
+    modalTitle.textContent = pick(job.title);
+    modalBody.innerHTML = `
+      <div class="law-citation-box">
+        <strong>${i18n.t('jobs.card.closes')}</strong>
+        <span>${formatDate(job.closes)} (${closingText(job)})</span>
+      </div>
+      <p>${pick(job.summary)}</p>
+      <h3 class="birth-subheading" style="margin-top:1rem;">${i18n.t('jobs.modal.requirements')}</h3>
+      <ul class="law-provisions-list">${pick(job.requirements).map((r) => `<li>${r}</li>`).join('')}</ul>
+      <div class="birth-lga-callout" style="margin-bottom:0;">
+        <strong>${i18n.t('jobs.card.dept')} · ${i18n.t('jobs.card.location')}:</strong>
+        <p>${pick(job.dept)}, ${job.location}</p>
+      </div>
+    `;
+
+    if (typeof modal.showModal === 'function') modal.showModal();
+    else modal.setAttribute('open', '');
+  }
+
+  function closeJobModal() {
+    if (!modal) return;
+    if (typeof modal.close === 'function') modal.close();
+    else modal.removeAttribute('open');
+  }
+
+  if (modal) {
+    const closeBtn = modal.querySelector('[data-close-job-modal]');
+    if (closeBtn) closeBtn.addEventListener('click', closeJobModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeJobModal();
+    });
+  }
+  if (modalPrintBtn) modalPrintBtn.addEventListener('click', () => window.print());
+  if (modalApplyBtn) {
+    modalApplyBtn.addEventListener('click', () => {
+      closeJobModal();
+      const target = document.getElementById('jobs-apply');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  if (listEl) {
+    listEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-view-job]');
+      if (!btn) return;
+      e.preventDefault();
+      openJobModal(btn.dataset.viewJob);
+    });
+  }
+
+  [typeFilter, fieldFilter, locationFilter].forEach((el) => {
+    if (el) el.addEventListener('change', renderJobs);
+  });
+  if (searchInput) searchInput.addEventListener('input', renderJobs);
+  if (moreBtn) {
+    moreBtn.addEventListener('click', () => {
+      showAllJobs = true;
+      renderJobs();
+    });
+  }
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      [typeFilter, fieldFilter, locationFilter].forEach((el) => {
+        if (el) el.value = 'all';
+      });
+      if (searchInput) searchInput.value = '';
+      renderJobs();
+    });
+  }
+
+  updateJobsPageLanguage = () => {
+    renderJobs();
+    if (modal && modal.hasAttribute('open') && activeJobId) openJobModal(activeJobId);
+  };
+
+  renderJobs();
 })();
 
 /* ---------------------------------------------------------

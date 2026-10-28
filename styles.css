@@ -3316,3 +3316,130 @@ body:has(.itinerary-modal[open]) {
   }
 }
 
+
+/* =========================================================
+   Jobs and Careers Page Styles
+   (cards, modal and filters reuse the Laws and Gazettes styles)
+   ========================================================= */
+
+.jobs-finder__controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: end;
+}
+
+.jobs-finder__search {
+  grid-column: 1 / -1;
+}
+
+.jobs-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.job-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+
+.job-row--contract {
+  border-left-color: #c99700;
+}
+
+.job-row--internship {
+  border-left-color: #2f5d8a;
+}
+
+.job-row:hover {
+  border-color: var(--green-dark);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+
+.job-row__main .law-card__title {
+  margin-bottom: 0.4rem;
+}
+
+.job-row__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.job-row__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+}
+
+.job-row__closes {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.job-row__closes span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.job-row__link {
+  font-weight: 700;
+  color: var(--green-dark);
+  text-decoration: underline;
+}
+
+#jobs-more-wrap[hidden] {
+  display: none;
+}
+
+.job-badge--permanent {
+  background: #e5f1ea;
+  color: var(--green-dark);
+}
+
+.job-badge--contract {
+  background: var(--gold-soft);
+  color: #5c4500;
+}
+
+.job-badge--internship {
+  background: #e6eef7;
+  color: #1d446b;
+}
+
+@media (max-width: 960px) {
+  .jobs-finder__controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .jobs-finder__controls,
+  #jobs-reset-filters {
+    display: none !important;
+  }
+}
+
+#jobs-reset-filters[hidden] {
+  display: none;
+}

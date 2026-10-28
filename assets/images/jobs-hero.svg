@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustrated job notice board, a briefcase and a hiring badge">
+  <path d="M8 0h464a8 8 0 0 1 8 8v344a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8z" fill="#e5f1ea"/>
+  <path d="M405 68m-88 0a88 88 0 1 0 176 0a88 88 0 1 0-176 0" fill="#cfe5d8"/>
+  <path d="M72 310m-100 0a100 100 0 1 0 200 0a100 100 0 1 0-200 0" fill="#cfe5d8"/>
+
+  <!-- Notice board -->
+  <path d="M60 52h230a8 8 0 0 1 8 8v226a8 8 0 0 1-8 8H60a8 8 0 0 1-8-8V60a8 8 0 0 1 8-8z" fill="#0f3b26"/>
+  <path d="M68 68h214v210H68z" fill="#ffffff"/>
+  <path d="M68 68h214v32H68z" fill="#00703c"/>
+  <path d="M84 80h92v8H84z" fill="#f2b705"/>
+  <!-- Listing rows -->
+  <path d="M84 116h24v24H84z" fill="#cfe5d8"/>
+  <path d="M120 118h110v7H120zM120 131h72v6h-72z" fill="#0f3b26"/>
+  <path d="M244 118h24v14h-24z" fill="#f2b705"/>
+  <path d="M84 156h24v24H84z" fill="#cfe5d8"/>
+  <path d="M120 158h96v7h-96zM120 171h64v6h-64z" fill="#0f3b26"/>
+  <path d="M244 158h24v14h-24z" fill="#cfe5d8"/>
+  <path d="M84 196h24v24H84z" fill="#cfe5d8"/>
+  <path d="M120 198h116v7H120zM120 211h80v6h-80z" fill="#0f3b26"/>
+  <path d="M244 198h24v14h-24z" fill="#cfe5d8"/>
+  <path d="M84 236h24v24H84z" fill="#cfe5d8"/>
+  <path d="M120 238h88v7h-88zM120 251h56v6h-56z" fill="#0f3b26"/>
+  <!-- Pins -->
+  <path d="M175 52m-7 0a7 7 0 1 0 14 0a7 7 0 1 0-14 0" fill="#f2b705"/>
+
+  <!-- Briefcase -->
+  <g transform="translate(262 196)">
+    <path d="M60 22V12a8 8 0 0 1 8-8h40a8 8 0 0 1 8 8v10h-12V16H72v6z" fill="#005a30"/>
+    <path d="M12 22h152a8 8 0 0 1 8 8v90a8 8 0 0 1-8 8H12a8 8 0 0 1-8-8V30a8 8 0 0 1 8-8z" fill="#00703c"/>
+    <path d="M4 66h168v10H4z" fill="#005a30"/>
+    <path d="M78 58h20v28H78z" fill="#f2b705"/>
+  </g>
+
+  <!-- Check badge -->
+  <g transform="translate(330 44)">
+    <path d="M60 60m-48 0a48 48 0 1 0 96 0a48 48 0 1 0-96 0" fill="#f2b705"/>
+    <path d="M60 60m-36 0a36 36 0 1 0 72 0a36 36 0 1 0-72 0" fill="#ffd34d"/>
+    <path d="M42 60l12 12 24-26" fill="none" stroke="#0f3b26" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
