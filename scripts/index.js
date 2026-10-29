@@ -20,6 +20,7 @@ const i18n = await createI18n({
     if (typeof updateBirthPageLanguage === 'function') updateBirthPageLanguage();
     if (typeof updateLawsPageLanguage === 'function') updateLawsPageLanguage();
     if (typeof updateJobsPageLanguage === 'function') updateJobsPageLanguage();
+    if (typeof updateLgaPageLanguage === 'function') updateLgaPageLanguage();
   },
 });
 
@@ -3706,6 +3707,40 @@ let updateJobsPageLanguage = null;
   };
 
   renderJobs();
+})();
+
+/* ---------------------------------------------------------
+   Local Government Areas page (uses OSUN_LGAS from the birth registration section)
+   --------------------------------------------------------- */
+let updateLgaPageLanguage = null;
+
+(function initLgaPage() {
+  const lgaRoot = document.getElementById('lga-page');
+  if (!lgaRoot) return;
+
+  const groupEls = lgaRoot.querySelectorAll('[data-lga-group]');
+  const pick = (obj) => obj[i18n.lang === 'yo' ? 'yo' : 'en'] || obj.en;
+
+  // The Ife East Area Office is not one of the 30 LGAs, so it is left out of the lists.
+  function renderLgas() {
+    groupEls.forEach((listEl) => {
+      listEl.innerHTML = OSUN_LGAS.filter(
+        (item) => item.district === listEl.dataset.lgaGroup && item.id !== 'ife-east-area'
+      )
+        .map(
+          (item) => `
+            <li class="lga-item">
+              <h4 class="lga-item__title">${pick(item.name)}</h4>
+              <p class="lga-item__hq"><strong>${i18n.t('lga.card.hq')}</strong> ${pick(item.hq)}</p>
+            </li>
+          `
+        )
+        .join('');
+    });
+  }
+
+  updateLgaPageLanguage = renderLgas;
+  renderLgas();
 })();
 
 /* ---------------------------------------------------------
